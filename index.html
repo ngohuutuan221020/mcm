@@ -4,16 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Open Graph -->
-<meta property="og:title" content="DOWNLOAD PHẦN MỀM">
-<meta property="og:description" content="Kho tải phần mềm, Windows, tiện ích máy tính">
-<meta property="og:image" content="https://kythuatmcm.vercel.app/banner.jpg">
-<meta property="og:url" content="https://kythuatmcm.vercel.app/">
-<meta property="og:type" content="website">
-
-<!-- Thumbnail Facebook -->
-<meta name="twitter:card" content="summary_large_image">
-
 <title>DOWNLOAD PHẦN MỀM</title>
 
 <style>
@@ -33,7 +23,6 @@ body{
     justify-content:center;
     align-items:center;
 }
-
 /* Container */
 
 .container{
@@ -90,7 +79,14 @@ h1{
 }
 
 /* Table */
+tr{
+    transition:0.25s;
+}
 
+tr:hover{
+    background:#f1f6ff;
+    transform:scale(1.01);
+}
 table{
     width:100%;
     border-collapse:collapse;
@@ -130,16 +126,19 @@ tr:hover{
     text-decoration:none;
     border-radius:5px;
     font-size:14px;
-    transition:0.2s;
+    transition:0.3s;
+    box-shadow:0 0 10px rgba(47,92,168,0.4);
 }
 
 .download-btn:hover{
     background:#244987;
+    box-shadow:
+        0 0 10px #2f5ca8,
+        0 0 20px #2f5ca8,
+        0 0 30px #2f5ca8;
+    transform:scale(1.05);
 }
 
-.center{
-    text-align:center;
-}
 
 /* Responsive */
 
@@ -172,12 +171,11 @@ tr:hover{
 <body>
 
 <!-- Header -->
-
-<div class="header">
+<div class="header" onclick="window.open('https://muicamau.vn', '_blank')">
     <img 
     src="https://muicamau.vn/wp-content/uploads/2026/01/logo-15-years-1.png"
     alt="MCM"
-    style="height:55px;">
+    style="height:55px">
 </div>
 
 <!-- Content -->
