@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOWNLOAD PHẦN MỀM</title>
+
+<style>
+    body{
+        margin:0;
+        font-family: Arial, sans-serif;
+        background:#f2f2f2;
+    }
+
+    .header{
+        background:#2f5ca8;
+        color:white;
+        padding:15px;
+        font-size:22px;
+        font-weight:bold;
+    }
+
+    .container{
+        width:80%;
+        margin:40px auto;
+        background:white;
+        padding:20px;
+        border-radius:8px;
+        box-shadow:0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1{
+        text-align:center;
+        margin-bottom:20px;
+    }
+
+    .search-box{
+        margin-bottom:20px;
+        text-align:left;
+    }
+
+    .search-box input{
+        width:300px;
+        max-width:100%;
+        padding:10px;
+        border:1px solid #ccc;
+        border-radius:5px;
+        font-size:14px;
+    }
+
+    table{
+        width:100%;
+        border-collapse:collapse;
+    }
+
+    th, td{
+        padding:14px;
+        border-bottom:1px solid #ddd;
+    }
+
+    th{
+        background:#f5f5f5;
+        text-align:left;
+    }
+
+    tr:hover{
+        background:#f9f9f9;
+    }
+
+    .download-btn{
+        background:#2f5ca8;
+        color:white;
+        padding:8px 14px;
+        text-decoration:none;
+        border-radius:5px;
+        font-size:14px;
+    }
+
+    .download-btn:hover{
+        background:#244987;
+    }
+
+    .center{
+        text-align:center;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    WEBSITE DOWNLOAD SOURCE
+</div>
+
+<div class="container">
+
+    <h1>DANH SÁCH PHẦN MỀM</h1>
+
+    <!-- Ô tìm kiếm -->
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Tìm phần mềm...">
+    </div>
+
+    <table id="softwareTable">
+        <tr>
+            <th width="10%">STT</th>
+            <th>Tên phần mềm</th>
+            <th width="20%">Tải xuống</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>ChromeSetup.exe</td>
+            <td class="center">
+                <a class="download-btn"
+                href="https://drive.google.com/file/d/1MYy9hLGd10zeCDmrX7C0n07D4BM-o3vB/view?usp=drive_link"
+                target="_blank">
+                Tải
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>CocCocSetup.exe</td>
+            <td class="center">
+                <a class="download-btn"
+                href="https://drive.google.com/file/d/1rLtHp67wRMvFmn3eRfwjB8iP0GmeLBBU/view?usp=drive_link"
+                target="_blank">
+                Tải
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Foxit PDF Reader 202611 Setup</td>
+            <td class="center">
+                <a class="download-btn"
+                href="https://drive.google.com/file/d/1GqekY_3rwbhWnm9kvDXgEfOnFg5vI30j/view?usp=drive_link"
+                target="_blank">
+                Tải
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>UniKey 4RC2</td>
+            <td class="center">
+                <a class="download-btn"
+                href="https://drive.google.com/file/d/1r2lf99YK4mLt7ZQmUXzhUEUEPR7FLq7m/view?usp=drive_link"
+                target="_blank">
+                Tải
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>Windows 10 22H2 English x64 ISO</td>
+            <td class="center">
+                <a class="download-btn"
+                href="https://drive.google.com/file/d/1rIAHvCS-6X83x5rg6M04415Jb2MpeE_x/view?usp=drive_link"
+                target="_blank">
+                Tải
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>6</td>
+            <td>Windows 11 25H2 English x64 ISO</td>
+            <td class="center">
+                <a class="download-btn"
+                href="https://drive.google.com/file/d/1kqHV0WnTlKaNi5h-yTKbFxJXmvQhdyzg/view?usp=drive_link"
+                target="_blank">
+                Tải
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>7</td>
+            <td>WinRAR x64 7.22</td>
+            <td class="center">
+                <a class="download-btn"
+                href="https://drive.google.com/file/d/1V8OPU-lsKSgkcFS4dMGQrvetD70smenK/view?usp=drive_link"
+                target="_blank">
+                Tải
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>8</td>
+            <td>Zalo Setup 26.5.10</td>
+            <td class="center">
+                <a class="download-btn"
+                href="https://drive.google.com/file/d/12gGlijTFLVNIW3LS0RMSu5jbG4wrYJIz/view?usp=drive_link"
+                target="_blank">
+                Tải
+                </a>
+            </td>
+        </tr>
+
+    </table>
+
+</div>
+
+<script>
+    const searchInput = document.getElementById("searchInput");
+    const table = document.getElementById("softwareTable");
+    const rows = table.getElementsByTagName("tr");
+
+    searchInput.addEventListener("keyup", function() {
+        const keyword = searchInput.value.toLowerCase();
+
+        for(let i = 1; i < rows.length; i++) {
+            const softwareName = rows[i].getElementsByTagName("td")[1];
+
+            if(softwareName) {
+                const text = softwareName.textContent || softwareName.innerText;
+
+                if(text.toLowerCase().indexOf(keyword) > -1) {
+                    rows[i].style.display = "";
+                } else {
+                    rows[i].style.display = "none";
+                }
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
