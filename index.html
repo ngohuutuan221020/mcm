@@ -15,8 +15,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <style>
 
-body{
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
     font-family:Arial,sans-serif;
     background:#f2f2f2;
 }
@@ -30,6 +35,10 @@ body{
     justify-content:center;
     align-items:center;
     cursor:pointer;
+}
+
+.header img{
+    height:55px;
 }
 
 /* CONTAINER */
@@ -73,7 +82,6 @@ h1{
     border:1px solid #ccc;
     border-radius:8px;
     font-size:15px;
-    box-sizing:border-box;
     outline:none;
 }
 
@@ -134,6 +142,7 @@ h1{
     display:grid;
     grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
     gap:20px;
+    align-items:stretch;
 }
 
 /* PRODUCT CARD */
@@ -147,6 +156,9 @@ h1{
     transition:0.3s;
     overflow:hidden;
     cursor:pointer;
+
+    display:flex;
+    flex-direction:column;
 }
 
 .product-card:hover{
@@ -194,6 +206,7 @@ h1{
     color:#666;
     margin-bottom:15px;
     min-height:40px;
+    flex-grow:1;
 }
 
 /* BUTTONS */
@@ -273,33 +286,70 @@ h1{
 
 @media(max-width:768px){
 
+    .container{
+        width:95%;
+    }
+
     h1{
         font-size:28px;
     }
 
+    .top-bar{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .search-wrapper{
+        width:100%;
+    }
+
+    .view-toggle{
+        justify-content:center;
+    }
+
     .product-grid{
         grid-template-columns:1fr 1fr;
-        gap:12px;
+        gap:10px;
+    }
+
+    .product-card{
+        padding:10px;
     }
 
     .product-image{
-        height:120px;
+        height:100px;
     }
 
     .product-name{
-        font-size:15px;
+        font-size:14px;
+        min-height:40px;
+        line-height:1.3;
+    }
+
+    .product-info{
+        font-size:12px;
         min-height:auto;
     }
 
+    .download-group{
+        flex-direction:column;
+    }
+
     .download-btn{
+        width:100%;
         font-size:12px;
         padding:8px;
     }
 
+    .table-view{
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
     .table-view th,
     .table-view td{
-        padding:10px;
         font-size:13px;
+        padding:10px;
     }
 
 }
@@ -317,8 +367,7 @@ onclick="window.open('https://muicamau.vn','_blank')">
 
 <img
 src="https://muicamau.vn/wp-content/uploads/2026/01/logo-15-years-1.png"
-alt="MCM"
-style="height:55px">
+alt="MCM">
 
 </div>
 
@@ -359,7 +408,7 @@ style="height:55px">
         class="toggle-btn active"
         id="gridBtn">
 
-            <i class="fa-solid fa-table-cells-large"></i>
+        <i class="fa-solid fa-table-cells-large"></i>
 
         </button>
 
@@ -367,7 +416,7 @@ style="height:55px">
         class="toggle-btn"
         id="tableBtn">
 
-            <i class="fa-solid fa-table-list"></i>
+        <i class="fa-solid fa-table-list"></i>
 
         </button>
 
@@ -377,8 +426,7 @@ style="height:55px">
 
 <!-- GRID VIEW -->
 
-<div class="product-grid"
-id="gridView">
+<div class="product-grid" id="gridView">
 
 <!-- WINDOWS 10 -->
 
@@ -387,8 +435,7 @@ onclick="window.open('https://www.microsoft.com/software-download/windows10','_b
 
 <div class="discount">NEW</div>
 
-<img
-class="product-image"
+<img class="product-image"
 src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_logo_-_2012.svg">
 
 <div class="product-name">
@@ -430,8 +477,7 @@ onclick="window.open('https://www.microsoft.com/software-download/windows11','_b
 
 <div class="discount">NEW</div>
 
-<img
-class="product-image"
+<img class="product-image"
 src="https://taimienphi.vn/tmp/cf/images/2021/ba/10/7/windows-11-logo.png">
 
 <div class="product-name">
@@ -471,8 +517,7 @@ Fshare
 <div class="product-card"
 onclick="window.open('https://www.google.com/chrome/','_blank')">
 
-<img
-class="product-image"
+<img class="product-image"
 src="https://upload.wikimedia.org/wikipedia/commons/8/87/Google_Chrome_icon_%282011%29.png">
 
 <div class="product-name">
@@ -512,8 +557,7 @@ Fshare
 <div class="product-card"
 onclick="window.open('https://coccoc.com/vi/download','_blank')">
 
-<img
-class="product-image"
+<img class="product-image"
 src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHM0OYfiFeMI2p9MWie0CvL99U4GA1gf6_kayTt_kBblFwHwo8BW8JXlqfnYxKPmmBagZQgyGC2_jkTZ8nDKXM2PY.3B_yfQRYeg2jMDqwWJw9SQuRr36v1Um.SsreqTU9ECPRsCZjcP2aPNQNPGZSww-&format=source">
 
 <div class="product-name">
@@ -553,8 +597,7 @@ Fshare
 <div class="product-card"
 onclick="window.open('https://www.foxit.com/pdf-reader/','_blank')">
 
-<img
-class="product-image"
+<img class="product-image"
 src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHM0OYfiFeMI2p9MWie0CvL99U4GA1gf6_kayTt_kBblFwHwo8BW8JXlqfnYxKPmmBTuhe3y__RCMTX6VQQ6dJnj8c9oUT9swTGtofuJIo6BUghDnFEeyimDSjdWkf.mNofyO1rLgG.osgDyOJPON2Ek-&format=source">
 
 <div class="product-name">
@@ -594,8 +637,7 @@ Fshare
 <div class="product-card"
 onclick="window.open('https://www.unikey.org/download.html','_blank')">
 
-<img
-class="product-image"
+<img class="product-image"
 src="https://cdn.tgdd.vn/2020/11/GameApp/download-unikey-moi-nhat-200x200-1.jpg">
 
 <div class="product-name">
@@ -635,8 +677,7 @@ Fshare
 <div class="product-card"
 onclick="window.open('https://www.win-rar.com/download.html','_blank')">
 
-<img
-class="product-image"
+<img class="product-image"
 src="https://sc.filehippo.net/images/t_app-icon-l/p/c3152528-96bf-11e6-b8e7-00163ed833e7/3833258526/winrar-64-icon.png">
 
 <div class="product-name">
@@ -676,8 +717,7 @@ Fshare
 <div class="product-card"
 onclick="window.open('https://zalo.me/pc','_blank')">
 
-<img
-class="product-image"
+<img class="product-image"
 src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg">
 
 <div class="product-name">
@@ -716,15 +756,12 @@ Fshare
 
 <!-- TABLE VIEW -->
 
-<table class="table-view"
-id="tableView">
+<table class="table-view" id="tableView">
 
 <tr>
-
 <th width="10%">STT</th>
 <th>Tên phần mềm</th>
 <th width="35%">Tải xuống</th>
-
 </tr>
 
 <tr class="windows-row">
@@ -780,6 +817,7 @@ Fshare
 </a>
 
 </div>
+
 </td>
 </tr>
 
@@ -788,19 +826,25 @@ Fshare
 <td>ChromeSetup.exe</td>
 <td>
 <div class="download-group">
+
 <a class="download-btn drive-btn"
 href="https://drive.google.com/file/d/1MYy9hLGd10zeCDmrX7C0n07D4BM-o3vB/view?usp=drive_link"
 target="_blank">
+
 <i class="fa-brands fa-google-drive"></i>
 Drive
+
 </a>
 
 <a class="download-btn fshare-btn"
 href="#"
 target="_blank">
+
 <i class="fa-solid fa-cloud-arrow-down"></i>
 Fshare
+
 </a>
+
 </div>
 </td>
 </tr>
@@ -810,19 +854,25 @@ Fshare
 <td>CocCocSetup.exe</td>
 <td>
 <div class="download-group">
+
 <a class="download-btn drive-btn"
 href="https://drive.google.com/file/d/1rLtHp67wRMvFmn3eRfwjB8iP0GmeLBBU/view?usp=drive_link"
 target="_blank">
+
 <i class="fa-brands fa-google-drive"></i>
 Drive
+
 </a>
 
 <a class="download-btn fshare-btn"
 href="#"
 target="_blank">
+
 <i class="fa-solid fa-cloud-arrow-down"></i>
 Fshare
+
 </a>
+
 </div>
 </td>
 </tr>
@@ -832,19 +882,25 @@ Fshare
 <td>Foxit PDF Reader</td>
 <td>
 <div class="download-group">
+
 <a class="download-btn drive-btn"
 href="https://drive.google.com/file/d/1GqekY_3rwbhWnm9kvDXgEfOnFg5vI30j/view?usp=drive_link"
 target="_blank">
+
 <i class="fa-brands fa-google-drive"></i>
 Drive
+
 </a>
 
 <a class="download-btn fshare-btn"
 href="#"
 target="_blank">
+
 <i class="fa-solid fa-cloud-arrow-down"></i>
 Fshare
+
 </a>
+
 </div>
 </td>
 </tr>
@@ -854,19 +910,25 @@ Fshare
 <td>UniKey 4RC2</td>
 <td>
 <div class="download-group">
+
 <a class="download-btn drive-btn"
 href="https://drive.google.com/file/d/1r2lf99YK4mLt7ZQmUXzhUEUEPR7FLq7m/view?usp=drive_link"
 target="_blank">
+
 <i class="fa-brands fa-google-drive"></i>
 Drive
+
 </a>
 
 <a class="download-btn fshare-btn"
 href="#"
 target="_blank">
+
 <i class="fa-solid fa-cloud-arrow-down"></i>
 Fshare
+
 </a>
+
 </div>
 </td>
 </tr>
@@ -876,19 +938,25 @@ Fshare
 <td>WinRAR x64 7.22</td>
 <td>
 <div class="download-group">
+
 <a class="download-btn drive-btn"
 href="https://drive.google.com/file/d/1V8OPU-lsKSgkcFS4dMGQrvetD70smenK/view?usp=drive_link"
 target="_blank">
+
 <i class="fa-brands fa-google-drive"></i>
 Drive
+
 </a>
 
 <a class="download-btn fshare-btn"
 href="#"
 target="_blank">
+
 <i class="fa-solid fa-cloud-arrow-down"></i>
 Fshare
+
 </a>
+
 </div>
 </td>
 </tr>
@@ -898,28 +966,31 @@ Fshare
 <td>Zalo Setup 26.5.10</td>
 <td>
 <div class="download-group">
+
 <a class="download-btn drive-btn"
 href="https://drive.google.com/file/d/12gGlijTFLVNIW3LS0RMSu5jbG4wrYJIz/view?usp=drive_link"
 target="_blank">
+
 <i class="fa-brands fa-google-drive"></i>
 Drive
+
 </a>
 
 <a class="download-btn fshare-btn"
 href="#"
 target="_blank">
+
 <i class="fa-solid fa-cloud-arrow-down"></i>
 Fshare
+
 </a>
+
 </div>
 </td>
 </tr>
-
 </table>
 
 </div>
-
-<!-- SCRIPT -->
 
 <script>
 
@@ -951,7 +1022,7 @@ function filterProducts(){
 
         if(name.includes(keyword)){
 
-            product.style.display = "block";
+            product.style.display = "";
 
         }else{
 
@@ -1023,6 +1094,7 @@ tableBtn.addEventListener("click", function(){
 
     gridView.style.display = "none";
     tableView.style.display = "table";
+    tableView.style.width = "100%";
 
     tableBtn.classList.add("active");
     gridBtn.classList.remove("active");
