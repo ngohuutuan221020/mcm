@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DOWNLOAD PHẦN MỀM</title>
+
+<!-- FONT AWESOME -->
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f2f2f2;
+}
+
+/* HEADER */
+
+.header{
+    background:#2f5ca8;
+    padding:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+}
+
+/* CONTAINER */
+
+.container{
+    width:80%;
+    margin:40px auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:25px;
+    font-size:42px;
+}
+
+/* SEARCH */
+
+.search-box{
+    margin-bottom:20px;
+}
+
+.search-wrapper{
+    position:relative;
+    width:320px;
+    max-width:100%;
+}
+
+.search-wrapper input{
+    width:100%;
+    padding:12px 40px 12px 12px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:14px;
+    box-sizing:border-box;
+}
+
+.clear-btn{
+    position:absolute;
+    right:10px;
+    top:50%;
+    transform:translateY(-50%);
+    border:none;
+    background:none;
+    font-size:20px;
+    cursor:pointer;
+    color:#888;
+    display:none;
+}
+
+.clear-btn:hover{
+    color:black;
+}
+
+/* TABLE */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th, td{
+    padding:14px;
+    border-bottom:1px solid #ddd;
+}
+
+th{
+    background:#f5f5f5;
+    text-align:left;
+    font-size:18px;
+}
+
+tr{
+    transition:0.25s;
+}
+
+tr:hover{
+    background:#f1f6ff;
+    transform:scale(1.01);
+}
+
+/* WINDOWS ROW */
+
+.windows-row{
+    background:#e8f1ff;
+}
+
+.windows-row:hover{
+    background:#d8e8ff !important;
+}
+
+/* DOWNLOAD GROUP */
+
+.download-group{
+    display:flex;
+    justify-content:flex-start;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+/* BUTTON CHUNG */
+
+.download-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+    color:white;
+    padding:8px 14px;
+    text-decoration:none;
+    border-radius:6px;
+    font-size:14px;
+    transition:0.3s;
+    font-weight:bold;
+    min-width:95px;
+}
+
+/* GOOGLE DRIVE */
+
+.drive-btn{
+    background:#2f5ca8;
+    box-shadow:0 0 10px rgba(47,92,168,0.4);
+}
+
+.drive-btn:hover{
+    background:#244987;
+    box-shadow:
+        0 0 10px #2f5ca8,
+        0 0 20px #2f5ca8,
+        0 0 30px #2f5ca8;
+    transform:scale(1.05);
+}
+
+/* FSHARE */
+
+.fshare-btn{
+    background:#ff7a00;
+    box-shadow:0 0 10px rgba(255,122,0,0.4);
+}
+
+.fshare-btn:hover{
+    background:#e56d00;
+    box-shadow:
+        0 0 10px #ff7a00,
+        0 0 20px #ff7a00,
+        0 0 30px #ff7a00;
+    transform:scale(1.05);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .container{
+        width:95%;
+        padding:15px;
+    }
+
+    h1{
+        font-size:28px;
+    }
+
+    th, td{
+        padding:10px;
+        font-size:14px;
+    }
+
+    .download-btn{
+        padding:7px 10px;
+        font-size:13px;
+        min-width:80px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<div class="header"
+onclick="window.open('https://muicamau.vn', '_blank')">
+
+    <img 
+    src="https://muicamau.vn/wp-content/uploads/2026/01/logo-15-years-1.png"
+    alt="MCM"
+    style="height:55px">
+
+</div>
+
+<!-- CONTENT -->
+
+<div class="container">
+
+    <h1>DANH SÁCH PHẦN MỀM</h1>
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+        <div class="search-wrapper">
+
+            <input
+            type="text"
+            id="searchInput"
+            placeholder="Tìm phần mềm...">
+
+            <button
+            class="clear-btn"
+            id="clearBtn">
+            &times;
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- TABLE -->
+
+    <table id="softwareTable">
+
+        <tr>
+            <th width="10%">STT</th>
+            <th>Tên phần mềm</th>
+            <th width="35%">Tải xuống</th>
+        </tr>
+
+        <!-- WINDOWS 10 -->
+
+        <tr class="windows-row">
+
+            <td>1</td>
+
+            <td>
+                <strong>
+                Windows 10 22H2 English x64 ISO
+                </strong>
+            </td>
+
+            <td class="center">
+
+                <div class="download-group">
+
+                    <a class="download-btn drive-btn"
+                    href="https://drive.google.com/file/d/1rIAHvCS-6X83x5rg6M04415Jb2MpeE_x/view?usp=drive_link"
+                    target="_blank">
+
+                        <i class="fa-brands fa-google-drive"></i>
+                        Drive
+
+                    </a>
+
+                    <a class="download-btn fshare-btn"
+                    href="https://www.fshare.vn/file/BKQQ7GEFOUZ3?token=1779436630"
+                    target="_blank">
+
+                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                        Fshare
+
+                    </a>
+
+                </div>
+
+            </td>
+
+        </tr>
+
+        <!-- WINDOWS 11 -->
+
+        <tr class="windows-row">
+
+            <td>2</td>
+
+            <td>
+                <strong>
+                Windows 11 25H2 English x64 ISO
+                </strong>
+            </td>
+
+            <td class="center">
+
+                <div class="download-group">
+
+                    <a class="download-btn drive-btn"
+                    href="https://drive.google.com/file/d/1kqHV0WnTlKaNi5h-yTKbFxJXmvQhdyzg/view?usp=drive_link"
+                    target="_blank">
+
+                        <i class="fa-brands fa-google-drive"></i>
+                        Drive
+
+                    </a>
+
+                    <a class="download-btn fshare-btn"
+                    href="https://www.fshare.vn/file/KOGWXQKDW6UH?token=1779436604"
+                    target="_blank">
+
+                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                        Fshare
+
+                    </a>
+
+                </div>
+
+            </td>
+
+        </tr>
+
+        <!-- CHROME -->
+
+        <tr>
+
+            <td>3</td>
+
+            <td>ChromeSetup.exe</td>
+
+            <td class="center">
+
+                <div class="download-group">
+
+                    <a class="download-btn drive-btn"
+                    href="https://drive.google.com/file/d/1MYy9hLGd10zeCDmrX7C0n07D4BM-o3vB/view?usp=drive_link"
+                    target="_blank">
+
+                        <i class="fa-brands fa-google-drive"></i>
+                        Drive
+
+                    </a>
+
+                    <a class="download-btn fshare-btn"
+                    href="#"
+                    target="_blank">
+
+                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                        Fshare
+
+                    </a>
+
+                </div>
+
+            </td>
+
+        </tr>
+
+        <!-- COCCOC -->
+
+        <tr>
+
+            <td>4</td>
+
+            <td>CocCocSetup.exe</td>
+
+            <td class="center">
+
+                <div class="download-group">
+
+                    <a class="download-btn drive-btn"
+                    href="https://drive.google.com/file/d/1rLtHp67wRMvFmn3eRfwjB8iP0GmeLBBU/view?usp=drive_link"
+                    target="_blank">
+
+                        <i class="fa-brands fa-google-drive"></i>
+                        Drive
+
+                    </a>
+
+                    <a class="download-btn fshare-btn"
+                    href="#"
+                    target="_blank">
+
+                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                        Fshare
+
+                    </a>
+
+                </div>
+
+            </td>
+
+        </tr>
+
+        <!-- FOXIT -->
+
+        <tr>
+
+            <td>5</td>
+
+            <td>Foxit PDF Reader 202611 Setup</td>
+
+            <td class="center">
+
+                <div class="download-group">
+
+                    <a class="download-btn drive-btn"
+                    href="https://drive.google.com/file/d/1GqekY_3rwbhWnm9kvDXgEfOnFg5vI30j/view?usp=drive_link"
+                    target="_blank">
+
+                        <i class="fa-brands fa-google-drive"></i>
+                        Drive
+
+                    </a>
+
+                    <a class="download-btn fshare-btn"
+                    href="#"
+                    target="_blank">
+
+                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                        Fshare
+
+                    </a>
+
+                </div>
+
+            </td>
+
+        </tr>
+<!-- UNIKEY -->
+
+<tr>
+
+    <td>6</td>
+
+    <td>UniKey 4RC2</td>
+
+    <td class="center">
+
+        <div class="download-group">
+
+            <a class="download-btn drive-btn"
+            href="https://drive.google.com/file/d/1r2lf99YK4mLt7ZQmUXzhUEUEPR7FLq7m/view?usp=drive_link"
+            target="_blank">
+
+                <i class="fa-brands fa-google-drive"></i>
+                Drive
+
+            </a>
+
+            <a class="download-btn fshare-btn"
+            href="#"
+            target="_blank">
+
+                <i class="fa-solid fa-cloud-arrow-down"></i>
+                Fshare
+
+            </a>
+
+        </div>
+
+    </td>
+
+</tr>
+
+<!-- WINRAR -->
+
+<tr>
+
+    <td>7</td>
+
+    <td>WinRAR x64 7.22</td>
+
+    <td class="center">
+
+        <div class="download-group">
+
+            <a class="download-btn drive-btn"
+            href="https://drive.google.com/file/d/1V8OPU-lsKSgkcFS4dMGQrvetD70smenK/view?usp=drive_link"
+            target="_blank">
+
+                <i class="fa-brands fa-google-drive"></i>
+                Drive
+
+            </a>
+
+            <a class="download-btn fshare-btn"
+            href="#"
+            target="_blank">
+
+                <i class="fa-solid fa-cloud-arrow-down"></i>
+                Fshare
+
+            </a>
+
+        </div>
+
+    </td>
+
+</tr>
+
+<!-- ZALO -->
+
+<tr>
+
+    <td>8</td>
+
+    <td>Zalo Setup 26.5.10</td>
+
+    <td class="center">
+
+        <div class="download-group">
+
+            <a class="download-btn drive-btn"
+            href="https://drive.google.com/file/d/12gGlijTFLVNIW3LS0RMSu5jbG4wrYJIz/view?usp=drive_link"
+            target="_blank">
+
+                <i class="fa-brands fa-google-drive"></i>
+                Drive
+
+            </a>
+
+            <a class="download-btn fshare-btn"
+            href="#"
+            target="_blank">
+
+                <i class="fa-solid fa-cloud-arrow-down"></i>
+                Fshare
+
+            </a>
+
+        </div>
+
+    </td>
+
+</tr>
+    </table>
+
+</div>
+
+<!-- SCRIPT -->
+
+<script>
+
+const searchInput =
+document.getElementById("searchInput");
+
+const clearBtn =
+document.getElementById("clearBtn");
+
+const table =
+document.getElementById("softwareTable");
+
+const rows =
+table.getElementsByTagName("tr");
+
+function filterTable(){
+
+    const keyword =
+    searchInput.value.toLowerCase();
+
+    clearBtn.style.display =
+    keyword ? "block" : "none";
+
+    for(let i = 1; i < rows.length; i++){
+
+        const softwareName =
+        rows[i].getElementsByTagName("td")[1];
+
+        if(softwareName){
+
+            const text =
+            softwareName.textContent ||
+            softwareName.innerText;
+
+            if(text.toLowerCase()
+            .indexOf(keyword) > -1){
+
+                rows[i].style.display = "";
+
+            }else{
+
+                rows[i].style.display = "none";
+
+            }
+
+        }
+
+    }
+
+}
+
+searchInput.addEventListener(
+"keyup",
+filterTable
+);
+
+clearBtn.addEventListener(
+"click",
+function(){
+
+    searchInput.value = "";
+
+    filterTable();
+
+    searchInput.focus();
+
+}
+);
+
+</script>
+
+</body>
+</html>
