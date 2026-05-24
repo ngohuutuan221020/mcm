@@ -3,701 +3,705 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>DOWNLOAD PHẦN MỀM</title>
+    <title>DOWNLOAD PHẦN MỀM</title>
 
-<!-- FONT AWESOME -->
+    <!-- FONT AWESOME -->
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-<style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            color: #222;
+        }
 
-body{
-    font-family:Arial,sans-serif;
-    background:#f2f2f2;
-    color:#222;
-}
+        /* HEADER */
 
-/* HEADER */
+        .header {
+            background: #2f5ca8;
+            padding: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
 
-.header{
-    background:#2f5ca8;
-    padding:14px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    cursor:pointer;
-}
+        .header img {
+            height: 58px;
+        }
 
-.header img{
-    height:58px;
-}
+        /* CONTAINER */
 
-/* CONTAINER */
+        .container {
+            width: 90%;
+            margin: 30px auto;
+        }
 
-.container{
-    width:90%;
-    margin:30px auto;
-}
+        /* TITLE */
 
-/* TITLE */
+        h1 {
+            text-align: center;
+            font-size: 52px;
+            margin-bottom: 35px;
+            font-weight: 700;
+        }
 
-h1{
-    text-align:center;
-    font-size:52px;
-    margin-bottom:35px;
-    font-weight:700;
-}
+        /* SEARCH */
 
-/* SEARCH */
+        .search-wrapper {
+            max-width: 350px;
+            position: relative;
+            margin-bottom: 30px;
+        }
 
-.search-wrapper{
-    max-width:350px;
-    position:relative;
-    margin-bottom:30px;
-}
+        .search-wrapper input {
+            width: 100%;
+            padding: 13px 45px 13px 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
 
-.search-wrapper input{
-    width:100%;
-    padding:13px 45px 13px 15px;
-    border:1px solid #ccc;
-    border-radius:8px;
-    outline:none;
-    font-size:15px;
-    transition:0.3s;
-}
+        .search-wrapper input:focus {
+            border-color: #2f5ca8;
+            box-shadow: 0 0 10px rgba(47, 92, 168, 0.2);
+        }
 
-.search-wrapper input:focus{
-    border-color:#2f5ca8;
-    box-shadow:0 0 10px rgba(47,92,168,0.2);
-}
+        .clear-btn {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            background: none;
+            font-size: 22px;
+            color: #777;
+            cursor: pointer;
+            display: none;
+        }
 
-.clear-btn{
-    position:absolute;
-    right:12px;
-    top:50%;
-    transform:translateY(-50%);
-    border:none;
-    background:none;
-    font-size:22px;
-    color:#777;
-    cursor:pointer;
-    display:none;
-}
+        /* GRID */
 
-/* GRID */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
 
-.product-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
-    gap:20px;
-}
+        /* CARD */
 
-/* CARD */
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: 0.3s;
 
-.product-card{
-    background:white;
-    border-radius:10px;
-    border:1px solid #ddd;
-    padding:15px;
-    position:relative;
-    overflow:hidden;
-    cursor:pointer;
-    transition:0.3s;
+            display: flex;
+            flex-direction: column;
+        }
 
-    display:flex;
-    flex-direction:column;
-}
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
 
-.product-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 10px 25px rgba(0,0,0,0.15);
-}
+        /* BADGE */
 
-/* BADGE */
+        .badge {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #ff4757;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 6px 10px;
+            clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+        }
 
-.badge{
-    position:absolute;
-    top:0;
-    left:0;
-    background:#ff4757;
-    color:white;
-    font-size:12px;
-    font-weight:bold;
-    padding:6px 10px;
-    clip-path:polygon(0 0,100% 0,100% 70%,50% 100%,0 70%);
-}
+        /* IMAGE */
 
-/* IMAGE */
+        .product-image {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
 
-.product-image{
-    width:100%;
-    height:180px;
-    object-fit:contain;
-    margin-bottom:15px;
-}
+        /* NAME */
 
-/* NAME */
+        .product-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            min-height: 50px;
+        }
 
-.product-name{
-    font-size:18px;
-    font-weight:bold;
-    margin-bottom:10px;
-    min-height:50px;
-}
+        /* INFO */
 
-/* INFO */
+        .product-info {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
 
-.product-info{
-    font-size:14px;
-    color:#666;
-    margin-bottom:15px;
-    line-height:1.5;
-    flex-grow:1;
-}
+        /* BUTTONS */
 
-/* BUTTONS */
+        .download-group {
+            display: flex;
+            gap: 8px;
+        }
 
-.download-group{
-    display:flex;
-    gap:8px;
-}
+        .download-btn {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            padding: 10px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-.download-btn{
-    flex:1;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:6px;
-    padding:10px;
-    border-radius:6px;
-    text-decoration:none;
-    color:white;
-    font-size:14px;
-    font-weight:bold;
-    transition:0.3s;
-}
+        .drive-btn {
+            background: #2f5ca8;
+        }
 
-.drive-btn{
-    background:#2f5ca8;
-}
+        .drive-btn:hover {
+            background: #234886;
+        }
 
-.drive-btn:hover{
-    background:#234886;
-}
+        .fshare-btn {
+            background: #ff7a00;
+        }
 
-.fshare-btn{
-    background:#ff7a00;
-}
+        .fshare-btn:hover {
+            background: #e06900;
+        }
 
-.fshare-btn:hover{
-    background:#e06900;
-}
+        /* MOBILE */
 
-/* MOBILE */
+        @media(max-width:768px) {
 
-@media(max-width:768px){
+            .container {
+                width: 95%;
+            }
 
-    .container{
-        width:95%;
-    }
+            h1 {
+                font-size: 34px;
+            }
 
-    h1{
-        font-size:34px;
-    }
+            .product-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
 
-    .product-grid{
-        grid-template-columns:1fr 1fr;
-        gap:12px;
-    }
+            .product-card {
+                padding: 10px;
+            }
 
-    .product-card{
-        padding:10px;
-    }
+            .product-image {
+                height: 110px;
+            }
 
-    .product-image{
-        height:110px;
-    }
+            .product-name {
+                font-size: 14px;
+                min-height: 42px;
+            }
 
-    .product-name{
-        font-size:14px;
-        min-height:42px;
-    }
+            .product-info {
+                font-size: 12px;
+            }
 
-    .product-info{
-        font-size:12px;
-    }
+            .download-group {
+                flex-direction: column;
+            }
 
-    .download-group{
-        flex-direction:column;
-    }
+            .download-btn {
+                width: 100%;
+                font-size: 12px;
+                padding: 8px;
+            }
 
-    .download-btn{
-        width:100%;
-        font-size:12px;
-        padding:8px;
-    }
-
-}
-
-</style>
+        }
+    </style>
 
 </head>
 
 <body>
 
-<!-- HEADER -->
+    <!-- HEADER -->
 
-<div class="header"
-onclick="window.open('https://muicamau.vn','_blank')">
+    <div class="header" onclick="window.open('https://muicamau.vn','_blank')">
 
-<img
-src="https://muicamau.vn/wp-content/uploads/2026/01/logo-15-years-1.png"
-alt="Mũi Cà Mau">
+        <img src="https://muicamau.vn/wp-content/uploads/2026/01/logo-15-years-1.png" alt="Mũi Cà Mau">
 
-</div>
+    </div>
 
-<!-- CONTENT -->
+    <!-- CONTENT -->
 
-<div class="container">
+    <div class="container">
 
-<h1>DANH SÁCH PHẦN MỀM</h1>
+        <h1>DANH SÁCH PHẦN MỀM</h1>
 
-<!-- SEARCH -->
+        <!-- SEARCH -->
 
-<div class="search-wrapper">
+        <div class="search-wrapper">
 
-<input
-type="text"
-id="searchInput"
-placeholder="Tìm phần mềm...">
+            <input type="text" id="searchInput" placeholder="Tìm phần mềm...">
 
-<button
-class="clear-btn"
-id="clearBtn">
+            <button class="clear-btn" id="clearBtn">
 
-&times;
+                &times;
 
-</button>
+            </button>
 
-</div>
+        </div>
 
-<!-- GRID -->
+        <!-- GRID -->
 
-<div class="product-grid" id="productGrid">
+        <div class="product-grid" id="productGrid">
 
-<!-- WINDOWS 10 -->
+            <!-- WINDOWS 10 -->
 
-<div class="product-card"
-onclick="window.open('https://www.microsoft.com/software-download/windows10','_blank')">
+            <div class="product-card"
+                onclick="window.open('https://www.microsoft.com/software-download/windows10','_blank')">
 
-<div class="badge">NEW</div>
+                <div class="badge">NEW</div>
 
-<img class="product-image"
-src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_logo_-_2012.svg">
+                <img class="product-image"
+                    src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_logo_-_2012.svg">
 
-<div class="product-name">
-Windows 10 22H2 English x64 ISO
-</div>
+                <div class="product-name">
+                    Windows 10 22H2 English x64 ISO
+                </div>
 
-<div class="product-info">
-Microsoft Windows 10 64bit
-</div>
+                <div class="product-info">
+                    Microsoft Windows 10 64bit
+                </div>
 
-<div class="download-group">
+                <div class="download-group">
 
-<a class="download-btn drive-btn"
-href="https://drive.google.com/file/d/1rIAHvCS-6X83x5rg6M04415Jb2MpeE_x/view?usp=drive_link"
-target="_blank">
+                    <a class="download-btn drive-btn"
+                        href="https://drive.google.com/file/d/1rIAHvCS-6X83x5rg6M04415Jb2MpeE_x/view?usp=drive_link"
+                        target="_blank">
 
-<i class="fa-brands fa-google-drive"></i>
-Drive
+                        <i class="fa-brands fa-google-drive"></i>
+                        Drive
 
-</a>
+                    </a>
 
-<a class="download-btn fshare-btn"
-href="https://www.fshare.vn/file/BKQQ7GEFOUZ3?token=1779436630"
-target="_blank">
+                    <a class="download-btn fshare-btn" href="https://www.fshare.vn/file/BKQQ7GEFOUZ3?token=1779436630"
+                        target="_blank">
 
-<i class="fa-solid fa-cloud-arrow-down"></i>
-Fshare
+                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                        Fshare
 
-</a>
+                    </a>
 
-</div>
+                </div>
 
-</div>
+            </div>
 
-<!-- WINDOWS 11 -->
+            <!-- WINDOWS 11 -->
 
-<div class="product-card"
-onclick="window.open('https://www.microsoft.com/software-download/windows11','_blank')">
+            <div class="product-card"
+                onclick="window.open('https://www.microsoft.com/software-download/windows11','_blank')">
 
-<div class="badge">NEW</div>
+                <div class="badge">NEW</div>
 
-<img class="product-image"
-src="https://taimienphi.vn/tmp/cf/images/2021/ba/10/7/windows-11-logo.png">
+                <img class="product-image" src="https://taimienphi.vn/tmp/cf/images/2021/ba/10/7/windows-11-logo.png">
 
-<div class="product-name">
-Windows 11 25H2 English x64 ISO
-</div>
+                <div class="product-name">
+                    Windows 11 25H2 English x64 ISO
+                </div>
 
-<div class="product-info">
-Microsoft Windows 11 64bit
-</div>
+                <div class="product-info">
+                    Microsoft Windows 11 64bit
+                </div>
 
-<div class="download-group">
+                <div class="download-group">
 
-<a class="download-btn drive-btn"
-href="https://drive.google.com/file/d/1kqHV0WnTlKaNi5h-yTKbFxJXmvQhdyzg/view?usp=drive_link"
-target="_blank">
+                    <a class="download-btn drive-btn"
+                        href="https://drive.google.com/file/d/1kqHV0WnTlKaNi5h-yTKbFxJXmvQhdyzg/view?usp=drive_link"
+                        target="_blank">
 
-<i class="fa-brands fa-google-drive"></i>
-Drive
+                        <i class="fa-brands fa-google-drive"></i>
+                        Drive
 
-</a>
+                    </a>
 
-<a class="download-btn fshare-btn"
-href="https://www.fshare.vn/file/KOGWXQKDW6UH?token=1779436604"
-target="_blank">
+                    <a class="download-btn fshare-btn" href="https://www.fshare.vn/file/KOGWXQKDW6UH?token=1779436604"
+                        target="_blank">
 
-<i class="fa-solid fa-cloud-arrow-down"></i>
-Fshare
+                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                        Fshare
 
-</a>
+                    </a>
 
-</div>
+                </div>
 
-</div>
+            </div>
 
-<!-- CHROME -->
+            <!-- CHROME -->
 
-<div class="product-card"
-onclick="window.open('https://www.google.com/chrome/','_blank')">
+            <div class="product-card" onclick="window.open('https://www.google.com/chrome/','_blank')">
 
-<img class="product-image"
-src="https://upload.wikimedia.org/wikipedia/commons/8/87/Google_Chrome_icon_%282011%29.png">
+                <img class="product-image"
+                    src="https://upload.wikimedia.org/wikipedia/commons/8/87/Google_Chrome_icon_%282011%29.png">
 
-<div class="product-name">
-ChromeSetup.exe
-</div>
+                <div class="product-name">
+                    ChromeSetup.exe
+                </div>
 
-<div class="product-info">
-Google Chrome Browser
-</div>
+                <div class="product-info">
+                    Google Chrome Browser
+                </div>
 
-<div class="download-group">
+                <div class="download-group">
 
-<a class="download-btn drive-btn"
-href="https://drive.google.com/file/d/1MYy9hLGd10zeCDmrX7C0n07D4BM-o3vB/view?usp=drive_link"
-target="_blank">
+                    <a class="download-btn drive-btn"
+                        href="https://drive.google.com/file/d/1MYy9hLGd10zeCDmrX7C0n07D4BM-o3vB/view?usp=drive_link"
+                        target="_blank">
 
-<i class="fa-brands fa-google-drive"></i>
-Drive
+                        <i class="fa-brands fa-google-drive"></i>
+                        Drive
 
-</a>
+                    </a>
 
-<a class="download-btn fshare-btn"
-href="#"
-target="_blank">
+                    <a class="download-btn fshare-btn" href="#" target="_blank">
 
-<i class="fa-solid fa-cloud-arrow-down"></i>
-Fshare
+                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                        Fshare
 
-</a>
+                    </a>
 
-</div>
+                </div>
 
-</div>
+            </div>
 
-<!-- COCCOC -->
+            <!-- COCCOC -->
 
-<div class="product-card"
-onclick="window.open('https://coccoc.com/vi/download','_blank')">
+            <div class="product-card" onclick="window.open('https://coccoc.com/vi/download','_blank')">
 
-<img class="product-image"
-src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHM0OYfiFeMI2p9MWie0CvL99U4GA1gf6_kayTt_kBblFwHwo8BW8JXlqfnYxKPmmBagZQgyGC2_jkTZ8nDKXM2PY.3B_yfQRYeg2jMDqwWJw9SQuRr36v1Um.SsreqTU9ECPRsCZjcP2aPNQNPGZSww-&format=source">
+                <img class="product-image"
+                    src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHM0OYfiFeMI2p9MWie0CvL99U4GA1gf6_kayTt_kBblFwHwo8BW8JXlqfnYxKPmmBagZQgyGC2_jkTZ8nDKXM2PY.3B_yfQRYeg2jMDqwWJw9SQuRr36v1Um.SsreqTU9ECPRsCZjcP2aPNQNPGZSww-&format=source">
 
-<div class="product-name">
-CocCocSetup.exe
-</div>
+                <div class="product-name">
+                    CocCocSetup.exe
+                </div>
 
-<div class="product-info">
-Trình duyệt Cốc Cốc
-</div>
+                <div class="product-info">
+                    Trình duyệt Cốc Cốc
+                </div>
 
-<div class="download-group">
+                <div class="download-group">
 
-<a class="download-btn drive-btn"
-href="https://drive.google.com/file/d/1rLtHp67wRMvFmn3eRfwjB8iP0GmeLBBU/view?usp=drive_link"
-target="_blank">
+                    <a class="download-btn drive-btn"
+                        href="https://drive.google.com/file/d/1rLtHp67wRMvFmn3eRfwjB8iP0GmeLBBU/view?usp=drive_link"
+                        target="_blank">
 
-<i class="fa-brands fa-google-drive"></i>
-Drive
+                        <i class="fa-brands fa-google-drive"></i>
+                        Drive
 
-</a>
+                    </a>
 
-<a class="download-btn fshare-btn"
-href="#"
-target="_blank">
+                    <a class="download-btn fshare-btn" href="#" target="_blank">
 
-<i class="fa-solid fa-cloud-arrow-down"></i>
-Fshare
+                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                        Fshare
 
-</a>
+                    </a>
 
-</div>
+                </div>
 
-</div>
+            </div>
 
-<!-- FOXIT -->
+            <!-- FOXIT -->
 
-<div class="product-card"
-onclick="window.open('https://www.foxit.com/pdf-reader/','_blank')">
+            <div class="product-card" onclick="window.open('https://www.foxit.com/pdf-reader/','_blank')">
 
-<img class="product-image"
-src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHM0OYfiFeMI2p9MWie0CvL99U4GA1gf6_kayTt_kBblFwHwo8BW8JXlqfnYxKPmmBTuhe3y__RCMTX6VQQ6dJnj8c9oUT9swTGtofuJIo6BUghDnFEeyimDSjdWkf.mNofyO1rLgG.osgDyOJPON2Ek-&format=source">
+                <img class="product-image"
+                    src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHM0OYfiFeMI2p9MWie0CvL99U4GA1gf6_kayTt_kBblFwHwo8BW8JXlqfnYxKPmmBTuhe3y__RCMTX6VQQ6dJnj8c9oUT9swTGtofuJIo6BUghDnFEeyimDSjdWkf.mNofyO1rLgG.osgDyOJPON2Ek-&format=source">
 
-<div class="product-name">
-Foxit PDF Reader
-</div>
+                <div class="product-name">
+                    Foxit PDF Reader
+                </div>
 
-<div class="product-info">
-PDF Reader & Editor
-</div>
+                <div class="product-info">
+                    PDF Reader & Editor
+                </div>
 
-<div class="download-group">
+                <div class="download-group">
 
-<a class="download-btn drive-btn"
-href="https://drive.google.com/file/d/1GqekY_3rwbhWnm9kvDXgEfOnFg5vI30j/view?usp=drive_link"
-target="_blank">
+                    <a class="download-btn drive-btn"
+                        href="https://drive.google.com/file/d/1GqekY_3rwbhWnm9kvDXgEfOnFg5vI30j/view?usp=drive_link"
+                        target="_blank">
 
-<i class="fa-brands fa-google-drive"></i>
-Drive
+                        <i class="fa-brands fa-google-drive"></i>
+                        Drive
 
-</a>
+                    </a>
 
-<a class="download-btn fshare-btn"
-href="#"
-target="_blank">
+                    <a class="download-btn fshare-btn" href="#" target="_blank">
 
-<i class="fa-solid fa-cloud-arrow-down"></i>
-Fshare
+                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                        Fshare
 
-</a>
+                    </a>
 
-</div>
+                </div>
 
-</div>
+            </div>
 
-<!-- UNIKEY -->
+            <!-- UNIKEY -->
 
-<div class="product-card"
-onclick="window.open('https://www.unikey.org/download.html','_blank')">
+            <div class="product-card" onclick="window.open('https://www.unikey.org/download.html','_blank')">
 
-<img class="product-image"
-src="https://cdn.tgdd.vn/2020/11/GameApp/download-unikey-moi-nhat-200x200-1.jpg">
+                <img class="product-image"
+                    src="https://cdn.tgdd.vn/2020/11/GameApp/download-unikey-moi-nhat-200x200-1.jpg">
 
-<div class="product-name">
-UniKey 4RC2
-</div>
+                <div class="product-name">
+                    UniKey 4RC2
+                </div>
 
-<div class="product-info">
-Bộ gõ tiếng Việt UniKey
-</div>
+                <div class="product-info">
+                    Bộ gõ tiếng Việt UniKey
+                </div>
 
-<div class="download-group">
+                <div class="download-group">
 
-<a class="download-btn drive-btn"
-href="https://drive.google.com/file/d/1r2lf99YK4mLt7ZQmUXzhUEUEPR7FLq7m/view?usp=drive_link"
-target="_blank">
+                    <a class="download-btn drive-btn"
+                        href="https://drive.google.com/file/d/1r2lf99YK4mLt7ZQmUXzhUEUEPR7FLq7m/view?usp=drive_link"
+                        target="_blank">
 
-<i class="fa-brands fa-google-drive"></i>
-Drive
+                        <i class="fa-brands fa-google-drive"></i>
+                        Drive
 
-</a>
+                    </a>
 
-<a class="download-btn fshare-btn"
-href="#"
-target="_blank">
+                    <a class="download-btn fshare-btn" href="#" target="_blank">
 
-<i class="fa-solid fa-cloud-arrow-down"></i>
-Fshare
+                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                        Fshare
 
-</a>
+                    </a>
 
-</div>
+                </div>
 
-</div>
+            </div>
 
-<!-- WINRAR -->
+            <!-- WINRAR -->
 
-<div class="product-card"
-onclick="window.open('https://www.win-rar.com/download.html','_blank')">
+            <div class="product-card" onclick="window.open('https://www.win-rar.com/download.html','_blank')">
 
-<img class="product-image"
-src="https://sc.filehippo.net/images/t_app-icon-l/p/c3152528-96bf-11e6-b8e7-00163ed833e7/3833258526/winrar-64-icon.png">
+                <img class="product-image"
+                    src="https://sc.filehippo.net/images/t_app-icon-l/p/c3152528-96bf-11e6-b8e7-00163ed833e7/3833258526/winrar-64-icon.png">
 
-<div class="product-name">
-WinRAR x64 7.22
-</div>
+                <div class="product-name">
+                    WinRAR x64 7.22
+                </div>
 
-<div class="product-info">
-Phần mềm giải nén WinRAR
-</div>
+                <div class="product-info">
+                    Phần mềm giải nén WinRAR
+                </div>
 
-<div class="download-group">
+                <div class="download-group">
 
-<a class="download-btn drive-btn"
-href="https://drive.google.com/file/d/1V8OPU-lsKSgkcFS4dMGQrvetD70smenK/view?usp=drive_link"
-target="_blank">
+                    <a class="download-btn drive-btn"
+                        href="https://drive.google.com/file/d/1V8OPU-lsKSgkcFS4dMGQrvetD70smenK/view?usp=drive_link"
+                        target="_blank">
 
-<i class="fa-brands fa-google-drive"></i>
-Drive
+                        <i class="fa-brands fa-google-drive"></i>
+                        Drive
 
-</a>
+                    </a>
 
-<a class="download-btn fshare-btn"
-href="#"
-target="_blank">
+                    <a class="download-btn fshare-btn" href="#" target="_blank">
 
-<i class="fa-solid fa-cloud-arrow-down"></i>
-Fshare
+                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                        Fshare
 
-</a>
+                    </a>
 
-</div>
+                </div>
 
-</div>
+            </div>
 
-<!-- ZALO -->
+            <!-- ZALO -->
 
-<div class="product-card"
-onclick="window.open('https://zalo.me/pc','_blank')">
+            <div class="product-card" onclick="window.open('https://zalo.me/pc','_blank')">
 
-<img class="product-image"
-src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg">
+                <img class="product-image" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg">
 
-<div class="product-name">
-Zalo Setup 26.5.10
-</div>
+                <div class="product-name">
+                    Zalo Setup 26.5.10
+                </div>
 
-<div class="product-info">
-Ứng dụng nhắn tin Zalo PC
-</div>
+                <div class="product-info">
+                    Ứng dụng nhắn tin Zalo PC
+                </div>
 
-<div class="download-group">
+                <div class="download-group">
 
-<a class="download-btn drive-btn"
-href="https://drive.google.com/file/d/12gGlijTFLVNIW3LS0RMSu5jbG4wrYJIz/view?usp=drive_link"
-target="_blank">
+                    <a class="download-btn drive-btn"
+                        href="https://drive.google.com/file/d/12gGlijTFLVNIW3LS0RMSu5jbG4wrYJIz/view?usp=drive_link"
+                        target="_blank">
 
-<i class="fa-brands fa-google-drive"></i>
-Drive
+                        <i class="fa-brands fa-google-drive"></i>
+                        Drive
 
-</a>
+                    </a>
 
-<a class="download-btn fshare-btn"
-href="#"
-target="_blank">
+                    <a class="download-btn fshare-btn" href="#" target="_blank">
 
-<i class="fa-solid fa-cloud-arrow-down"></i>
-Fshare
+                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                        Fshare
 
-</a>
+                    </a>
 
-</div>
+                </div>
 
-</div>
+            </div>
 
-</div>
+            <!-- ULTRAVIEW -->
 
-</div>
+            <div class="product-card" onclick="window.open('https://www.ultraviewer.net/vi/download.html','_blank')">
 
-<script>
+                <img class="product-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTbONMaF_6CzHXjWVsF_LIEcGvnDg-bzKN3g&s">
 
-/* SEARCH */
+                <div class="product-name">
+                    UltraViewer 6.6.124
+                </div>
 
-const searchInput =
-document.getElementById("searchInput");
+                <div class="product-info">
+                    Phần mềm điều khiển máy tính từ xa
+                </div>
 
-const clearBtn =
-document.getElementById("clearBtn");
+                <div class="download-group">
 
-const products =
-document.querySelectorAll(".product-card");
+                    <a class="download-btn drive-btn"
+                        href="https://drive.google.com/file/d/17sNwI8pLYeLFub9UOg9RPTO8kyxN9A1P/view?usp=sharing"
+                        target="_blank">
 
-function filterProducts(){
+                        <i class="fa-brands fa-google-drive"></i>
+                        Drive
 
-    const keyword =
-    searchInput.value.toLowerCase();
+                    </a>
 
-    clearBtn.style.display =
-    keyword ? "block" : "none";
+                    <a class="download-btn fshare-btn" href="#" target="_blank">
 
-    products.forEach(product => {
+                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                        Fshare
 
-        const name =
-        product.querySelector(".product-name")
-        .textContent
-        .toLowerCase();
+                    </a>
 
-        if(name.includes(keyword)){
+                </div>
 
-            product.style.display = "";
+            </div>
 
-        }else{
+        </div>
 
-            product.style.display = "none";
+    </div>
+
+    <script>
+
+        /* SEARCH */
+
+        const searchInput =
+            document.getElementById("searchInput");
+
+        const clearBtn =
+            document.getElementById("clearBtn");
+
+        const products =
+            document.querySelectorAll(".product-card");
+
+        function filterProducts() {
+
+            const keyword =
+                searchInput.value.toLowerCase();
+
+            clearBtn.style.display =
+                keyword ? "block" : "none";
+
+            products.forEach(product => {
+
+                const name =
+                    product.querySelector(".product-name")
+                        .textContent
+                        .toLowerCase();
+
+                if (name.includes(keyword)) {
+
+                    product.style.display = "";
+
+                } else {
+
+                    product.style.display = "none";
+
+                }
+
+            });
 
         }
 
-    });
+        searchInput.addEventListener(
+            "keyup",
+            filterProducts
+        );
 
-}
+        clearBtn.addEventListener(
+            "click",
+            function () {
 
-searchInput.addEventListener(
-"keyup",
-filterProducts
-);
+                searchInput.value = "";
 
-clearBtn.addEventListener(
-"click",
-function(){
+                filterProducts();
 
-    searchInput.value = "";
+                searchInput.focus();
 
-    filterProducts();
+            }
+        );
 
-    searchInput.focus();
+        /* PREVENT CARD CLICK */
 
-}
-);
+        document.querySelectorAll(".download-btn")
+            .forEach(btn => {
 
-/* PREVENT CARD CLICK */
+                btn.addEventListener("click",
+                    function (e) {
 
-document.querySelectorAll(".download-btn")
-.forEach(btn => {
+                        e.stopPropagation();
 
-    btn.addEventListener("click",
-    function(e){
+                    });
 
-        e.stopPropagation();
+            });
 
-    });
-
-});
-
-</script>
+    </script>
 
 </body>
+
 </html>
