@@ -57,6 +57,7 @@
             font-weight: 700;
         }
 
+
         /* SEARCH */
 
         .search-wrapper {
@@ -91,6 +92,39 @@
             color: #777;
             cursor: pointer;
             display: none;
+        }
+
+        /* TABS */
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            border: none;
+            background: #ddd;
+            color: #333;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .tab-btn.active {
+            background: #2f5ca8;
+            color: #fff;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
         }
 
         /* GRID */
@@ -281,535 +315,804 @@
 
         </div>
 
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab('basic',this)">PHẦN MỀM CƠ BẢN</button>
+            <button class="tab-btn" onclick="showTab('game',this)">GAME</button>
+        </div>
+
         <!-- GRID -->
 
-        <div class="product-grid" id="productGrid">
+        <div class="tab-content active" id="basic">
+            <div class="product-grid" id="productGrid">
 
-            <!-- WINDOWS 10 -->
+                <!-- WINDOWS 10 -->
 
-            <div class="product-card"
-                onclick="window.open('https://www.microsoft.com/software-download/windows10','_blank')">
+                <div class="product-card"
+                    onclick="window.open('https://www.microsoft.com/software-download/windows10','_blank')">
 
-                <div class="badge">Microsoft</div>
+                    <div class="badge">Microsoft</div>
 
-                <img class="product-image"
-                    src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_logo_-_2012.svg">
+                    <img class="product-image"
+                        src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_logo_-_2012.svg">
 
-                <div class="product-name">
-                    Windows 10 22H2 English x64 ISO
+                    <div class="product-name">
+                        Windows 10 22H2 English x64 ISO
+                    </div>
+
+                    <div class="product-info">
+                        Microsoft Windows 10 64bit
+                    </div>
+
+                    <div class="download-group">
+
+                        <a class="download-btn drive-btn"
+                            href="https://drive.google.com/file/d/1rIAHvCS-6X83x5rg6M04415Jb2MpeE_x/view?usp=drive_link"
+                            target="_blank">
+
+                            <i class="fa-brands fa-google-drive"></i>
+                            Drive
+
+                        </a>
+
+                        <a class="download-btn fshare-btn"
+                            href="https://www.fshare.vn/file/BKQQ7GEFOUZ3?token=1779436630" target="_blank">
+
+                            <i class="fa-solid fa-cloud-arrow-down"></i>
+                            Fshare
+
+                        </a>
+
+                    </div>
+
                 </div>
 
-                <div class="product-info">
-                    Microsoft Windows 10 64bit
+                <!-- WINDOWS 11 -->
+
+                <div class="product-card"
+                    onclick="window.open('https://www.microsoft.com/software-download/windows11','_blank')">
+
+                    <div class="badge">Microsoft</div>
+
+                    <img class="product-image"
+                        src="https://taimienphi.vn/tmp/cf/images/2021/ba/10/7/windows-11-logo.png">
+
+                    <div class="product-name">
+                        Windows 11 25H2 English x64 ISO
+                    </div>
+
+                    <div class="product-info">
+                        Microsoft Windows 11 64bit
+                    </div>
+
+                    <div class="download-group">
+
+                        <a class="download-btn drive-btn"
+                            href="https://drive.google.com/file/d/1kqHV0WnTlKaNi5h-yTKbFxJXmvQhdyzg/view?usp=drive_link"
+                            target="_blank">
+
+                            <i class="fa-brands fa-google-drive"></i>
+                            Drive
+
+                        </a>
+
+                        <a class="download-btn fshare-btn"
+                            href="https://www.fshare.vn/file/KOGWXQKDW6UH?token=1779436604" target="_blank">
+
+                            <i class="fa-solid fa-cloud-arrow-down"></i>
+                            Fshare
+
+                        </a>
+
+                    </div>
+
                 </div>
 
-                <div class="download-group">
+                <!-- OFFICE 365 -->
 
-                    <a class="download-btn drive-btn"
-                        href="https://drive.google.com/file/d/1rIAHvCS-6X83x5rg6M04415Jb2MpeE_x/view?usp=drive_link"
-                        target="_blank">
+                <div class="product-card"
+                    onclick="window.open('https://www.microsoft.com/vi-vn/microsoft-365/download-office','_blank')">
 
-                        <i class="fa-brands fa-google-drive"></i>
-                        Drive
+                    <div class="badge">Microsoft</div>
 
-                    </a>
+                    <img class="product-image"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkfNV1YtiGc-HUrSF4OfHIX50fUSmXWPWP2g&s">
 
-                    <a class="download-btn fshare-btn" href="https://www.fshare.vn/file/BKQQ7GEFOUZ3?token=1779436630"
-                        target="_blank">
+                    <div class="product-name">
+                        Microsoft Office 365
+                    </div>
+
+                    <div class="product-info">
+                        Word, Excel, PowerPoint và nhiều ứng dụng khác với Microsoft 365
+                    </div>
+
+                    <div class="download-group">
+
+                        <a class="download-btn drive-btn"
+                            href="https://drive.google.com/file/d/1owsc8RoeKSgvGpp81HN5QyBsAhsupuIv/view?usp=sharing"
+                            target="_blank">
+
+                            <i class="fa-brands fa-google-drive"></i>
+                            Drive
+
+                        </a>
+
+                        <a class="download-btn fshare-btn" href="https://www.fshare.vn/file/7RWXSUL7YV9D"
+                            target="_blank">
+
+                            <i class="fa-solid fa-cloud-arrow-down"></i>
+                            Fshare
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- WPS Office -->
+
+                <div class="product-card"
+                    onclick="window.open('https://www.wps.com/?utm_source=affiliate&utm_medium=admitad&MediaId=850412&irclickid=CjwKCAjw8uTQBhAdEiwAVvtJyj41i338Qc1DfQbUQC0OxKlCnRCCob3WKgoYE68Hb-yEJJ2hWWzo4xoCGsUQAvD_BwE&gad_source=1&gad_campaignid=23008624976&gbraid=0AAAABBLoP3-TEaYLlEnLcLgUJs0CeGUem&gclid=CjwKCAjw8uTQBhAdEiwAVvtJyj41i338Qc1DfQbUQC0OxKlCnRCCob3WKgoYE68Hb-yEJJ2hWWzo4xoCGsUQAvD_BwE','_blank')">
+
+                    <div class="badge">Office</div>
+
+                    <img class="product-image"
+                        src="https://store-images.s-microsoft.com/image/apps.13038.14368399110871650.cb9f96e8-f73e-4ff2-a660-429763c16a84.4bd999ed-3263-4a75-8583-cadc59597944?h=210">
+
+                    <div class="product-name">
+                        WPS Office
+                    </div>
+
+                    <div class="product-info">
+                        WPS Office Suite for PC Windows, macOS, linux，Mobile android and tablets
+                    </div>
+
+                    <div class="download-group">
+
+                        <a class="download-btn drive-btn"
+                            href="https://drive.google.com/file/d/1wVV2nNbGoqp2SChp6w4E9OU4BaQvk_18/view?usp=sharing"
+                            target="_blank">
+
+                            <i class="fa-brands fa-google-drive"></i>
+                            Drive
+
+                        </a>
+
+                        <!-- <a class="download-btn fshare-btn" href="https://www.fshare.vn/file/7RWXSUL7YV9D" target="_blank">
 
                         <i class="fa-solid fa-cloud-arrow-down"></i>
                         Fshare
 
-                    </a>
+                    </a> -->
+
+                    </div>
 
                 </div>
 
-            </div>
+                <!-- Bkav -->
 
-            <!-- WINDOWS 11 -->
+                <div class="product-card" onclick="window.open('https://www.bkav.com/download','_blank')">
 
-            <div class="product-card"
-                onclick="window.open('https://www.microsoft.com/software-download/windows11','_blank')">
+                    <img class="product-image"
+                        src="https://www.bkav.com/WebBkav/bkavpro/img-banner-bkavpro-mobile-2024.png">
 
-                <div class="badge">Microsoft</div>
+                    <div class="product-name">
+                        Bkav Pro
+                    </div>
 
-                <img class="product-image" src="https://taimienphi.vn/tmp/cf/images/2021/ba/10/7/windows-11-logo.png">
+                    <div class="product-info">
+                        Bkav Pro 2026 bảo vệ thông tin cá nhân, chống lừa đảo. An toàn dữ liệu, bảo vệ máy tính toàn
+                        diện.
+                    </div>
 
-                <div class="product-name">
-                    Windows 11 25H2 English x64 ISO
-                </div>
+                    <div class="download-group">
 
-                <div class="product-info">
-                    Microsoft Windows 11 64bit
-                </div>
+                        <a class="download-btn drive-btn"
+                            href="https://drive.google.com/file/d/1c6u-uJ4NmKd1uZUp5kydV4SvUID_XCVc/view?usp=drive_link"
+                            target="_blank">
 
-                <div class="download-group">
+                            <i class="fa-brands fa-google-drive"></i>
+                            Drive
 
-                    <a class="download-btn drive-btn"
-                        href="https://drive.google.com/file/d/1kqHV0WnTlKaNi5h-yTKbFxJXmvQhdyzg/view?usp=drive_link"
-                        target="_blank">
-
-                        <i class="fa-brands fa-google-drive"></i>
-                        Drive
-
-                    </a>
-
-                    <a class="download-btn fshare-btn" href="https://www.fshare.vn/file/KOGWXQKDW6UH?token=1779436604"
-                        target="_blank">
-
-                        <i class="fa-solid fa-cloud-arrow-down"></i>
-                        Fshare
-
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- OFFICE 365 -->
-
-            <div class="product-card"
-                onclick="window.open('https://www.microsoft.com/vi-vn/microsoft-365/download-office','_blank')">
-
-                <div class="badge">Microsoft</div>
-
-                <img class="product-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkfNV1YtiGc-HUrSF4OfHIX50fUSmXWPWP2g&s">
-
-                <div class="product-name">
-                    Microsoft Office 365
-                </div>
-
-                <div class="product-info">
-                    Word, Excel, PowerPoint và nhiều ứng dụng khác với Microsoft 365
-                </div>
-
-                <div class="download-group">
-
-                    <a class="download-btn drive-btn"
-                        href="https://drive.google.com/file/d/1owsc8RoeKSgvGpp81HN5QyBsAhsupuIv/view?usp=sharing"
-                        target="_blank">
-
-                        <i class="fa-brands fa-google-drive"></i>
-                        Drive
-
-                    </a>
-
-                    <a class="download-btn fshare-btn" href="https://www.fshare.vn/file/7RWXSUL7YV9D"
-                        target="_blank">
-
-                        <i class="fa-solid fa-cloud-arrow-down"></i>
-                        Fshare
-
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- WPS Office -->
-
-            <div class="product-card"
-                onclick="window.open('https://www.wps.com/?utm_source=affiliate&utm_medium=admitad&MediaId=850412&irclickid=CjwKCAjw8uTQBhAdEiwAVvtJyj41i338Qc1DfQbUQC0OxKlCnRCCob3WKgoYE68Hb-yEJJ2hWWzo4xoCGsUQAvD_BwE&gad_source=1&gad_campaignid=23008624976&gbraid=0AAAABBLoP3-TEaYLlEnLcLgUJs0CeGUem&gclid=CjwKCAjw8uTQBhAdEiwAVvtJyj41i338Qc1DfQbUQC0OxKlCnRCCob3WKgoYE68Hb-yEJJ2hWWzo4xoCGsUQAvD_BwE','_blank')">
-
-                <div class="badge">Office</div>
-
-                <img class="product-image" src="https://store-images.s-microsoft.com/image/apps.13038.14368399110871650.cb9f96e8-f73e-4ff2-a660-429763c16a84.4bd999ed-3263-4a75-8583-cadc59597944?h=210">
-
-                <div class="product-name">
-                    WPS Office
-                </div>
-
-                <div class="product-info">
-                    WPS Office Suite for PC Windows, macOS, linux，Mobile android and tablets
-                </div>
-
-                <div class="download-group">
-
-                    <a class="download-btn drive-btn"
-                        href="https://drive.google.com/file/d/1wVV2nNbGoqp2SChp6w4E9OU4BaQvk_18/view?usp=sharing"
-                        target="_blank">
-
-                        <i class="fa-brands fa-google-drive"></i>
-                        Drive
-
-                    </a>
-
-                    <a class="download-btn fshare-btn" href="https://www.fshare.vn/file/7RWXSUL7YV9D"
-                        target="_blank">
-
-                        <i class="fa-solid fa-cloud-arrow-down"></i>
-                        Fshare
-
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- Bkav -->
-
-            <div class="product-card" onclick="window.open('https://www.bkav.com/download','_blank')">
-
-                <img class="product-image"
-                    src="https://www.bkav.com/WebBkav/bkavpro/img-banner-bkavpro-mobile-2024.png">
-
-                <div class="product-name">
-                    Bkav Pro
-                </div>
-
-                <div class="product-info">
-                    Bkav Pro 2026 bảo vệ thông tin cá nhân, chống lừa đảo. An toàn dữ liệu, bảo vệ máy tính toàn diện.
-                </div>
-
-                <div class="download-group">
-
-                    <a class="download-btn drive-btn"
-                        href="https://drive.google.com/file/d/1c6u-uJ4NmKd1uZUp5kydV4SvUID_XCVc/view?usp=drive_link"
-                        target="_blank">
-
-                        <i class="fa-brands fa-google-drive"></i>
-                        Drive
-
-                    </a>
-
+                        </a>
+                        <!-- 
                     <a class="download-btn fshare-btn" href="#" target="_blank">
 
                         <i class="fa-solid fa-cloud-arrow-down"></i>
                         Fshare
 
-                    </a>
+                    </a> -->
+
+                    </div>
 
                 </div>
 
-            </div>
+                <!-- Kaspersky -->
 
-            <!-- Kaspersky -->
+                <div class="product-card" onclick="window.open('https://www.kaspersky.com.vn/','_blank')">
 
-            <div class="product-card" onclick="window.open('https://www.kaspersky.com.vn/','_blank')">
+                    <img class="product-image"
+                        src="https://http2.mlstatic.com/D_NQ_NP_890566-MLM74826299048_032024-O.webp">
 
-                <img class="product-image"
-                    src="https://http2.mlstatic.com/D_NQ_NP_890566-MLM74826299048_032024-O.webp">
+                    <div class="product-name">
+                        Kaspersky
+                    </div>
 
-                <div class="product-name">
-                    Kaspersky
+                    <div class="product-info">
+                        Kaspersky Việt Nam cung cấp các giải pháp bảo mật mạng và diệt Virus cho máy tính, điện thoại
+                    </div>
+
+                    <div class="download-group">
+
+                        <a class="download-btn drive-btn" href="https://kaspersky.nts.com.vn/tai-phan-mem-kaspersky"
+                            target="_blank">
+
+                            <i class="fa-brands fa-google-drive"></i>
+                            Drive
+
+                        </a>
+
+                        <!-- <a class="download-btn fshare-btn" href="#" target="_blank">
+
+                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                        Fshare
+
+                    </a> -->
+
+                    </div>
+
                 </div>
 
-                <div class="product-info">
-                    Kaspersky Việt Nam cung cấp các giải pháp bảo mật mạng và diệt Virus cho máy tính, điện thoại
+                <!-- CHROME -->
+
+                <div class="product-card" onclick="window.open('https://www.google.com/intl/vi_vn/chrome/','_blank')">
+
+                    <img class="product-image"
+                        src="https://upload.wikimedia.org/wikipedia/commons/8/87/Google_Chrome_icon_%282011%29.png">
+
+                    <div class="product-name">
+                        ChromeSetup.exe
+                    </div>
+
+                    <div class="product-info">
+                        Google Chrome Browser
+                    </div>
+
+                    <div class="download-group">
+
+                        <a class="download-btn drive-btn"
+                            href="https://drive.google.com/file/d/1MYy9hLGd10zeCDmrX7C0n07D4BM-o3vB/view?usp=drive_link"
+                            target="_blank">
+
+                            <i class="fa-brands fa-google-drive"></i>
+                            Drive
+
+                        </a>
+
+                        <!-- <a class="download-btn fshare-btn" href="#" target="_blank">
+
+                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                        Fshare
+
+                    </a> -->
+
+                    </div>
+
                 </div>
 
-                <div class="download-group">
+                <!-- COCCOC -->
 
-                    <a class="download-btn drive-btn"
-                        href="https://kaspersky.nts.com.vn/tai-phan-mem-kaspersky"
-                        target="_blank">
+                <div class="product-card" onclick="window.open('https://coccoc.com/vi/download','_blank')">
 
-                        <i class="fa-brands fa-google-drive"></i>
-                        Drive
+                    <img class="product-image"
+                        src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHM0OYfiFeMI2p9MWie0CvL99U4GA1gf6_kayTt_kBblFwHwo8BW8JXlqfnYxKPmmBagZQgyGC2_jkTZ8nDKXM2PY.3B_yfQRYeg2jMDqwWJw9SQuRr36v1Um.SsreqTU9ECPRsCZjcP2aPNQNPGZSww-&format=source">
 
-                    </a>
+                    <div class="product-name">
+                        CocCocSetup.exe
+                    </div>
 
+                    <div class="product-info">
+                        Trình duyệt Cốc Cốc
+                    </div>
+
+                    <div class="download-group">
+
+                        <a class="download-btn drive-btn"
+                            href="https://drive.google.com/file/d/1rLtHp67wRMvFmn3eRfwjB8iP0GmeLBBU/view?usp=drive_link"
+                            target="_blank">
+
+                            <i class="fa-brands fa-google-drive"></i>
+                            Drive
+
+                        </a>
+                        <!-- 
                     <a class="download-btn fshare-btn" href="#" target="_blank">
 
                         <i class="fa-solid fa-cloud-arrow-down"></i>
                         Fshare
 
-                    </a>
+                    </a> -->
+
+                    </div>
 
                 </div>
 
-            </div>
+                <!-- FOXIT -->
 
-            <!-- CHROME -->
+                <div class="product-card" onclick="window.open('https://www.foxit.com/pdf-reader/','_blank')">
 
-            <div class="product-card" onclick="window.open('https://www.google.com/intl/vi_vn/chrome/','_blank')">
+                    <img class="product-image"
+                        src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHM0OYfiFeMI2p9MWie0CvL99U4GA1gf6_kayTt_kBblFwHwo8BW8JXlqfnYxKPmmBTuhe3y__RCMTX6VQQ6dJnj8c9oUT9swTGtofuJIo6BUghDnFEeyimDSjdWkf.mNofyO1rLgG.osgDyOJPON2Ek-&format=source">
 
-                <img class="product-image"
-                    src="https://upload.wikimedia.org/wikipedia/commons/8/87/Google_Chrome_icon_%282011%29.png">
+                    <div class="product-name">
+                        Foxit PDF Reader
+                    </div>
 
-                <div class="product-name">
-                    ChromeSetup.exe
-                </div>
+                    <div class="product-info">
+                        PDF Reader & Editor
+                    </div>
 
-                <div class="product-info">
-                    Google Chrome Browser
-                </div>
+                    <div class="download-group">
 
-                <div class="download-group">
+                        <a class="download-btn drive-btn"
+                            href="https://drive.google.com/file/d/1GqekY_3rwbhWnm9kvDXgEfOnFg5vI30j/view?usp=drive_link"
+                            target="_blank">
 
-                    <a class="download-btn drive-btn"
-                        href="https://drive.google.com/file/d/1MYy9hLGd10zeCDmrX7C0n07D4BM-o3vB/view?usp=drive_link"
-                        target="_blank">
+                            <i class="fa-brands fa-google-drive"></i>
+                            Drive
 
-                        <i class="fa-brands fa-google-drive"></i>
-                        Drive
+                        </a>
 
-                    </a>
-
-                    <a class="download-btn fshare-btn" href="#" target="_blank">
+                        <!-- <a class="download-btn fshare-btn" href="#" target="_blank">
 
                         <i class="fa-solid fa-cloud-arrow-down"></i>
                         Fshare
 
-                    </a>
+                    </a> -->
+
+                    </div>
 
                 </div>
 
-            </div>
+                <!-- UNIKEY -->
 
-            <!-- COCCOC -->
+                <div class="product-card" onclick="window.open('https://www.unikey.org/download.html','_blank')">
 
-            <div class="product-card" onclick="window.open('https://coccoc.com/vi/download','_blank')">
+                    <img class="product-image"
+                        src="https://cdn.tgdd.vn/2020/11/GameApp/download-unikey-moi-nhat-200x200-1.jpg">
 
-                <img class="product-image"
-                    src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHM0OYfiFeMI2p9MWie0CvL99U4GA1gf6_kayTt_kBblFwHwo8BW8JXlqfnYxKPmmBagZQgyGC2_jkTZ8nDKXM2PY.3B_yfQRYeg2jMDqwWJw9SQuRr36v1Um.SsreqTU9ECPRsCZjcP2aPNQNPGZSww-&format=source">
+                    <div class="product-name">
+                        UniKey 4RC2
+                    </div>
 
-                <div class="product-name">
-                    CocCocSetup.exe
-                </div>
+                    <div class="product-info">
+                        Bộ gõ tiếng Việt UniKey
+                    </div>
 
-                <div class="product-info">
-                    Trình duyệt Cốc Cốc
-                </div>
+                    <div class="download-group">
 
-                <div class="download-group">
+                        <a class="download-btn drive-btn"
+                            href="https://drive.google.com/file/d/1r2lf99YK4mLt7ZQmUXzhUEUEPR7FLq7m/view?usp=drive_link"
+                            target="_blank">
 
-                    <a class="download-btn drive-btn"
-                        href="https://drive.google.com/file/d/1rLtHp67wRMvFmn3eRfwjB8iP0GmeLBBU/view?usp=drive_link"
-                        target="_blank">
+                            <i class="fa-brands fa-google-drive"></i>
+                            Drive
 
-                        <i class="fa-brands fa-google-drive"></i>
-                        Drive
+                        </a>
 
-                    </a>
-
-                    <a class="download-btn fshare-btn" href="#" target="_blank">
+                        <!-- <a class="download-btn fshare-btn" href="#" target="_blank">
 
                         <i class="fa-solid fa-cloud-arrow-down"></i>
                         Fshare
 
-                    </a>
+                    </a> -->
+
+                    </div>
 
                 </div>
 
-            </div>
+                <!-- WINRAR -->
 
-            <!-- FOXIT -->
+                <div class="product-card" onclick="window.open('https://www.win-rar.com/download.html','_blank')">
 
-            <div class="product-card" onclick="window.open('https://www.foxit.com/pdf-reader/','_blank')">
+                    <img class="product-image"
+                        src="https://sc.filehippo.net/images/t_app-icon-l/p/c3152528-96bf-11e6-b8e7-00163ed833e7/3833258526/winrar-64-icon.png">
 
-                <img class="product-image"
-                    src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHM0OYfiFeMI2p9MWie0CvL99U4GA1gf6_kayTt_kBblFwHwo8BW8JXlqfnYxKPmmBTuhe3y__RCMTX6VQQ6dJnj8c9oUT9swTGtofuJIo6BUghDnFEeyimDSjdWkf.mNofyO1rLgG.osgDyOJPON2Ek-&format=source">
+                    <div class="product-name">
+                        WinRAR x64 7.22
+                    </div>
 
-                <div class="product-name">
-                    Foxit PDF Reader
-                </div>
+                    <div class="product-info">
+                        Phần mềm giải nén WinRAR
+                    </div>
 
-                <div class="product-info">
-                    PDF Reader & Editor
-                </div>
+                    <div class="download-group">
 
-                <div class="download-group">
+                        <a class="download-btn drive-btn"
+                            href="https://drive.google.com/file/d/1V8OPU-lsKSgkcFS4dMGQrvetD70smenK/view?usp=drive_link"
+                            target="_blank">
 
-                    <a class="download-btn drive-btn"
-                        href="https://drive.google.com/file/d/1GqekY_3rwbhWnm9kvDXgEfOnFg5vI30j/view?usp=drive_link"
-                        target="_blank">
+                            <i class="fa-brands fa-google-drive"></i>
+                            Drive
 
-                        <i class="fa-brands fa-google-drive"></i>
-                        Drive
+                        </a>
 
-                    </a>
-
-                    <a class="download-btn fshare-btn" href="#" target="_blank">
+                        <!-- <a class="download-btn fshare-btn" href="#" target="_blank">
 
                         <i class="fa-solid fa-cloud-arrow-down"></i>
                         Fshare
 
-                    </a>
+                    </a> -->
+
+                    </div>
 
                 </div>
 
-            </div>
+                <!-- ZALO -->
 
-            <!-- UNIKEY -->
+                <div class="product-card" onclick="window.open('https://zalo.me/pc','_blank')">
 
-            <div class="product-card" onclick="window.open('https://www.unikey.org/download.html','_blank')">
+                    <img class="product-image"
+                        src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg">
 
-                <img class="product-image"
-                    src="https://cdn.tgdd.vn/2020/11/GameApp/download-unikey-moi-nhat-200x200-1.jpg">
+                    <div class="product-name">
+                        Zalo Setup 26.5.10
+                    </div>
 
-                <div class="product-name">
-                    UniKey 4RC2
-                </div>
+                    <div class="product-info">
+                        Ứng dụng nhắn tin Zalo PC
+                    </div>
 
-                <div class="product-info">
-                    Bộ gõ tiếng Việt UniKey
-                </div>
+                    <div class="download-group">
 
-                <div class="download-group">
+                        <a class="download-btn drive-btn"
+                            href="https://drive.google.com/file/d/12gGlijTFLVNIW3LS0RMSu5jbG4wrYJIz/view?usp=drive_link"
+                            target="_blank">
 
-                    <a class="download-btn drive-btn"
-                        href="https://drive.google.com/file/d/1r2lf99YK4mLt7ZQmUXzhUEUEPR7FLq7m/view?usp=drive_link"
-                        target="_blank">
+                            <i class="fa-brands fa-google-drive"></i>
+                            Drive
 
-                        <i class="fa-brands fa-google-drive"></i>
-                        Drive
+                        </a>
 
-                    </a>
-
-                    <a class="download-btn fshare-btn" href="#" target="_blank">
+                        <!-- <a class="download-btn fshare-btn" href="#" target="_blank">
 
                         <i class="fa-solid fa-cloud-arrow-down"></i>
                         Fshare
 
-                    </a>
+                    </a> -->
+
+                    </div>
 
                 </div>
 
-            </div>
+                <!-- ULTRAVIEW -->
 
-            <!-- WINRAR -->
+                <div class="product-card"
+                    onclick="window.open('https://www.ultraviewer.net/vi/download.html','_blank')">
 
-            <div class="product-card" onclick="window.open('https://www.win-rar.com/download.html','_blank')">
+                    <img class="product-image"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTbONMaF_6CzHXjWVsF_LIEcGvnDg-bzKN3g&s">
 
-                <img class="product-image"
-                    src="https://sc.filehippo.net/images/t_app-icon-l/p/c3152528-96bf-11e6-b8e7-00163ed833e7/3833258526/winrar-64-icon.png">
+                    <div class="product-name">
+                        UltraViewer 6.6.124
+                    </div>
 
-                <div class="product-name">
-                    WinRAR x64 7.22
-                </div>
+                    <div class="product-info">
+                        Phần mềm điều khiển máy tính từ xa
+                    </div>
 
-                <div class="product-info">
-                    Phần mềm giải nén WinRAR
-                </div>
+                    <div class="download-group">
 
-                <div class="download-group">
+                        <a class="download-btn drive-btn"
+                            href="https://drive.google.com/file/d/17sNwI8pLYeLFub9UOg9RPTO8kyxN9A1P/view?usp=sharing"
+                            target="_blank">
 
-                    <a class="download-btn drive-btn"
-                        href="https://drive.google.com/file/d/1V8OPU-lsKSgkcFS4dMGQrvetD70smenK/view?usp=drive_link"
-                        target="_blank">
+                            <i class="fa-brands fa-google-drive"></i>
+                            Drive
 
-                        <i class="fa-brands fa-google-drive"></i>
-                        Drive
+                        </a>
 
-                    </a>
-
-                    <a class="download-btn fshare-btn" href="#" target="_blank">
+                        <!-- <a class="download-btn fshare-btn" href="#" target="_blank">
 
                         <i class="fa-solid fa-cloud-arrow-down"></i>
                         Fshare
 
-                    </a>
+                    </a> -->
+
+                    </div>
 
                 </div>
 
-            </div>
+                <!-- CoolerPlus A05 AI -->
 
-            <!-- ZALO -->
+                <div class="product-card" onclick="window.open('https://yun.wlai.vip/index_vi.html','_blank')">
 
-            <div class="product-card" onclick="window.open('https://zalo.me/pc','_blank')">
+                    <img class="product-image"
+                        src="https://cdn.hstatic.net/products/200000801931/1_5ddf7d9174fb4829ac05d904b3f292b1_master.jpg">
 
-                <img class="product-image" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg">
+                    <div class="product-name">
+                        CoolerPlus A05 AI
+                    </div>
 
-                <div class="product-name">
-                    Zalo Setup 26.5.10
-                </div>
+                    <div class="product-info">
+                        Chuột thông minh AI, Hỗ trợ Chat GPT, Tìm kiếm bằng giọng nói, Dịch văn bản...
+                    </div>
 
-                <div class="product-info">
-                    Ứng dụng nhắn tin Zalo PC
-                </div>
+                    <div class="download-group">
 
-                <div class="download-group">
+                        <a class="download-btn drive-btn"
+                            href="https://drive.google.com/file/d/1jo6FyTbnH4jbCONT1vFC5uG80GTQ62ba/view?usp=drive_link"
+                            target="_blank">
 
-                    <a class="download-btn drive-btn"
-                        href="https://drive.google.com/file/d/12gGlijTFLVNIW3LS0RMSu5jbG4wrYJIz/view?usp=drive_link"
-                        target="_blank">
+                            <i class="fa-brands fa-google-drive"></i>
+                            Drive
 
-                        <i class="fa-brands fa-google-drive"></i>
-                        Drive
+                        </a>
 
-                    </a>
-
-                    <a class="download-btn fshare-btn" href="#" target="_blank">
+                        <!-- <a class="download-btn fshare-btn" href="#" target="_blank">
 
                         <i class="fa-solid fa-cloud-arrow-down"></i>
                         Fshare
 
-                    </a>
+                    </a> -->
+
+                    </div>
 
                 </div>
 
             </div>
+        </div>
 
-            <!-- ULTRAVIEW -->
+        <div class="tab-content" id="game">
+            <div class="product-grid">
 
-            <div class="product-card" onclick="window.open('https://www.ultraviewer.net/vi/download.html','_blank')">
+                <!-- League of Legends -->
+                <div class="product-card"
+                    onclick="window.open('https://www.leagueoflegends.com/vi-vn/download/','_blank')">
 
-                <img class="product-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTbONMaF_6CzHXjWVsF_LIEcGvnDg-bzKN3g&s">
+                    <div class="badge">Riot Games</div>
 
-                <div class="product-name">
-                    UltraViewer 6.6.124
-                </div>
+                    <img class="product-image"
+                        src="https://upload.wikimedia.org/wikipedia/commons/d/d8/League_of_Legends_2019_vector.svg">
 
-                <div class="product-info">
-                    Phần mềm điều khiển máy tính từ xa
-                </div>
+                    <div class="product-name">
+                        Liên Minh Huyền Thoại
+                    </div>
 
-                <div class="download-group">
+                    <div class="product-info">
+                        League of Legends PC
+                    </div>
 
-                    <a class="download-btn drive-btn"
-                        href="https://drive.google.com/file/d/17sNwI8pLYeLFub9UOg9RPTO8kyxN9A1P/view?usp=sharing"
-                        target="_blank">
+                    <div class="download-group">
 
-                        <i class="fa-brands fa-google-drive"></i>
-                        Drive
+                        <a class="download-btn drive-btn"
+                            href="https://drive.google.com/file/d/1J1J9MFUFe3fIuJz17hXNvYcF27E6gXjI/view?usp=drive_link"
+                            target="_blank">
 
-                    </a>
+                            <i class="fa-solid fa-download"></i>
+                            Download
 
-                    <a class="download-btn fshare-btn" href="#" target="_blank">
+                        </a>
 
-                        <i class="fa-solid fa-cloud-arrow-down"></i>
-                        Fshare
-
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- CoolerPlus A05 AI -->
-
-            <div class="product-card" onclick="window.open('https://yun.wlai.vip/index_vi.html','_blank')">
-
-                <img class="product-image" src="https://cdn.hstatic.net/products/200000801931/1_5ddf7d9174fb4829ac05d904b3f292b1_master.jpg">
-
-                <div class="product-name">
-                    CoolerPlus A05 AI
-                </div>
-
-                <div class="product-info">
-                    Chuột thông minh AI, Hỗ trợ Chat GPT, Tìm kiếm bằng giọng nói, Dịch văn bản...
-                </div>
-
-                <div class="download-group">
-
-                    <a class="download-btn drive-btn"
-                        href="https://drive.google.com/file/d/1jo6FyTbnH4jbCONT1vFC5uG80GTQ62ba/view?usp=drive_link"
-                        target="_blank">
-
-                        <i class="fa-brands fa-google-drive"></i>
-                        Drive
-
-                    </a>
-
-                    <a class="download-btn fshare-btn" href="#" target="_blank">
-
-                        <i class="fa-solid fa-cloud-arrow-down"></i>
-                        Fshare
-
-                    </a>
+                    </div>
 
                 </div>
+
+                <!-- FC ONLINE -->
+                <div class="product-card"
+                    onclick="window.open('https://fconline.garena.vn/','_blank')">
+
+                    <div class="badge">Garena</div>
+
+                    <img class="product-image"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPXVIF_Dk5lR8MrlpA8Pu8DuYW07dcF5sBpw&s">
+
+                    <div class="product-name">
+                        FIFA Online 4
+                    </div>
+
+                    <div class="product-info">
+                        EA Sports FC Online
+                    </div>
+
+                    <div class="download-group">
+
+                        <a class="download-btn drive-btn"
+                            href="https://drive.google.com/file/d/1Yw3vQQwR6pikJz0AUErnzD3tITnttNte/view?usp=sharing"
+                            target="_blank">
+
+                            <i class="fa-solid fa-download"></i>
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </div>
+                <!-- Đột Kích Trong Tầm Ngắm -->
+                <div class="product-card"
+                    onclick="window.open('https://cf.goplay.vn/','_blank')">
+
+                    <div class="badge">CrossFire</div>
+
+                    <img class="product-image"
+                        src="https://images.steamusercontent.com/ugc/2304218742202785857/A8A3D2ECC3DFBA8657314A1542DD3BD74C15D814/?imw=512&imh=512&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true">
+
+                    <div class="product-name">
+                       Đột Kích Trong Tầm Ngắm
+                    </div>
+
+                    <div class="product-info">
+                        CrossFire Việt Nam
+                    </div>
+
+                    <div class="download-group">
+
+                        <a class="download-btn drive-btn"
+                            href="https://drive.google.com/file/d/1CuSoUOYne6plIYm46wH6BuXrpZ3e01A6/view?usp=drive_link"
+                            target="_blank">
+
+                            <i class="fa-solid fa-download"></i>
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </div>
+                <!-- Epic Games Launcher -->
+                <div class="product-card" onclick="window.open('https://store.epicgames.com/en-US/download','_blank')">
+
+                    <div class="badge">Epic Games</div>
+
+                    <img class="product-image"
+                        src="https://upload.wikimedia.org/wikipedia/commons/3/31/Epic_Games_logo.svg">
+
+                    <div class="product-name">
+                        Epic Games Launcher
+                    </div>
+
+                    <div class="product-info">
+                        Nền tảng tải và quản lý game Epic Games
+                    </div>
+
+                    <div class="download-group">
+
+                        <a class="download-btn drive-btn"
+                            href="https://drive.google.com/file/d/1wYakZDjk-0tFkyeHqJHcziE4_4am-BPE/view?usp=drive_link"
+                            target="_blank">
+
+                            <i class="fa-solid fa-download"></i>
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Steam -->
+                <div class="product-card" onclick="window.open('https://store.steampowered.com/about/','_blank')">
+
+                    <div class="badge">Valve</div>
+
+                    <img class="product-image"
+                        src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg">
+
+                    <div class="product-name">
+                        Steam
+                    </div>
+
+                    <div class="product-info">
+                        Nền tảng game trực tuyến Steam
+                    </div>
+
+                    <div class="download-group">
+
+                        <a class="download-btn drive-btn"
+                            href="https://drive.google.com/file/d/1Hv1Kfk1XJwWpY8Shpii3hzx6vFgW8cD0/view?usp=drive_link"
+                            target="_blank">
+
+                            <i class="fa-solid fa-download"></i>
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- NoxPlayer -->
+                <div class="product-card" onclick="window.open('https://www.bignox.com/','_blank')">
+
+                    <div class="badge">Nox</div>
+
+                    <img class="product-image"
+                        src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Nox_App_Player_Icon3.png">
+
+                    <div class="product-name">
+                        NoxPlayer
+                    </div>
+
+                    <div class="product-info">
+                        Giả lập Android trên Windows
+                    </div>
+
+                    <div class="download-group">
+
+                        <a class="download-btn drive-btn"
+                            href="https://drive.google.com/file/d/1LZt43LuODBEDJ56Ki52iwvXBd7Qeu5Rb/view?usp=drive_link"
+                            target="_blank">
+
+                            <i class="fa-solid fa-download"></i>
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- BlueStacks -->
+                <div class="product-card" onclick="window.open('https://www.bluestacks.com/','_blank')">
+
+                    <div class="badge">BlueStacks</div>
+
+                    <img class="product-image" src="https://www.computerhope.com/jargon/b/bluestacks.png">
+
+                    <div class="product-name">
+                        BlueStacks 5
+                    </div>
+
+                    <div class="product-info">
+                        Giả lập Android hiệu năng cao
+                    </div>
+
+                    <div class="download-group">
+
+                        <a class="download-btn drive-btn"
+                            href="https://drive.google.com/file/d/1n4DaBDhjoWMXd35q4_a4tjcUQqqOQhvB/view?usp=drive_link"
+                            target="_blank">
+
+                            <i class="fa-solid fa-download"></i>
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- LDPlayer -->
+                <div class="product-card" onclick="window.open('https://vn.ldplayer.net/','_blank')">
+
+                    <div class="badge">LDPlayer</div>
+
+                    <img class="product-image"
+                        src="https://img.utdstc.com/icon/262/caa/262caa2064e8b6a45b7c817e87951661452947c89145422e80e3c9e3db115d8c:600">
+
+                    <div class="product-name">
+                        LDPlayer 9
+                    </div>
+
+                    <div class="product-info">
+                        Giả lập Android tối ưu game mobile
+                    </div>
+
+                    <div class="download-group">
+
+                        <a class="download-btn drive-btn"
+                            href="https://drive.google.com/file/d/1LqVofjRcbj3skGe9YEf-k6BGB4lJMu4j/view?usp=drive_link"
+                            target="_blank">
+
+                            <i class="fa-solid fa-download"></i>
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </div>
+
 
             </div>
 
@@ -817,7 +1120,17 @@
 
     </div>
 
+    </div>
+
+
     <script>
+        function showTab(tabId, btn) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            btn.classList.add('active');
+        }
+
 
         /* SEARCH */
 
