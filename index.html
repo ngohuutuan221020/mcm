@@ -281,6 +281,40 @@
             }
 
         }
+/* ================= FOOTER ================= */
+
+.footer {
+    margin-top: 50px;
+    background: #1f2937;
+    color: #bbb;
+    text-align: center;
+    padding: 18px;
+    font-size: 14px;
+    position: relative;
+}
+
+.footer a {
+    color: #4ea1ff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Hidden Button ===== */
+
+.secret-btn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 70%;
+    background: transparent;
+    cursor: default;
+    user-select: none;
+}
     </style>
 
 </head>
@@ -318,6 +352,7 @@
         <div class="tabs">
             <button class="tab-btn active" onclick="showTab('basic',this)">PHẦN MỀM CƠ BẢN</button>
             <button class="tab-btn" onclick="showTab('game',this)">GAME</button>
+            <button class="tab-btn" onclick="showTab('product',this)">Phần mềm</button>
         </div>
 
         <!-- GRID -->
@@ -1103,11 +1138,272 @@
             </div>
 
         </div>
+        <div class="tab-content" id="product">
+            <div class="product-grid">
 
+                <!-- League of Legends -->
+                <div class="product-card"
+                    onclick="window.open('https://www.leagueoflegends.com/vi-vn/download/','_blank')">
+
+                    <div class="badge">Riot Games</div>
+
+                    <img class="product-image"
+                        src="https://upload.wikimedia.org/wikipedia/commons/d/d8/League_of_Legends_2019_vector.svg">
+
+                    <div class="product-name">
+                        Liên Minh Huyền Thoại
+                    </div>
+
+                    <div class="product-info">
+                        League of Legends PC
+                    </div>
+
+                    <div class="download-group">
+
+                        <a class="download-btn drive-btn"
+                            href="https://drive.google.com/file/d/1J1J9MFUFe3fIuJz17hXNvYcF27E6gXjI/view?usp=drive_link"
+                            target="_blank">
+
+                            <i class="fa-solid fa-download"></i>
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- FC ONLINE -->
+                <div class="product-card"
+                    onclick="window.open('https://fconline.garena.vn/','_blank')">
+
+                    <div class="badge">Garena</div>
+
+                    <img class="product-image"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPXVIF_Dk5lR8MrlpA8Pu8DuYW07dcF5sBpw&s">
+
+                    <div class="product-name">
+                        FIFA Online 4
+                    </div>
+
+                    <div class="product-info">
+                        EA Sports FC Online
+                    </div>
+
+                    <div class="download-group">
+
+                        <a class="download-btn drive-btn"
+                            href="https://drive.google.com/file/d/1Yw3vQQwR6pikJz0AUErnzD3tITnttNte/view?usp=sharing"
+                            target="_blank">
+
+                            <i class="fa-solid fa-download"></i>
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </div>
+                <!-- Đột Kích Trong Tầm Ngắm -->
+                <div class="product-card"
+                    onclick="window.open('https://cf.goplay.vn/','_blank')">
+
+                    <div class="badge">CrossFire</div>
+
+                    <img class="product-image"
+                        src="https://images.steamusercontent.com/ugc/2304218742202785857/A8A3D2ECC3DFBA8657314A1542DD3BD74C15D814/?imw=512&imh=512&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true">
+
+                    <div class="product-name">
+                       Đột Kích Trong Tầm Ngắm
+                    </div>
+
+                    <div class="product-info">
+                        CrossFire Việt Nam
+                    </div>
+
+                    <div class="download-group">
+
+                        <a class="download-btn drive-btn"
+                            href="https://drive.google.com/file/d/1CuSoUOYne6plIYm46wH6BuXrpZ3e01A6/view?usp=drive_link"
+                            target="_blank">
+
+                            <i class="fa-solid fa-download"></i>
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </div>
+                <!-- Epic Games Launcher -->
+                <div class="product-card" onclick="window.open('https://store.epicgames.com/en-US/download','_blank')">
+
+                    <div class="badge">Epic Games</div>
+
+                    <img class="product-image"
+                        src="https://upload.wikimedia.org/wikipedia/commons/3/31/Epic_Games_logo.svg">
+
+                    <div class="product-name">
+                        Epic Games Launcher
+                    </div>
+
+                    <div class="product-info">
+                        Nền tảng tải và quản lý game Epic Games
+                    </div>
+
+                    <div class="download-group">
+
+                        <a class="download-btn drive-btn"
+                            href="https://drive.google.com/file/d/1wYakZDjk-0tFkyeHqJHcziE4_4am-BPE/view?usp=drive_link"
+                            target="_blank">
+
+                            <i class="fa-solid fa-download"></i>
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Steam -->
+                <div class="product-card" onclick="window.open('https://store.steampowered.com/about/','_blank')">
+
+                    <div class="badge">Valve</div>
+
+                    <img class="product-image"
+                        src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg">
+
+                    <div class="product-name">
+                        Steam
+                    </div>
+
+                    <div class="product-info">
+                        Nền tảng game trực tuyến Steam
+                    </div>
+
+                    <div class="download-group">
+
+                        <a class="download-btn drive-btn"
+                            href="https://drive.google.com/file/d/1Hv1Kfk1XJwWpY8Shpii3hzx6vFgW8cD0/view?usp=drive_link"
+                            target="_blank">
+
+                            <i class="fa-solid fa-download"></i>
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- NoxPlayer -->
+                <div class="product-card" onclick="window.open('https://www.bignox.com/','_blank')">
+
+                    <div class="badge">Nox</div>
+
+                    <img class="product-image"
+                        src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Nox_App_Player_Icon3.png">
+
+                    <div class="product-name">
+                        NoxPlayer
+                    </div>
+
+                    <div class="product-info">
+                        Giả lập Android trên Windows
+                    </div>
+
+                    <div class="download-group">
+
+                        <a class="download-btn drive-btn"
+                            href="https://drive.google.com/file/d/1LZt43LuODBEDJ56Ki52iwvXBd7Qeu5Rb/view?usp=drive_link"
+                            target="_blank">
+
+                            <i class="fa-solid fa-download"></i>
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- BlueStacks -->
+                <div class="product-card" onclick="window.open('https://www.bluestacks.com/','_blank')">
+
+                    <div class="badge">BlueStacks</div>
+
+                    <img class="product-image" src="https://www.computerhope.com/jargon/b/bluestacks.png">
+
+                    <div class="product-name">
+                        BlueStacks 5
+                    </div>
+
+                    <div class="product-info">
+                        Giả lập Android hiệu năng cao
+                    </div>
+
+                    <div class="download-group">
+
+                        <a class="download-btn drive-btn"
+                            href="https://drive.google.com/file/d/1n4DaBDhjoWMXd35q4_a4tjcUQqqOQhvB/view?usp=drive_link"
+                            target="_blank">
+
+                            <i class="fa-solid fa-download"></i>
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- LDPlayer -->
+                <div class="product-card" onclick="window.open('https://vn.ldplayer.net/','_blank')">
+
+                    <div class="badge">LDPlayer</div>
+
+                    <img class="product-image"
+                        src="https://img.utdstc.com/icon/262/caa/262caa2064e8b6a45b7c817e87951661452947c89145422e80e3c9e3db115d8c:600">
+
+                    <div class="product-name">
+                        LDPlayer 9
+                    </div>
+
+                    <div class="product-info">
+                        Giả lập Android tối ưu game mobile
+                    </div>
+
+                    <div class="download-group">
+
+                        <a class="download-btn drive-btn"
+                            href="https://drive.google.com/file/d/1LqVofjRcbj3skGe9YEf-k6BGB4lJMu4j/view?usp=drive_link"
+                            target="_blank">
+
+                            <i class="fa-solid fa-download"></i>
+                            Download
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
     </div>
 
     </div>
+<footer class="footer">
 
+    © 2026 Mũi Cà Mau Computer |
+    Hỗ trợ cài đặt phần mềm Windows & Game
+
+    <div class="secret-btn" id="secretBtn"></div>
+
+</footer>
 
     <script>
         function showTab(tabId, btn) {
@@ -1189,6 +1485,39 @@
                     });
 
             });
+/* ================= SECRET BUTTON ================= */
+
+const secretBtn = document.getElementById("secretBtn");
+
+let holdTimer;
+
+function openSecretDrive() {
+    window.open(
+        "https://drive.google.com/drive/folders/YOUR_DRIVE_ID",
+        "_blank"
+    );
+}
+
+secretBtn.addEventListener("mousedown", () => {
+    holdTimer = setTimeout(openSecretDrive, 1000);
+});
+
+secretBtn.addEventListener("mouseup", () => {
+    clearTimeout(holdTimer);
+});
+
+secretBtn.addEventListener("mouseleave", () => {
+    clearTimeout(holdTimer);
+});
+
+// Mobile
+secretBtn.addEventListener("touchstart", () => {
+    holdTimer = setTimeout(openSecretDrive, 1000);
+});
+
+secretBtn.addEventListener("touchend", () => {
+    clearTimeout(holdTimer);
+});
 
     </script>
 
