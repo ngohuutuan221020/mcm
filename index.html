@@ -94,18 +94,312 @@
 
         /* HEADER */
 
-        .header {
-            background: #2f5ca8;
-            padding: 14px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-        }
+/* ================= HEADER ================= */
 
-        .header img {
-            height: 58px;
-        }
+.header {
+    height: 7rem;
+    background:
+        linear-gradient(90deg, #28569e, #2f5ca8, #28569e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* hiệu ứng đường sáng trong header */
+
+.header::before {
+    content: "";
+    position: absolute;
+    width: 45%;
+    height: 2px;
+    left: -50%;
+    bottom: 8px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.8),
+        transparent
+    );
+    animation: headerLight 5s linear infinite;
+}
+
+@keyframes headerLight {
+
+    0% {
+        left: -50%;
+    }
+
+    100% {
+        left: 110%;
+    }
+
+}
+
+/* LOGO */
+
+.header-logo {
+    height: 58px;
+    width: auto;
+    position: relative;
+    z-index: 2;
+    transition: 0.3s;
+}
+
+.header-logo:hover {
+    transform: scale(1.04);
+}
+
+
+/* ================= ANIME ASSISTANT ================= */
+
+.anime-assistant {
+    position: absolute;
+    right: 17rem;
+    bottom: 0;
+    width: 270px;
+    height: 100%;
+    z-index: 20;
+
+    opacity: 0;
+    transform: translateX(120px);
+
+    animation:
+        animeEnter 1s ease-out 1.5s forwards;
+}
+
+
+/* Anime xuất hiện từ bên phải */
+
+@keyframes animeEnter {
+
+    0% {
+        opacity: 0;
+        transform: translateX(120px);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translateX(-8px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* NHÂN VẬT */
+
+.anime-character {
+    position: absolute;
+    right: 0;
+    bottom: -8px;
+
+    width: 125px;
+    height: 125px;
+
+    cursor: pointer;
+
+    animation: animeFloat 3s ease-in-out infinite;
+}
+
+.anime-character img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    filter:
+        drop-shadow(0 5px 8px rgba(0,0,0,0.25));
+
+    transition: 0.3s;
+}
+
+.anime-character:hover img {
+    transform: scale(1.08) rotate(-2deg);
+}
+
+
+/* Bay nhẹ */
+
+@keyframes animeFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+
+}
+
+
+/* ================= SPEECH BUBBLE ================= */
+
+.anime-bubble {
+
+    position: absolute;
+
+    right: 105px;
+    top: 14px;
+
+    min-width: 145px;
+    max-width: 180px;
+
+    background: white;
+    color: #1e3f76;
+
+    padding: 10px 13px;
+
+    border-radius: 15px;
+
+    font-size: 13px;
+    line-height: 1.35;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 5px 18px rgba(0,0,0,0.2);
+
+    border: 2px solid #2f5ca8;
+
+    animation: bubbleFloat 3s ease-in-out infinite;
+
+}
+
+
+/* Tam giác bong bóng */
+
+.anime-bubble::after {
+
+    content: "";
+
+    position: absolute;
+
+    right: -11px;
+    bottom: 12px;
+
+    width: 0;
+    height: 0;
+
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 12px solid white;
+
+}
+
+
+/* Bong bóng bay nhẹ */
+
+@keyframes bubbleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+
+}
+
+
+/* ================= CLOSE BUTTON ================= */
+
+.anime-close {
+
+    position: absolute;
+
+    right: 2px;
+    top: 3px;
+
+    width: 23px;
+    height: 23px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(0,0,0,0.35);
+
+    color: white;
+
+    font-size: 18px;
+    line-height: 20px;
+
+    cursor: pointer;
+
+    z-index: 30;
+
+    transition: 0.25s;
+}
+
+.anime-close:hover {
+
+    background: #ff4757;
+
+    transform: rotate(90deg) scale(1.1);
+
+}
+
+
+/* ================= SPARK ================= */
+
+.anime-spark {
+
+    position: absolute;
+
+    color: #74d9ff;
+
+    font-size: 18px;
+
+    text-shadow:
+        0 0 8px #00bfff;
+
+    animation: sparkMove 1.8s ease-in-out infinite;
+
+}
+
+.spark-1 {
+    left: 5px;
+    top: 35px;
+}
+
+.spark-2 {
+    left: 30px;
+    top: 75px;
+    animation-delay: 0.5s;
+}
+
+.spark-3 {
+    right: 95px;
+    top: 8px;
+    font-size: 14px;
+    animation-delay: 0.9s;
+}
+
+
+@keyframes sparkMove {
+
+    0%,
+    100% {
+        opacity: 0.2;
+        transform: scale(0.7) rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2) rotate(15deg);
+    }
+
+}
 
         /* CONTAINER */
 
@@ -345,7 +639,42 @@
                 font-size: 12px;
                 padding: 8px;
             }
+/* ANIME MOBILE */
 
+.anime-assistant {
+    right: 5px;
+    width: 145px;
+    height: 80px;
+}
+
+.anime-character {
+    width: 75px;
+    height: 75px;
+    bottom: -2px;
+}
+
+.anime-bubble {
+    right: 60px;
+    top: 5px;
+
+    min-width: 90px;
+    max-width: 105px;
+
+    padding: 6px 8px;
+
+    font-size: 9px;
+}
+
+.anime-close {
+    width: 18px;
+    height: 18px;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.anime-spark {
+    display: none;
+}
         }
 
         /* ================= FOOTER ================= */
@@ -389,12 +718,45 @@
 <body>
 
     <!-- HEADER -->
+<!-- HEADER -->
 
-    <div class="header" onclick="window.open('https://muicamau.vn','_blank')">
+<div class="header" id="mainHeader">
 
-        <img src="https://muicamau.vn/wp-content/uploads/2026/01/logo-15-years-1.png" alt="Mũi Cà Mau">
+    <!-- LOGO -->
+    <img class="header-logo"
+        src="https://muicamau.vn/wp-content/uploads/2026/01/logo-15-years-1.png"
+        alt="Mũi Cà Mau">
+
+    <!-- ANIME ASSISTANT -->
+    <div class="anime-assistant" id="animeAssistant">
+
+        <!-- Speech Bubble -->
+        <div class="anime-bubble" id="animeBubble">
+            Xin chào! 👋<br>
+            Tải phần mềm nhanh chóng nhé!
+        </div>
+
+        <!-- Close -->
+        <button class="anime-close" id="animeClose">
+            ×
+        </button>
+
+        <!-- Anime -->
+        <div class="anime-character" onclick="openMCM(event)">
+
+            <img
+                src="https://png.pngtree.com/png-clipart/20250418/original/pngtree-adorable-chibi-anime-girl-png-image_20836682.png"
+                alt="MCM Anime Assistant">
+
+            <div class="anime-spark spark-1">✦</div>
+            <div class="anime-spark spark-2">✦</div>
+            <div class="anime-spark spark-3">⚡</div>
+
+        </div>
 
     </div>
+
+</div>
 
     <!-- CONTENT -->
 
@@ -2059,6 +2421,114 @@
 
         </div>
     </div>
+    <script>
+
+/* ================= ANIME ASSISTANT ================= */
+
+const animeAssistant =
+    document.getElementById("animeAssistant");
+
+const animeBubble =
+    document.getElementById("animeBubble");
+
+const animeClose =
+    document.getElementById("animeClose");
+
+
+/* Nội dung tự động thay đổi */
+
+const animeMessages = [
+
+    "Xin chào! 👋<br>Tải phần mềm nhanh chóng nhé!",
+
+    "Chúc bạn sử dụng vui vẻ! ❤️",
+
+    "Cần phần mềm gì cứ tìm ở đây nhé! 🔍",
+
+    "Mũi Cà Mau<br>Hỗ trợ kỹ thuật 💻",
+
+    "Chúc bạn có một ngày làm việc hiệu quả! ✨"
+
+];
+
+let animeMessageIndex = 0;
+
+
+/* Đổi câu nói */
+
+setInterval(() => {
+
+    animeMessageIndex++;
+
+    if (animeMessageIndex >= animeMessages.length) {
+        animeMessageIndex = 0;
+    }
+
+    animeBubble.style.opacity = "0";
+
+    setTimeout(() => {
+
+        animeBubble.innerHTML =
+            animeMessages[animeMessageIndex];
+
+        animeBubble.style.opacity = "1";
+
+    }, 250);
+
+}, 4000);
+
+
+/* Click nhân vật */
+
+function openMCM(event) {
+
+    event.stopPropagation();
+
+    window.open(
+        "https://muicamau.vn",
+        "_blank"
+    );
+
+}
+
+
+/* Đóng Anime */
+
+animeClose.addEventListener("click", function(event) {
+
+    event.stopPropagation();
+
+    animeAssistant.style.animation =
+        "animeExit 0.5s ease forwards";
+
+});
+
+
+/* Animation biến mất */
+
+const animeStyle = document.createElement("style");
+
+animeStyle.innerHTML = `
+
+@keyframes animeExit {
+
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(120px);
+    }
+
+}
+
+`;
+
+document.head.appendChild(animeStyle);
+
+</script>
 </body>
 
 </html>
