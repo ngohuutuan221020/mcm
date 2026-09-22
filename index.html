@@ -2472,13 +2472,34 @@
                 </label>
 
                 <select id="fpsCPU">
-                    <option value="i3-12100f">Core i3-12100F</option>
-                    <option value="i5-12400f">Core i5-12400F</option>
-                    <option value="i5-13400f">Core i5-13400F</option>
-                    <option value="i5-14400f">Core i5-14400F</option>
-                    <option value="r5-5500">Ryzen 5 5500</option>
-                    <option value="r5-5600">Ryzen 5 5600</option>
-                    <option value="r5-7600">Ryzen 5 7600</option>
+ <optgroup label="CPU Cơ bản">
+        <option value="i3-10100f">Core i3-10100F</option>
+        <option value="i3-10105f">Core i3-10105F</option>
+        <option value="i3-12100f" selected>Core i3-12100F</option>
+        <option value="i3-13100f">Core i3-13100F</option>
+    </optgroup>
+
+    <optgroup label="CPU Quốc dân">
+        <option value="i5-10400f">Core i5-10400F</option>
+        <option value="i5-11400f">Core i5-11400F</option>
+        <option value="i5-12400f">Core i5-12400F</option>
+        <option value="i5-13400f">Core i5-13400F</option>
+        <option value="i5-14400f">Core i5-14400F</option>
+        <option value="r5-3600">Ryzen 5 3600</option>
+        <option value="r5-5500">Ryzen 5 5500</option>
+        <option value="r5-5600">Ryzen 5 5600</option>
+        <option value="r5-7500f">Ryzen 5 7500F</option>
+        <option value="r5-7600">Ryzen 5 7600</option>
+    </optgroup>
+
+    <optgroup label="CPU Cao cấp">
+        <option value="i5-14600kf">Core i5-14600KF</option>
+        <option value="i7-12700f">Core i7-12700F</option>
+        <option value="i7-13700f">Core i7-13700F</option>
+        <option value="i7-14700f">Core i7-14700F</option>
+        <option value="r7-7700">Ryzen 7 7700</option>
+        <option value="r7-7800x3d">Ryzen 7 7800X3D</option>
+    </optgroup>
                 </select>
             </div>
 
@@ -2489,14 +2510,95 @@
                     Mainboard
                 </label>
 
-                <select id="fpsMain">
-                    <option value="h610">H610M LGA 1700 Intel Gen 12 / 13 / 14</option>
-                    <option value="b660">B660M LGA 1700 Intel Gen 12 / 13 / 14</option>
-                    <option value="b760">B760M LGA 1700 Intel Gen 12 / 13 / 14</option>
-                    <option value="b450">B450M AM4 AMD Ryzen 1000 → 5000 (tùy BIOS/main)</option>
-                    <option value="b550">B550M AM4 AMD Ryzen 3000 / 4000G / 5000</option>
-                    <option value="a620">A620M 	AM5	AMD Ryzen 7000 / 8000G / 9000 (tùy BIOS)</option>
-                </select>
+<select id="fpsMain">
+
+    <!-- INTEL LGA 1200 -->
+    <optgroup label="Intel LGA 1200">
+        <option value="h410">
+            H410M — LGA 1200 — Intel Gen 10
+        </option>
+        <option value="b460">
+            B460M — LGA 1200 — Intel Gen 10
+        </option>
+        <option value="b560">
+            B560M — LGA 1200 — Intel Gen 10 / 11
+        </option>
+    </optgroup>
+
+    <!-- INTEL LGA 1151 / 1151v2 -->
+    <optgroup label="Intel LGA 1151">
+        <option value="h310">
+            H310M — LGA 1151 — Intel Gen 8 / 9
+        </option>
+        <option value="b365">
+            B365M — LGA 1151 — Intel Gen 8 / 9
+        </option>
+        <option value="z390">
+            Z390 — LGA 1151 — Intel Gen 8 / 9
+        </option>
+    </optgroup>
+
+    <!-- INTEL LGA 1700 -->
+    <optgroup label="Intel LGA 1700">
+        <option value="h610" selected>
+            H610M — LGA 1700 — Intel Gen 12 / 13 / 14
+        </option>
+        <option value="b660">
+            B660M — LGA 1700 — Intel Gen 12 / 13 / 14
+        </option>
+        <option value="b760">
+            B760M — LGA 1700 — Intel Gen 12 / 13 / 14
+        </option>
+        <option value="z690">
+            Z690 — LGA 1700 — Intel Gen 12 / 13 / 14
+        </option>
+        <option value="z790">
+            Z790 — LGA 1700 — Intel Gen 12 / 13 / 14
+        </option>
+    </optgroup>
+
+    <!-- AMD AM4 -->
+    <optgroup label="AMD AM4">
+        <option value="a320">
+            A320M — AM4 — Ryzen 1000 → 5000 (tùy BIOS)
+        </option>
+        <option value="b350">
+            B350M — AM4 — Ryzen 1000 → 5000 (tùy BIOS)
+        </option>
+        <option value="b450">
+            B450M — AM4 — Ryzen 1000 → 5000 (tùy BIOS)
+        </option>
+        <option value="a520">
+            A520M — AM4 — Ryzen 3000 / 4000G / 5000
+        </option>
+        <option value="b550">
+            B550M — AM4 — Ryzen 3000 / 4000G / 5000
+        </option>
+        <option value="x570">
+            X570 — AM4 — Ryzen 3000 / 5000
+        </option>
+    </optgroup>
+
+    <!-- AMD AM5 -->
+    <optgroup label="AMD AM5">
+        <option value="a620">
+            A620M — AM5 — Ryzen 7000 / 8000G / 9000 (tùy BIOS)
+        </option>
+        <option value="b650">
+            B650M — AM5 — Ryzen 7000 / 8000 / 9000
+        </option>
+        <option value="b650e">
+            B650E — AM5 — Ryzen 7000 / 8000 / 9000
+        </option>
+        <option value="x670">
+            X670 — AM5 — Ryzen 7000 / 8000 / 9000
+        </option>
+        <option value="x870">
+            X870 — AM5 — Ryzen 7000 / 8000 / 9000
+        </option>
+    </optgroup>
+
+</select>
             </div>
 
             <!-- RAM -->
@@ -2977,44 +3079,34 @@ document.head.appendChild(animeStyle);
 ===================================================== */
 
 const fpsData = {
+    // Cơ bản
+    "i3-10100f":  { name: "Core i3-10100F",  cpuScore: 0.82 },
+    "i3-10105f":  { name: "Core i3-10105F",  cpuScore: 0.85 },
+    "i3-12100f":  { name: "Core i3-12100F",  cpuScore: 1.00 },
+    "i3-13100f":  { name: "Core i3-13100F",  cpuScore: 1.05 },
 
-    "i3-12100f": {
-        name: "Core i3-12100F",
-        cpuScore: 1.00
-    },
+    // Quốc dân
+    "i5-10400f":  { name: "Core i5-10400F",  cpuScore: 0.95 },
+    "i5-11400f":  { name: "Core i5-11400F",  cpuScore: 1.00 },
+    "i5-12400f":  { name: "Core i5-12400F",  cpuScore: 1.12 },
+    "i5-13400f":  { name: "Core i5-13400F",  cpuScore: 1.20 },
+    "i5-14400f":  { name: "Core i5-14400F",  cpuScore: 1.28 },
 
-    "i5-12400f": {
-        name: "Core i5-12400F",
-        cpuScore: 1.12
-    },
+    "r5-3600":    { name: "Ryzen 5 3600",    cpuScore: 0.88 },
+    "r5-5500":    { name: "Ryzen 5 5500",    cpuScore: 1.05 },
+    "r5-5600":    { name: "Ryzen 5 5600",    cpuScore: 1.14 },
+    "r5-7500f":   { name: "Ryzen 5 7500F",   cpuScore: 1.28 },
+    "r5-7600":    { name: "Ryzen 5 7600",    cpuScore: 1.35 },
 
-    "i5-13400f": {
-        name: "Core i5-13400F",
-        cpuScore: 1.20
-    },
+    // Cao cấp
+    "i5-14600kf": { name: "Core i5-14600KF", cpuScore: 1.38 },
+    "i7-12700f":  { name: "Core i7-12700F",  cpuScore: 1.30 },
+    "i7-13700f":  { name: "Core i7-13700F",  cpuScore: 1.42 },
+    "i7-14700f":  { name: "Core i7-14700F",  cpuScore: 1.52 },
 
-    "i5-14400f": {
-        name: "Core i5-14400F",
-        cpuScore: 1.28
-    },
-
-    "r5-5500": {
-        name: "Ryzen 5 5500",
-        cpuScore: 1.05
-    },
-
-    "r5-5600": {
-        name: "Ryzen 5 5600",
-        cpuScore: 1.14
-    },
-
-    "r5-7600": {
-        name: "Ryzen 5 7600",
-        cpuScore: 1.35
-    }
-
+    "r7-7700":    { name: "Ryzen 7 7700",    cpuScore: 1.38 },
+    "r7-7800x3d": { name: "Ryzen 7 7800X3D", cpuScore: 1.55 }
 };
-
 
 const gpuData = {
 
@@ -3061,23 +3153,66 @@ const gpuData = {
 
 const baseFPS = {
 
+    // =========================
+    // GAME ESPORT / GAME QUỐC DÂN
+    // =========================
     "Liên Minh Huyền Thoại": 240,
-
     "Đột Kích": 220,
-
     "FC Online": 150,
-
     "VALORANT": 250,
-
-    "CS2": 125,
-
+    "Counter-Strike 2": 125,
     "PUBG": 85,
+    "NARAKA: BLADEPOINT": 70,
 
-    "NARAKA": 70
+    // =========================
+    // GAME ONLINE PHỔ BIẾN
+    // =========================
+    "Dota 2": 120,
+    "Apex Legends": 95,
+    "Overwatch 2": 120,
+    "Rainbow Six Siege": 140,
+    "Fortnite": 100,
+    "Rocket League": 180,
+    "Marvel Rivals": 75,
+    "Call of Duty: Warzone": 75,
+    "Call of Duty: Black Ops 6": 70,
 
+    // =========================
+    // GAME PHỔ BIẾN / SANDBOX
+    // =========================
+    "GTA V": 110,
+    "Minecraft": 150,
+    "Roblox": 140,
+    "The Sims 4": 120,
+
+    // =========================
+    // GAME ĐUA XE / THỂ THAO
+    // =========================
+    "Forza Horizon 5": 80,
+    "EA SPORTS FC 25": 130,
+    "EA SPORTS FC 26": 130,
+
+    // =========================
+    // GAME AAA
+    // =========================
+    "Red Dead Redemption 2": 60,
+    "Elden Ring": 60,
+    "Hogwarts Legacy": 60,
+    "Cyberpunk 2077": 65,
+    "Black Myth: Wukong": 55,
+    "Monster Hunter Wilds": 50,
+    "Battlefield 6": 65,
+
+    // =========================
+    // GAME KHÁC KHÁ PHỔ BIẾN
+    // =========================
+    "Rust": 70,
+    "Dead by Daylight": 100,
+    "HELLDIVERS 2": 60,
+    "War Thunder": 100,
+    "Genshin Impact": 60,
+    "Honkai: Star Rail": 60
 };
-
-
 /* Tính FPS */
 
 function calculateFPS() {
