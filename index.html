@@ -94,312 +94,310 @@
 
         /* HEADER */
 
-/* ================= HEADER ================= */
-
-.header {
-    height: 7rem;
-    background:
-        linear-gradient(90deg, #28569e, #2f5ca8, #28569e);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    cursor: default;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
-}
-
-/* hiệu ứng đường sáng trong header */
+        /* ================= HEADER ================= */
+
+        .header {
+            height: 7rem;
+            background:
+                linear-gradient(90deg, #28569e, #2f5ca8, #28569e);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            cursor: default;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+        }
 
-.header::before {
-    content: "";
-    position: absolute;
-    width: 45%;
-    height: 2px;
-    left: -50%;
-    bottom: 8px;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255,255,255,0.8),
-        transparent
-    );
-    animation: headerLight 5s linear infinite;
-}
+        /* hiệu ứng đường sáng trong header */
 
-@keyframes headerLight {
+        .header::before {
+            content: "";
+            position: absolute;
+            width: 45%;
+            height: 2px;
+            left: -50%;
+            bottom: 8px;
+            background: linear-gradient(90deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.8),
+                    transparent);
+            animation: headerLight 5s linear infinite;
+        }
 
-    0% {
-        left: -50%;
-    }
+        @keyframes headerLight {
 
-    100% {
-        left: 110%;
-    }
+            0% {
+                left: -50%;
+            }
 
-}
+            100% {
+                left: 110%;
+            }
 
-/* LOGO */
+        }
 
-.header-logo {
-    height: 58px;
-    width: auto;
-    position: relative;
-    z-index: 2;
-    transition: 0.3s;
-}
+        /* LOGO */
 
-.header-logo:hover {
-    transform: scale(1.04);
-}
+        .header-logo {
+            height: 58px;
+            width: auto;
+            position: relative;
+            z-index: 2;
+            transition: 0.3s;
+        }
 
+        .header-logo:hover {
+            transform: scale(1.04);
+        }
 
-/* ================= ANIME ASSISTANT ================= */
 
-.anime-assistant {
-    position: absolute;
-    right: 17rem;
-    bottom: 0;
-    width: 270px;
-    height: 100%;
-    z-index: 20;
+        /* ================= ANIME ASSISTANT ================= */
 
-    opacity: 0;
-    transform: translateX(120px);
+        .anime-assistant {
+            position: absolute;
+            right: 17rem;
+            bottom: 0;
+            width: 270px;
+            height: 100%;
+            z-index: 20;
 
-    animation:
-        animeEnter 1s ease-out 1.5s forwards;
-}
+            opacity: 0;
+            transform: translateX(120px);
 
+            animation:
+                animeEnter 1s ease-out 1.5s forwards;
+        }
 
-/* Anime xuất hiện từ bên phải */
 
-@keyframes animeEnter {
+        /* Anime xuất hiện từ bên phải */
 
-    0% {
-        opacity: 0;
-        transform: translateX(120px);
-    }
+        @keyframes animeEnter {
 
-    70% {
-        opacity: 1;
-        transform: translateX(-8px);
-    }
+            0% {
+                opacity: 0;
+                transform: translateX(120px);
+            }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+            70% {
+                opacity: 1;
+                transform: translateX(-8px);
+            }
 
-}
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
 
+        }
 
-/* NHÂN VẬT */
 
-.anime-character {
-    position: absolute;
-    right: 0;
-    bottom: -8px;
+        /* NHÂN VẬT */
 
-    width: 125px;
-    height: 125px;
+        .anime-character {
+            position: absolute;
+            right: 0;
+            bottom: -8px;
 
-    cursor: pointer;
+            width: 125px;
+            height: 125px;
 
-    animation: animeFloat 3s ease-in-out infinite;
-}
+            cursor: pointer;
 
-.anime-character img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+            animation: animeFloat 3s ease-in-out infinite;
+        }
 
-    filter:
-        drop-shadow(0 5px 8px rgba(0,0,0,0.25));
+        .anime-character img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
 
-    transition: 0.3s;
-}
+            filter:
+                drop-shadow(0 5px 8px rgba(0, 0, 0, 0.25));
 
-.anime-character:hover img {
-    transform: scale(1.08) rotate(-2deg);
-}
+            transition: 0.3s;
+        }
 
+        .anime-character:hover img {
+            transform: scale(1.08) rotate(-2deg);
+        }
 
-/* Bay nhẹ */
 
-@keyframes animeFloat {
+        /* Bay nhẹ */
 
-    0%,
-    100% {
-        transform: translateY(0);
-    }
+        @keyframes animeFloat {
 
-    50% {
-        transform: translateY(-7px);
-    }
+            0%,
+            100% {
+                transform: translateY(0);
+            }
 
-}
+            50% {
+                transform: translateY(-7px);
+            }
 
+        }
 
-/* ================= SPEECH BUBBLE ================= */
 
-.anime-bubble {
+        /* ================= SPEECH BUBBLE ================= */
 
-    position: absolute;
+        .anime-bubble {
 
-    right: 105px;
-    top: 14px;
+            position: absolute;
 
-    min-width: 145px;
-    max-width: 180px;
+            right: 105px;
+            top: 14px;
 
-    background: white;
-    color: #1e3f76;
+            min-width: 145px;
+            max-width: 180px;
 
-    padding: 10px 13px;
+            background: white;
+            color: #1e3f76;
 
-    border-radius: 15px;
+            padding: 10px 13px;
 
-    font-size: 13px;
-    line-height: 1.35;
+            border-radius: 15px;
 
-    font-weight: bold;
+            font-size: 13px;
+            line-height: 1.35;
 
-    box-shadow:
-        0 5px 18px rgba(0,0,0,0.2);
+            font-weight: bold;
 
-    border: 2px solid #2f5ca8;
+            box-shadow:
+                0 5px 18px rgba(0, 0, 0, 0.2);
 
-    animation: bubbleFloat 3s ease-in-out infinite;
+            border: 2px solid #2f5ca8;
 
-}
+            animation: bubbleFloat 3s ease-in-out infinite;
 
+        }
 
-/* Tam giác bong bóng */
 
-.anime-bubble::after {
+        /* Tam giác bong bóng */
 
-    content: "";
+        .anime-bubble::after {
 
-    position: absolute;
+            content: "";
 
-    right: -11px;
-    bottom: 12px;
+            position: absolute;
 
-    width: 0;
-    height: 0;
+            right: -11px;
+            bottom: 12px;
 
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
-    border-left: 12px solid white;
+            width: 0;
+            height: 0;
 
-}
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-left: 12px solid white;
 
+        }
 
-/* Bong bóng bay nhẹ */
 
-@keyframes bubbleFloat {
+        /* Bong bóng bay nhẹ */
 
-    0%,
-    100% {
-        transform: translateY(0);
-    }
+        @keyframes bubbleFloat {
 
-    50% {
-        transform: translateY(-4px);
-    }
+            0%,
+            100% {
+                transform: translateY(0);
+            }
 
-}
+            50% {
+                transform: translateY(-4px);
+            }
 
+        }
 
-/* ================= CLOSE BUTTON ================= */
 
-.anime-close {
+        /* ================= CLOSE BUTTON ================= */
 
-    position: absolute;
+        .anime-close {
 
-    right: 2px;
-    top: 3px;
+            position: absolute;
 
-    width: 23px;
-    height: 23px;
+            right: 2px;
+            top: 3px;
 
-    border: none;
-    border-radius: 50%;
+            width: 23px;
+            height: 23px;
 
-    background: rgba(0,0,0,0.35);
+            border: none;
+            border-radius: 50%;
 
-    color: white;
+            background: rgba(0, 0, 0, 0.35);
 
-    font-size: 18px;
-    line-height: 20px;
+            color: white;
 
-    cursor: pointer;
+            font-size: 18px;
+            line-height: 20px;
 
-    z-index: 30;
+            cursor: pointer;
 
-    transition: 0.25s;
-}
+            z-index: 30;
 
-.anime-close:hover {
+            transition: 0.25s;
+        }
 
-    background: #ff4757;
+        .anime-close:hover {
 
-    transform: rotate(90deg) scale(1.1);
+            background: #ff4757;
 
-}
+            transform: rotate(90deg) scale(1.1);
 
+        }
 
-/* ================= SPARK ================= */
 
-.anime-spark {
+        /* ================= SPARK ================= */
 
-    position: absolute;
+        .anime-spark {
 
-    color: #74d9ff;
+            position: absolute;
 
-    font-size: 18px;
+            color: #74d9ff;
 
-    text-shadow:
-        0 0 8px #00bfff;
+            font-size: 18px;
 
-    animation: sparkMove 1.8s ease-in-out infinite;
+            text-shadow:
+                0 0 8px #00bfff;
 
-}
+            animation: sparkMove 1.8s ease-in-out infinite;
 
-.spark-1 {
-    left: 5px;
-    top: 35px;
-}
+        }
 
-.spark-2 {
-    left: 30px;
-    top: 75px;
-    animation-delay: 0.5s;
-}
+        .spark-1 {
+            left: 5px;
+            top: 35px;
+        }
 
-.spark-3 {
-    right: 95px;
-    top: 8px;
-    font-size: 14px;
-    animation-delay: 0.9s;
-}
+        .spark-2 {
+            left: 30px;
+            top: 75px;
+            animation-delay: 0.5s;
+        }
 
+        .spark-3 {
+            right: 95px;
+            top: 8px;
+            font-size: 14px;
+            animation-delay: 0.9s;
+        }
 
-@keyframes sparkMove {
 
-    0%,
-    100% {
-        opacity: 0.2;
-        transform: scale(0.7) rotate(0deg);
-    }
+        @keyframes sparkMove {
 
-    50% {
-        opacity: 1;
-        transform: scale(1.2) rotate(15deg);
-    }
+            0%,
+            100% {
+                opacity: 0.2;
+                transform: scale(0.7) rotate(0deg);
+            }
 
-}
+            50% {
+                opacity: 1;
+                transform: scale(1.2) rotate(15deg);
+            }
+
+        }
 
         /* CONTAINER */
 
@@ -639,42 +637,43 @@
                 font-size: 12px;
                 padding: 8px;
             }
-/* ANIME MOBILE */
 
-.anime-assistant {
-    right: 5px;
-    width: 145px;
-    height: 80px;
-}
+            /* ANIME MOBILE */
 
-.anime-character {
-    width: 75px;
-    height: 75px;
-    bottom: -2px;
-}
+            .anime-assistant {
+                right: 5px;
+                width: 145px;
+                height: 80px;
+            }
 
-.anime-bubble {
-    right: 60px;
-    top: 5px;
+            .anime-character {
+                width: 75px;
+                height: 75px;
+                bottom: -2px;
+            }
 
-    min-width: 90px;
-    max-width: 105px;
+            .anime-bubble {
+                right: 60px;
+                top: 5px;
 
-    padding: 6px 8px;
+                min-width: 90px;
+                max-width: 105px;
 
-    font-size: 9px;
-}
+                padding: 6px 8px;
 
-.anime-close {
-    width: 18px;
-    height: 18px;
-    font-size: 14px;
-    line-height: 16px;
-}
+                font-size: 9px;
+            }
 
-.anime-spark {
-    display: none;
-}
+            .anime-close {
+                width: 18px;
+                height: 18px;
+                font-size: 14px;
+                line-height: 16px;
+            }
+
+            .anime-spark {
+                display: none;
+            }
         }
 
         /* ================= FOOTER ================= */
@@ -711,208 +710,276 @@
             cursor: default;
             user-select: none;
         }
-    /* =====================================================
+
+        /* =====================================================
    FPS PC GAMING
 ===================================================== */
 
-.fps-container {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 16px;
-    padding: 25px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-}
+        .fps-container {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
 
-.fps-title {
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    color: #2f5ca8;
-    margin-bottom: 8px;
-}
+        .fps-title {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: #2f5ca8;
+            margin-bottom: 8px;
+        }
 
-.fps-subtitle {
-    text-align: center;
-    color: #666;
-    margin-bottom: 25px;
-}
+        .fps-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 25px;
+        }
 
-.fps-config {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-}
+        .fps-config {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
 
-.fps-item {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-}
+        .fps-item {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
 
-.fps-item label {
-    font-weight: bold;
-    font-size: 14px;
-    color: #333;
-}
+        .fps-item label {
+            font-weight: bold;
+            font-size: 14px;
+            color: #333;
+        }
 
-.fps-item select {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background: white;
-    font-size: 14px;
-    outline: none;
-}
+        .fps-item select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background: white;
+            font-size: 14px;
+            outline: none;
+        }
 
-.fps-item select:focus {
-    border-color: #2f5ca8;
-    box-shadow: 0 0 8px rgba(47,92,168,.18);
-}
+        .fps-item select:focus {
+            border-color: #2f5ca8;
+            box-shadow: 0 0 8px rgba(47, 92, 168, .18);
+        }
 
-.fps-calculate {
-    margin: 25px auto;
-    display: block;
-    border: none;
-    background: linear-gradient(135deg,#28569e,#2f5ca8);
-    color: white;
-    padding: 14px 30px;
-    border-radius: 9px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: .25s;
-}
+        .fps-calculate {
+            margin: 25px auto;
+            display: block;
+            border: none;
+            background: linear-gradient(135deg, #28569e, #2f5ca8);
+            color: white;
+            padding: 14px 30px;
+            border-radius: 9px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: .25s;
+        }
 
-.fps-calculate:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(47,92,168,.3);
-}
+        .fps-calculate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(47, 92, 168, .3);
+        }
 
-.fps-result {
-    display: none;
-    margin-top: 20px;
-}
+        .fps-result {
+            display: none;
+            margin-top: 20px;
+        }
 
-.fps-summary {
-    background: linear-gradient(135deg,#eef5ff,#f8fbff);
-    border: 1px solid #cbdcf5;
-    border-radius: 12px;
-    padding: 18px;
-    margin-bottom: 20px;
-}
+        .fps-summary {
+            background: linear-gradient(135deg, #eef5ff, #f8fbff);
+            border: 1px solid #cbdcf5;
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 20px;
+        }
 
-.fps-summary-title {
-    font-size: 20px;
-    font-weight: bold;
-    color: #2f5ca8;
-    margin-bottom: 12px;
-}
+        .fps-summary-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #2f5ca8;
+            margin-bottom: 12px;
+        }
 
-.fps-hardware {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 10px;
-}
+        .fps-hardware {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
 
-.fps-hardware div {
-    background: white;
-    border-radius: 8px;
-    padding: 10px;
-    border: 1px solid #e2e2e2;
-}
+        .fps-hardware div {
+            background: white;
+            border-radius: 8px;
+            padding: 10px;
+            border: 1px solid #e2e2e2;
+        }
 
-.fps-hardware strong {
-    display: block;
-    font-size: 12px;
-    color: #777;
-    margin-bottom: 4px;
-}
+        .fps-hardware strong {
+            display: block;
+            font-size: 12px;
+            color: #777;
+            margin-bottom: 4px;
+        }
 
-.fps-hardware span {
-    font-weight: bold;
-    font-size: 14px;
-}
+        .fps-hardware span {
+            font-weight: bold;
+            font-size: 14px;
+        }
 
-.fps-table {
-    width: 100%;
-    border-collapse: collapse;
-    overflow: hidden;
-    border-radius: 10px;
-}
+        .fps-table {
+            width: 100%;
+            border-collapse: collapse;
+            overflow: hidden;
+            border-radius: 10px;
+        }
 
-.fps-table th {
-    background: #2f5ca8;
-    color: white;
-    padding: 13px 10px;
-    text-align: left;
-}
+        .fps-table th {
+            background: #2f5ca8;
+            color: white;
+            padding: 13px 10px;
+            text-align: left;
+        }
 
-.fps-table td {
-    padding: 12px 10px;
-    border-bottom: 1px solid #e5e5e5;
-}
+        .fps-table td {
+            padding: 12px 10px;
+            border-bottom: 1px solid #e5e5e5;
+        }
 
-.fps-table tr:hover {
-    background: #f7faff;
-}
+        .fps-table tr:hover {
+            background: #f7faff;
+        }
 
-.fps-game {
-    font-weight: bold;
-}
+        .fps-game {
+            font-weight: bold;
+        }
 
-.fps-value {
-    font-weight: bold;
-    color: #16803c;
-}
+        .fps-value {
+            font-weight: bold;
+            color: #16803c;
+        }
 
-.fps-note {
-    margin-top: 20px;
-    background: #fff8e6;
-    border: 1px solid #f0d98c;
-    border-radius: 9px;
-    padding: 13px;
-    color: #765b00;
-    font-size: 13px;
-    line-height: 1.5;
-}
+        .fps-note {
+            margin-top: 20px;
+            background: #fff8e6;
+            border: 1px solid #f0d98c;
+            border-radius: 9px;
+            padding: 13px;
+            color: #765b00;
+            font-size: 13px;
+            line-height: 1.5;
+        }
 
-.fps-status {
-    margin-top: 15px;
-    padding: 12px;
-    border-radius: 8px;
-    background: #f3f4f6;
-    font-size: 14px;
-}
+        .fps-status {
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 8px;
+            background: #f3f4f6;
+            font-size: 14px;
+        }
 
-@media(max-width:768px) {
+        @media(max-width:768px) {
 
-    .fps-container {
-        padding: 15px;
-    }
+            .fps-container {
+                padding: 15px;
+            }
 
-    .fps-title {
-        font-size: 23px;
-    }
+            .fps-title {
+                font-size: 23px;
+            }
 
-    .fps-config {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
+            .fps-config {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
 
-    .fps-hardware {
-        grid-template-columns: 1fr 1fr;
-    }
+            .fps-hardware {
+                grid-template-columns: 1fr 1fr;
+            }
 
-    .fps-table {
-        font-size: 12px;
-    }
+            .fps-table {
+                font-size: 12px;
+            }
 
-    .fps-table th,
-    .fps-table td {
-        padding: 9px 6px;
-    }
-}
+            .fps-table th,
+            .fps-table td {
+                padding: 9px 6px;
+            }
+        }
+
+        /* Màu FPS và đánh giá theo mức hiệu năng */
+        .fps-value,
+        .fps-status {
+            display: inline-block;
+            font-weight: 700;
+            border-radius: 8px;
+            padding: 5px 10px;
+        }
+
+        /* Rất tốt */
+        .fps-excellent {
+            color: #15803d;
+            background: #dcfce7;
+        }
+
+        /* Tốt */
+        .fps-good {
+            color: #1d4ed8;
+            background: #dbeafe;
+        }
+
+        /* Khá */
+        .fps-medium {
+            color: #a16207;
+            background: #fef9c3;
+        }
+
+        /* Chơi được */
+        .fps-playable {
+            color: #c2410c;
+            background: #ffedd5;
+        }
+
+        /* Cần nâng cấp */
+        .fps-low {
+            color: #b91c1c;
+            background: #fee2e2;
+        }
+
+        /* Hỗ trợ giao diện tối */
+        @media (prefers-color-scheme: dark) {
+            .fps-excellent {
+                color: #86efac;
+                background: #14532d;
+            }
+
+            .fps-good {
+                color: #93c5fd;
+                background: #1e3a8a;
+            }
+
+            .fps-medium {
+                color: #fde047;
+                background: #713f12;
+            }
+
+            .fps-playable {
+                color: #fdba74;
+                background: #7c2d12;
+            }
+
+            .fps-low {
+                color: #fca5a5;
+                background: #7f1d1d;
+            }
+        }
     </style>
     <script defer src="/_vercel/insights/script.js"></script>
 
@@ -921,45 +988,43 @@
 <body>
 
     <!-- HEADER -->
-<!-- HEADER -->
+    <!-- HEADER -->
 
-<div class="header" id="mainHeader">
+    <div class="header" id="mainHeader">
 
-    <!-- LOGO -->
-    <img class="header-logo"
-        src="https://muicamau.vn/wp-content/uploads/2026/01/logo-15-years-1.png"
-        alt="Mũi Cà Mau">
+        <!-- LOGO -->
+        <img class="header-logo" src="https://muicamau.vn/wp-content/uploads/2026/01/logo-15-years-1.png"
+            alt="Mũi Cà Mau">
 
-    <!-- ANIME ASSISTANT -->
-    <div class="anime-assistant" id="animeAssistant">
+        <!-- ANIME ASSISTANT -->
+        <div class="anime-assistant" id="animeAssistant">
 
-        <!-- Speech Bubble -->
-        <div class="anime-bubble" id="animeBubble">
-            Xin chào! 👋<br>
-            Tải phần mềm nhanh chóng nhé!
-        </div>
+            <!-- Speech Bubble -->
+            <div class="anime-bubble" id="animeBubble">
+                Xin chào! 👋<br>
+                Tải phần mềm nhanh chóng nhé!
+            </div>
 
-        <!-- Close -->
-        <button class="anime-close" id="animeClose">
-            ×
-        </button>
+            <!-- Close -->
+            <button class="anime-close" id="animeClose">
+                ×
+            </button>
 
-        <!-- Anime -->
-        <div class="anime-character" onclick="openMCM(event)">
+            <!-- Anime -->
+            <div class="anime-character" onclick="openMCM(event)">
 
-            <img
-                src="https://png.pngtree.com/png-clipart/20250418/original/pngtree-adorable-chibi-anime-girl-png-image_20836682.png"
-                alt="MCM Anime Assistant">
+                <img src="https://png.pngtree.com/png-clipart/20250418/original/pngtree-adorable-chibi-anime-girl-png-image_20836682.png"
+                    alt="MCM Anime Assistant">
 
-            <div class="anime-spark spark-1">✦</div>
-            <div class="anime-spark spark-2">✦</div>
-            <div class="anime-spark spark-3">⚡</div>
+                <div class="anime-spark spark-1">✦</div>
+                <div class="anime-spark spark-2">✦</div>
+                <div class="anime-spark spark-3">⚡</div>
+
+            </div>
 
         </div>
 
     </div>
-
-</div>
 
     <!-- CONTENT -->
 
@@ -1862,7 +1927,8 @@
 
                 </div>
                 <!-- Cài âm thanh-->
-                <div class="product-card" onclick="window.open('https://www.microsoft.com/en-us/p/app/9p2b8mcsvpln','_blank')">
+                <div class="product-card"
+                    onclick="window.open('https://www.microsoft.com/en-us/p/app/9p2b8mcsvpln','_blank')">
                     <img class="product-image"
                         src="https://cdn.systweak.com/content/wp/bg_systweak_com/uploads/2022/03/get-realtek-audio-control.webp">
 
@@ -2409,16 +2475,13 @@
         <div class="tab-content" id="test">
             <div class="product-grid">
 
-                <div class="product-card"
-                    onclick="window.open('https://keytest.vn/','_blank')">
-                    <img class="product-image"
-                        src="https://cdn.sicomp.vn/storage/blog-images/migrated-319.webp">
+                <div class="product-card" onclick="window.open('https://keytest.vn/','_blank')">
+                    <img class="product-image" src="https://cdn.sicomp.vn/storage/blog-images/migrated-319.webp">
                     <div class="product-name">
                         Kiểm tra bàn phím
                     </div>
                 </div>
-                <div class="product-card"
-                    onclick="window.open('https://vi.mictests.com/','_blank')">
+                <div class="product-card" onclick="window.open('https://vi.mictests.com/','_blank')">
                     <img class="product-image"
                         src="https://image.dienthoaivui.com.vn/x,webp,q90/https://media-asset.dienthoaivui.com.vn/uploads/dashboard/editor_upload/test-micro-1.jpg">
                     <div class="product-name">
@@ -2433,12 +2496,11 @@
                         Kiểm tra màn hình
                     </div>
                 </div>
-                <div class="product-card"
-                    onclick="window.open('https://slowroads.io/','_blank')">
+                <div class="product-card" onclick="window.open('https://slowroads.io/','_blank')">
                     <img class="product-image"
                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT175eO88mPqkB4hnx6hB7NA5B85tPs-hNyF-FGTTOmKA&s=10">
                     <div class="product-name">
-                        Kiểm tra 
+                        Kiểm tra
                     </div>
                 </div>
 
@@ -2449,341 +2511,414 @@
      TÍNH FPS PC GAMING
 ===================================================== -->
 
-<div class="tab-content" id="fps">
+        <div class="tab-content" id="fps">
 
-    <div class="fps-container">
+            <div class="fps-container">
 
-        <div class="fps-title">
-            <i class="fa-solid fa-gauge-high"></i>
-            DỰ ĐOÁN HIỆU NĂNG PC GAMING
-        </div>
-
-        <div class="fps-subtitle">
-            Chọn linh kiện máy tính để xem FPS tham khảo
-        </div>
-
-        <div class="fps-config">
-
-            <!-- CPU -->
-            <div class="fps-item">
-                <label>
-                    <i class="fa-solid fa-microchip"></i>
-                    CPU
-                </label>
-
-                <select id="fpsCPU">
- <optgroup label="CPU Cơ bản">
-        <option value="i3-10100f">Core i3-10100F</option>
-        <option value="i3-10105f">Core i3-10105F</option>
-        <option value="i3-12100f" selected>Core i3-12100F</option>
-        <option value="i3-13100f">Core i3-13100F</option>
-    </optgroup>
-
-    <optgroup label="CPU Quốc dân">
-        <option value="i5-10400f">Core i5-10400F</option>
-        <option value="i5-11400f">Core i5-11400F</option>
-        <option value="i5-12400f">Core i5-12400F</option>
-        <option value="i5-13400f">Core i5-13400F</option>
-        <option value="i5-14400f">Core i5-14400F</option>
-        <option value="r5-3600">Ryzen 5 3600</option>
-        <option value="r5-5500">Ryzen 5 5500</option>
-        <option value="r5-5600">Ryzen 5 5600</option>
-        <option value="r5-7500f">Ryzen 5 7500F</option>
-        <option value="r5-7600">Ryzen 5 7600</option>
-    </optgroup>
-
-    <optgroup label="CPU Cao cấp">
-        <option value="i5-14600kf">Core i5-14600KF</option>
-        <option value="i7-12700f">Core i7-12700F</option>
-        <option value="i7-13700f">Core i7-13700F</option>
-        <option value="i7-14700f">Core i7-14700F</option>
-        <option value="r7-7700">Ryzen 7 7700</option>
-        <option value="r7-7800x3d">Ryzen 7 7800X3D</option>
-    </optgroup>
-                </select>
-            </div>
-
-            <!-- MAINBOARD -->
-            <div class="fps-item">
-                <label>
-                    <i class="fa-solid fa-server"></i>
-                    Mainboard
-                </label>
-
-<select id="fpsMain">
-
-    <!-- INTEL LGA 1200 -->
-    <optgroup label="Intel LGA 1200">
-        <option value="h410">
-            H410M — LGA 1200 — Intel Gen 10
-        </option>
-        <option value="b460">
-            B460M — LGA 1200 — Intel Gen 10
-        </option>
-        <option value="b560">
-            B560M — LGA 1200 — Intel Gen 10 / 11
-        </option>
-    </optgroup>
-
-    <!-- INTEL LGA 1151 / 1151v2 -->
-    <optgroup label="Intel LGA 1151">
-        <option value="h310">
-            H310M — LGA 1151 — Intel Gen 8 / 9
-        </option>
-        <option value="b365">
-            B365M — LGA 1151 — Intel Gen 8 / 9
-        </option>
-        <option value="z390">
-            Z390 — LGA 1151 — Intel Gen 8 / 9
-        </option>
-    </optgroup>
-
-    <!-- INTEL LGA 1700 -->
-    <optgroup label="Intel LGA 1700">
-        <option value="h610" selected>
-            H610M — LGA 1700 — Intel Gen 12 / 13 / 14
-        </option>
-        <option value="b660">
-            B660M — LGA 1700 — Intel Gen 12 / 13 / 14
-        </option>
-        <option value="b760">
-            B760M — LGA 1700 — Intel Gen 12 / 13 / 14
-        </option>
-        <option value="z690">
-            Z690 — LGA 1700 — Intel Gen 12 / 13 / 14
-        </option>
-        <option value="z790">
-            Z790 — LGA 1700 — Intel Gen 12 / 13 / 14
-        </option>
-    </optgroup>
-
-    <!-- AMD AM4 -->
-    <optgroup label="AMD AM4">
-        <option value="a320">
-            A320M — AM4 — Ryzen 1000 → 5000 (tùy BIOS)
-        </option>
-        <option value="b350">
-            B350M — AM4 — Ryzen 1000 → 5000 (tùy BIOS)
-        </option>
-        <option value="b450">
-            B450M — AM4 — Ryzen 1000 → 5000 (tùy BIOS)
-        </option>
-        <option value="a520">
-            A520M — AM4 — Ryzen 3000 / 4000G / 5000
-        </option>
-        <option value="b550">
-            B550M — AM4 — Ryzen 3000 / 4000G / 5000
-        </option>
-        <option value="x570">
-            X570 — AM4 — Ryzen 3000 / 5000
-        </option>
-    </optgroup>
-
-    <!-- AMD AM5 -->
-    <optgroup label="AMD AM5">
-        <option value="a620">
-            A620M — AM5 — Ryzen 7000 / 8000G / 9000 (tùy BIOS)
-        </option>
-        <option value="b650">
-            B650M — AM5 — Ryzen 7000 / 8000 / 9000
-        </option>
-        <option value="b650e">
-            B650E — AM5 — Ryzen 7000 / 8000 / 9000
-        </option>
-        <option value="x670">
-            X670 — AM5 — Ryzen 7000 / 8000 / 9000
-        </option>
-        <option value="x870">
-            X870 — AM5 — Ryzen 7000 / 8000 / 9000
-        </option>
-    </optgroup>
-
-</select>
-            </div>
-
-            <!-- RAM -->
-            <div class="fps-item">
-                <label>
-                    <i class="fa-solid fa-memory"></i>
-                    RAM
-                </label>
-
-                <select id="fpsRAM">
-                    <option value="8">8GB</option>
-                    <option value="16" selected>16GB Dual Channel</option>
-                    <option value="32">32GB Dual Channel</option>
-                </select>
-            </div>
-
-            <!-- GPU -->
-            <div class="fps-item">
-                <label>
-                    <i class="fa-solid fa-display"></i>
-                    Card đồ họa
-                </label>
-
-                <select id="fpsGPU">
-                    <option value="rx580">RX 580 8GB</option>
-                    <option value="rtx3050">RTX 3050 6GB</option>
-                    <option value="rtx3060">RTX 3060 12GB</option>
-                    <option value="rtx4060">RTX 4060 8GB</option>
-                    <option value="rx6600">RX 6600 8GB</option>
-                    <option value="rx7600">RX 7600 8GB</option>
-                    <option value="gtx1660s">GTX 1660 Super 6GB</option>
-                </select>
-            </div>
-
-            <!-- SSD -->
-            <div class="fps-item">
-                <label>
-                    <i class="fa-solid fa-hard-drive"></i>
-                    SSD
-                </label>
-
-                <select id="fpsSSD">
-                    <option value="sata" selected>SSD SATA</option>
-                    <option value="nvme" >SSD NVMe</option>
-                    <option value="nvme-gen4">SSD NVMe Gen4</option>
-                </select>
-            </div>
-
-            <!-- PSU -->
-            <div class="fps-item">
-                <label>
-                    <i class="fa-solid fa-bolt"></i>
-                    Nguồn PSU
-                </label>
-
-                <select id="fpsPSU">
-                    <option value="500">500W</option>
-                    <option value="550">550W</option>
-                    <option value="650" selected>650W</option>
-                    <option value="750">750W</option>
-                    <option value="850">850W</option>
-                </select>
-            </div>
-
-            <!-- RESOLUTION -->
-            <div class="fps-item">
-
-                <label>
-                    <i class="fa-solid fa-expand"></i>
-                    Độ phân giải
-                </label>
-
-                <select id="fpsResolution">
-
-                    <option value="1080" selected>
-                        Full HD 1920×1080
-                    </option>
-
-                    <option value="1440">
-                        2K 2560×1440
-                    </option>
-
-                </select>
-
-            </div>
-
-        </div>
-
-        <button class="fps-calculate" onclick="calculateFPS()">
-
-            <i class="fa-solid fa-calculator"></i>
-            TÍNH FPS
-
-        </button>
-
-        <div class="fps-result" id="fpsResult">
-
-            <div class="fps-summary">
-
-                <div class="fps-summary-title">
-                    <i class="fa-solid fa-computer"></i>
-                    Cấu hình đã chọn
+                <div class="fps-title">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    DỰ ĐOÁN HIỆU NĂNG PC GAMING
                 </div>
 
-                <div class="fps-hardware">
+                <div class="fps-subtitle">
+                    Chọn linh kiện máy tính để xem FPS tham khảo
+                </div>
 
-                    <div>
-                        <strong>CPU</strong>
-                        <span id="resultCPU"></span>
+                <div class="fps-config">
+
+                    <!-- CPU -->
+                    <div class="fps-item">
+                        <label>
+                            <i class="fa-solid fa-microchip"></i>
+                            CPU
+                        </label>
+
+                        <select id="fpsCPU">
+                            <optgroup label="CPU Cơ bản">
+                                <option value="i3-10100f">Core i3-10100F</option>
+                                <option value="i3-10105f">Core i3-10105F</option>
+                                <option value="i3-12100f">Core i3-12100F</option>
+                                <option value="i3-13100f">Core i3-13100F</option>
+                            </optgroup>
+
+                            <optgroup label="CPU Quốc dân">
+                                <option value="i5-10400f">Core i5-10400F</option>
+                                <option value="i5-11400f">Core i5-11400F</option>
+                                <option value="i5-12400f">Core i5-12400F</option>
+                                <option value="i5-13400f">Core i5-13400F</option>
+                                <option value="i5-14400f" selected>Core i5-14400F</option>
+                                <option value="r5-3600">Ryzen 5 3600</option>
+                                <option value="r5-5500">Ryzen 5 5500</option>
+                                <option value="r5-5600">Ryzen 5 5600</option>
+                                <option value="r5-7500f">Ryzen 5 7500F</option>
+                                <option value="r5-7600">Ryzen 5 7600</option>
+                            </optgroup>
+
+                            <optgroup label="CPU Cao cấp">
+                                <option value="i5-14600kf">Core i5-14600KF</option>
+                                <option value="i7-12700f">Core i7-12700F</option>
+                                <option value="i7-13700f">Core i7-13700F</option>
+                                <option value="i7-14700f">Core i7-14700F</option>
+                                <option value="r7-7700">Ryzen 7 7700</option>
+                                <option value="r7-7800x3d">Ryzen 7 7800X3D</option>
+                            </optgroup>
+                        </select>
                     </div>
 
-                    <div>
-                        <strong>Mainboard</strong>
-                        <span id="resultMain"></span>
+                    <!-- MAINBOARD -->
+                    <div class="fps-item">
+                        <label>
+                            <i class="fa-solid fa-server"></i>
+                            Mainboard
+                        </label>
+
+                        <select id="fpsMain">
+
+                            <!-- INTEL LGA 1200 -->
+                            <optgroup label="Intel LGA 1200">
+                                <option value="h410">
+                                    H410M — LGA 1200 — Intel Gen 10
+                                </option>
+                                <option value="b460">
+                                    B460M — LGA 1200 — Intel Gen 10
+                                </option>
+                                <option value="b560">
+                                    B560M — LGA 1200 — Intel Gen 10 / 11
+                                </option>
+                            </optgroup>
+
+                            <!-- INTEL LGA 1151 / 1151v2 -->
+                            <optgroup label="Intel LGA 1151">
+                                <option value="h310">
+                                    H310M — LGA 1151 — Intel Gen 8 / 9
+                                </option>
+                                <option value="b365">
+                                    B365M — LGA 1151 — Intel Gen 8 / 9
+                                </option>
+                                <option value="z390">
+                                    Z390 — LGA 1151 — Intel Gen 8 / 9
+                                </option>
+                            </optgroup>
+
+                            <!-- INTEL LGA 1700 -->
+                            <optgroup label="Intel LGA 1700">
+                                <option value="h610" selected>
+                                    H610M — LGA 1700 — Intel Gen 12 / 13 / 14
+                                </option>
+                                <option value="b660">
+                                    B660M — LGA 1700 — Intel Gen 12 / 13 / 14
+                                </option>
+                                <option value="b760">
+                                    B760M — LGA 1700 — Intel Gen 12 / 13 / 14
+                                </option>
+                                <option value="z690">
+                                    Z690 — LGA 1700 — Intel Gen 12 / 13 / 14
+                                </option>
+                                <option value="z790">
+                                    Z790 — LGA 1700 — Intel Gen 12 / 13 / 14
+                                </option>
+                            </optgroup>
+
+                            <!-- AMD AM4 -->
+                            <optgroup label="AMD AM4">
+                                <option value="a320">
+                                    A320M — AM4 — Ryzen 1000 → 5000 (tùy BIOS)
+                                </option>
+                                <option value="b350">
+                                    B350M — AM4 — Ryzen 1000 → 5000 (tùy BIOS)
+                                </option>
+                                <option value="b450">
+                                    B450M — AM4 — Ryzen 1000 → 5000 (tùy BIOS)
+                                </option>
+                                <option value="a520">
+                                    A520M — AM4 — Ryzen 3000 / 4000G / 5000
+                                </option>
+                                <option value="b550">
+                                    B550M — AM4 — Ryzen 3000 / 4000G / 5000
+                                </option>
+                                <option value="x570">
+                                    X570 — AM4 — Ryzen 3000 / 5000
+                                </option>
+                            </optgroup>
+
+                            <!-- AMD AM5 -->
+                            <optgroup label="AMD AM5">
+                                <option value="a620">
+                                    A620M — AM5 — Ryzen 7000 / 8000G / 9000 (tùy BIOS)
+                                </option>
+                                <option value="b650">
+                                    B650M — AM5 — Ryzen 7000 / 8000 / 9000
+                                </option>
+                                <option value="b650e">
+                                    B650E — AM5 — Ryzen 7000 / 8000 / 9000
+                                </option>
+                                <option value="x670">
+                                    X670 — AM5 — Ryzen 7000 / 8000 / 9000
+                                </option>
+                                <option value="x870">
+                                    X870 — AM5 — Ryzen 7000 / 8000 / 9000
+                                </option>
+                            </optgroup>
+
+                        </select>
                     </div>
 
-                    <div>
-                        <strong>RAM</strong>
-                        <span id="resultRAM"></span>
+                    <!-- RAM -->
+                    <div class="fps-item">
+                        <label>
+                            <i class="fa-solid fa-memory"></i>
+                            RAM
+                        </label>
+
+                        <select id="fpsRAM">
+                            <option value="8">8GB</option>
+                            <option value="16" selected>16GB Dual Channel</option>
+                            <option value="32">32GB Dual Channel</option>
+                        </select>
                     </div>
 
-                    <div>
-                        <strong>GPU</strong>
-                        <span id="resultGPU"></span>
+                    <!-- GPU -->
+                    <div class="fps-item">
+                        <label>
+                            <i class="fa-solid fa-display"></i>
+                            Card đồ họa
+                        </label>
+
+                        <select id="fpsGPU">
+
+                            <optgroup label="🟢 PHỔ THÔNG — 1080P">
+                                <option value="gtx1050ti">GTX 1050 Ti 4GB</option>
+                                <option value="gtx1650">GTX 1650 4GB</option>
+                                <option value="rx570">RX 570 4GB</option>
+                                <option value="rx580">RX 580 8GB</option>
+                                <option value="rx590">RX 590 8GB</option>
+                                <option value="rx6500xt">RX 6500 XT 4GB</option>
+                                <option value="arc_a380">Intel Arc A380 6GB</option>
+                            </optgroup>
+
+                            <optgroup label="🔵 TẦM TRUNG — 1080P">
+                                <option value="gtx1660">GTX 1660 6GB</option>
+                                <option value="gtx1660s">GTX 1660 Super 6GB</option>
+                                <option value="gtx1660ti">GTX 1660 Ti 6GB</option>
+                                <option value="rtx3050" selected>RTX 3050 6GB</option>
+                                <option value="rtx3050_8gb">RTX 3050 8GB</option>
+                                <option value="rx5500xt">RX 5500 XT 8GB</option>
+                                <option value="rx5600xt">RX 5600 XT 6GB</option>
+                                <option value="rx6600">RX 6600 8GB</option>
+                                <option value="rx6600xt">RX 6600 XT 8GB</option>
+                                <option value="rx6650xt">RX 6650 XT 8GB</option>
+                                <option value="arc_a580">Intel Arc A580 8GB</option>
+                                <option value="arc_a750">Intel Arc A750 8GB</option>
+                            </optgroup>
+
+                            <optgroup label="🟣 CAO CẤP — 1080P / 2K">
+                                <option value="rtx2060">RTX 2060 6GB</option>
+                                <option value="rtx2060s">RTX 2060 Super 8GB</option>
+                                <option value="rtx2070">RTX 2070 8GB</option>
+                                <option value="rtx2080">RTX 2080 8GB</option>
+
+                                <option value="rtx3060">RTX 3060 12GB</option>
+                                <option value="rtx3060ti">RTX 3060 Ti 8GB</option>
+                                <option value="rtx3070">RTX 3070 8GB</option>
+                                <option value="rtx3070ti">RTX 3070 Ti 8GB</option>
+                                <option value="rtx3080">RTX 3080 10GB</option>
+                                <option value="rtx3080ti">RTX 3080 Ti 12GB</option>
+                                <option value="rtx3090">RTX 3090 24GB</option>
+
+                                <option value="rx6700xt">RX 6700 XT 12GB</option>
+                                <option value="rx6750xt">RX 6750 XT 12GB</option>
+                                <option value="rx6800">RX 6800 16GB</option>
+                                <option value="rx6800xt">RX 6800 XT 16GB</option>
+                                <option value="rx6900xt">RX 6900 XT 16GB</option>
+                                <option value="rx6950xt">RX 6950 XT 16GB</option>
+
+                                <option value="rx7600">RX 7600 8GB</option>
+                                <option value="rx7600xt">RX 7600 XT 16GB</option>
+                                <option value="rx7700xt">RX 7700 XT 12GB</option>
+                                <option value="rx7800xt">RX 7800 XT 16GB</option>
+
+                                <option value="rtx4060">RTX 4060 8GB</option>
+                                <option value="rtx4060ti">RTX 4060 Ti 8GB</option>
+                                <option value="arc_a770">Intel Arc A770 16GB</option>
+                                <option value="arc_b580">Intel Arc B580 12GB</option>
+                            </optgroup>
+
+                            <optgroup label="🔴 CAO CẤP — 2K / 4K">
+                                <option value="rtx4070">RTX 4070 12GB</option>
+                                <option value="rtx4070s">RTX 4070 Super 12GB</option>
+                                <option value="rtx4070ti">RTX 4070 Ti 12GB</option>
+                                <option value="rtx4070tis">RTX 4070 Ti Super 16GB</option>
+                                <option value="rtx4080">RTX 4080 16GB</option>
+                                <option value="rtx4080s">RTX 4080 Super 16GB</option>
+                                <option value="rtx4090">RTX 4090 24GB</option>
+
+                                <option value="rtx5050">RTX 5050 8GB</option>
+                                <option value="rtx5060">RTX 5060 8GB</option>
+                                <option value="rtx5060ti">RTX 5060 Ti 8GB</option>
+                                <option value="rtx5070">RTX 5070 12GB</option>
+                                <option value="rtx5070ti">RTX 5070 Ti 16GB</option>
+                                <option value="rtx5080">RTX 5080 16GB</option>
+                                <option value="rtx5090">RTX 5090 32GB</option>
+
+                                <option value="rx7900gre">RX 7900 GRE 16GB</option>
+                                <option value="rx7900xt">RX 7900 XT 20GB</option>
+                                <option value="rx7900xtx">RX 7900 XTX 24GB</option>
+                            </optgroup>
+
+                        </select>
                     </div>
 
-                    <div>
-                        <strong>SSD</strong>
-                        <span id="resultSSD"></span>
+                    <!-- SSD -->
+                    <div class="fps-item">
+                        <label>
+                            <i class="fa-solid fa-hard-drive"></i>
+                            SSD
+                        </label>
+
+                        <select id="fpsSSD">
+                            <option value="sata" selected>SSD SATA</option>
+                            <option value="nvme">SSD NVMe</option>
+                            <option value="nvme-gen4">SSD NVMe Gen4</option>
+                        </select>
                     </div>
 
-                    <div>
-                        <strong>PSU</strong>
-                        <span id="resultPSU"></span>
+                    <!-- PSU -->
+                    <div class="fps-item">
+                        <label>
+                            <i class="fa-solid fa-bolt"></i>
+                            Nguồn PSU
+                        </label>
+
+                        <select id="fpsPSU">
+                            <option value="500">500W</option>
+                            <option value="550">550W</option>
+                            <option value="650" selected>650W</option>
+                            <option value="750">750W</option>
+                            <option value="850">850W</option>
+                        </select>
+                    </div>
+
+                    <!-- RESOLUTION -->
+                    <div class="fps-item">
+
+                        <label>
+                            <i class="fa-solid fa-expand"></i>
+                            Độ phân giải
+                        </label>
+
+                        <select id="fpsResolution">
+
+                            <option value="1080" selected>
+                                Full HD 1920×1080
+                            </option>
+
+                            <option value="1440">
+                                2K 2560×1440
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <button class="fps-calculate" onclick="calculateFPS()">
+
+                    <i class="fa-solid fa-calculator"></i>
+                    TÍNH FPS
+
+                </button>
+
+                <div class="fps-result" id="fpsResult">
+
+                    <div class="fps-summary">
+
+                        <div class="fps-summary-title">
+                            <i class="fa-solid fa-computer"></i>
+                            Cấu hình đã chọn
+                        </div>
+
+                        <div class="fps-hardware">
+
+                            <div>
+                                <strong>CPU</strong>
+                                <span id="resultCPU"></span>
+                            </div>
+
+                            <div>
+                                <strong>Mainboard</strong>
+                                <span id="resultMain"></span>
+                            </div>
+
+                            <div>
+                                <strong>RAM</strong>
+                                <span id="resultRAM"></span>
+                            </div>
+
+                            <div>
+                                <strong>GPU</strong>
+                                <span id="resultGPU"></span>
+                            </div>
+
+                            <div>
+                                <strong>SSD</strong>
+                                <span id="resultSSD"></span>
+                            </div>
+
+                            <div>
+                                <strong>PSU</strong>
+                                <span id="resultPSU"></span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <table class="fps-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>GAME</th>
+                                <th>FPS THAM KHẢO</th>
+                                <th>Đánh giá</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="fpsTableBody">
+                        </tbody>
+
+                    </table>
+
+                    <div class="fps-status" id="fpsStatus"></div>
+
+                    <div class="fps-note">
+
+                        <strong>
+                            <i class="fa-solid fa-circle-info"></i>
+                            Lưu ý:
+                        </strong>
+
+                        FPS trên đây là mức <b>ước tính tham khảo</b>
+                        ở điều kiện chơi game thông thường.
+
+                        FPS thực tế còn phụ thuộc vào driver GPU,
+                        phiên bản game, thiết lập đồ họa,
+                        nhiệt độ CPU/GPU, RAM Dual Channel,
+                        Windows và các ứng dụng chạy nền.
+
+                        Mainboard, SSD và PSU chủ yếu ảnh hưởng
+                        đến khả năng tương thích, độ ổn định và thời gian tải,
+                        không trực tiếp cộng FPS.
+
                     </div>
 
                 </div>
 
             </div>
 
-            <table class="fps-table">
-
-                <thead>
-
-                    <tr>
-                        <th>GAME</th>
-                        <th>FPS THAM KHẢO</th>
-                        <th>Đánh giá</th>
-                    </tr>
-
-                </thead>
-
-                <tbody id="fpsTableBody">
-                </tbody>
-
-            </table>
-
-            <div class="fps-status" id="fpsStatus"></div>
-
-            <div class="fps-note">
-
-                <strong>
-                    <i class="fa-solid fa-circle-info"></i>
-                    Lưu ý:
-                </strong>
-
-                FPS trên đây là mức <b>ước tính tham khảo</b>
-                ở điều kiện chơi game thông thường.
-
-                FPS thực tế còn phụ thuộc vào driver GPU,
-                phiên bản game, thiết lập đồ họa,
-                nhiệt độ CPU/GPU, RAM Dual Channel,
-                Windows và các ứng dụng chạy nền.
-
-                Mainboard, SSD và PSU chủ yếu ảnh hưởng
-                đến khả năng tương thích, độ ổn định và thời gian tải,
-                không trực tiếp cộng FPS.
-
-            </div>
-
         </div>
-
-    </div>
-
-</div>
     </div>
 
     </div>
@@ -2966,92 +3101,92 @@
     </div>
     <script>
 
-/* ================= ANIME ASSISTANT ================= */
+        /* ================= ANIME ASSISTANT ================= */
 
-const animeAssistant =
-    document.getElementById("animeAssistant");
+        const animeAssistant =
+            document.getElementById("animeAssistant");
 
-const animeBubble =
-    document.getElementById("animeBubble");
+        const animeBubble =
+            document.getElementById("animeBubble");
 
-const animeClose =
-    document.getElementById("animeClose");
-
-
-/* Nội dung tự động thay đổi */
-
-const animeMessages = [
-
-    "Xin chào! 👋<br>Tải phần mềm nhanh chóng nhé!",
-
-    "Chúc bạn sử dụng vui vẻ! ❤️",
-
-    "Cần phần mềm gì cứ tìm ở đây nhé! 🔍",
-
-    "Mũi Cà Mau<br>Hỗ trợ kỹ thuật 💻",
-
-    "Chúc bạn có một ngày làm việc hiệu quả! ✨"
-
-];
-
-let animeMessageIndex = 0;
+        const animeClose =
+            document.getElementById("animeClose");
 
 
-/* Đổi câu nói */
+        /* Nội dung tự động thay đổi */
 
-setInterval(() => {
+        const animeMessages = [
 
-    animeMessageIndex++;
+            "Xin chào! 👋<br>Tải phần mềm nhanh chóng nhé!",
 
-    if (animeMessageIndex >= animeMessages.length) {
-        animeMessageIndex = 0;
-    }
+            "Chúc bạn sử dụng vui vẻ! ❤️",
 
-    animeBubble.style.opacity = "0";
+            "Cần phần mềm gì cứ tìm ở đây nhé! 🔍",
 
-    setTimeout(() => {
+            "Mũi Cà Mau<br>Hỗ trợ kỹ thuật 💻",
 
-        animeBubble.innerHTML =
-            animeMessages[animeMessageIndex];
+            "Chúc bạn có một ngày làm việc hiệu quả! ✨"
 
-        animeBubble.style.opacity = "1";
+        ];
 
-    }, 250);
-
-}, 4000);
+        let animeMessageIndex = 0;
 
 
-/* Click nhân vật */
+        /* Đổi câu nói */
 
-function openMCM(event) {
+        setInterval(() => {
 
-    event.stopPropagation();
+            animeMessageIndex++;
 
-    window.open(
-        "https://muicamau.vn",
-        "_blank"
-    );
+            if (animeMessageIndex >= animeMessages.length) {
+                animeMessageIndex = 0;
+            }
 
-}
+            animeBubble.style.opacity = "0";
 
+            setTimeout(() => {
 
-/* Đóng Anime */
+                animeBubble.innerHTML =
+                    animeMessages[animeMessageIndex];
 
-animeClose.addEventListener("click", function(event) {
+                animeBubble.style.opacity = "1";
 
-    event.stopPropagation();
+            }, 250);
 
-    animeAssistant.style.animation =
-        "animeExit 0.5s ease forwards";
-
-});
+        }, 4000);
 
 
-/* Animation biến mất */
+        /* Click nhân vật */
 
-const animeStyle = document.createElement("style");
+        function openMCM(event) {
 
-animeStyle.innerHTML = `
+            event.stopPropagation();
+
+            window.open(
+                "https://muicamau.vn",
+                "_blank"
+            );
+
+        }
+
+
+        /* Đóng Anime */
+
+        animeClose.addEventListener("click", function (event) {
+
+            event.stopPropagation();
+
+            animeAssistant.style.animation =
+                "animeExit 0.5s ease forwards";
+
+        });
+
+
+        /* Animation biến mất */
+
+        const animeStyle = document.createElement("style");
+
+        animeStyle.innerHTML = `
 
 @keyframes animeExit {
 
@@ -3069,445 +3204,675 @@ animeStyle.innerHTML = `
 
 `;
 
-document.head.appendChild(animeStyle);
-
-</script>
-<script>
-
-/* =====================================================
-   FPS PC GAMING CALCULATOR
-===================================================== */
-
-const fpsData = {
-    // Cơ bản
-    "i3-10100f":  { name: "Core i3-10100F",  cpuScore: 0.82 },
-    "i3-10105f":  { name: "Core i3-10105F",  cpuScore: 0.85 },
-    "i3-12100f":  { name: "Core i3-12100F",  cpuScore: 1.00 },
-    "i3-13100f":  { name: "Core i3-13100F",  cpuScore: 1.05 },
-
-    // Quốc dân
-    "i5-10400f":  { name: "Core i5-10400F",  cpuScore: 0.95 },
-    "i5-11400f":  { name: "Core i5-11400F",  cpuScore: 1.00 },
-    "i5-12400f":  { name: "Core i5-12400F",  cpuScore: 1.12 },
-    "i5-13400f":  { name: "Core i5-13400F",  cpuScore: 1.20 },
-    "i5-14400f":  { name: "Core i5-14400F",  cpuScore: 1.28 },
-
-    "r5-3600":    { name: "Ryzen 5 3600",    cpuScore: 0.88 },
-    "r5-5500":    { name: "Ryzen 5 5500",    cpuScore: 1.05 },
-    "r5-5600":    { name: "Ryzen 5 5600",    cpuScore: 1.14 },
-    "r5-7500f":   { name: "Ryzen 5 7500F",   cpuScore: 1.28 },
-    "r5-7600":    { name: "Ryzen 5 7600",    cpuScore: 1.35 },
-
-    // Cao cấp
-    "i5-14600kf": { name: "Core i5-14600KF", cpuScore: 1.38 },
-    "i7-12700f":  { name: "Core i7-12700F",  cpuScore: 1.30 },
-    "i7-13700f":  { name: "Core i7-13700F",  cpuScore: 1.42 },
-    "i7-14700f":  { name: "Core i7-14700F",  cpuScore: 1.52 },
-
-    "r7-7700":    { name: "Ryzen 7 7700",    cpuScore: 1.38 },
-    "r7-7800x3d": { name: "Ryzen 7 7800X3D", cpuScore: 1.55 }
-};
-
-const gpuData = {
-
-    "rx580": {
-        name: "RX 580 8GB",
-        gpuScore: 1.00
-    },
-
-    "gtx1660s": {
-        name: "GTX 1660 Super 6GB",
-        gpuScore: 1.25
-    },
-
-    "rx6600": {
-        name: "RX 6600 8GB",
-        gpuScore: 1.65
-    },
-
-    "rtx3050": {
-        name: "RTX 3050 6GB",
-        gpuScore: 1.38
-    },
-
-    "rtx3060": {
-        name: "RTX 3060 12GB",
-        gpuScore: 1.82
-    },
-
-    "rx7600": {
-        name: "RX 7600 8GB",
-        gpuScore: 1.95
-    },
-
-    "rtx4060": {
-        name: "RTX 4060 8GB",
-        gpuScore: 2.05
-    }
-
-};
-
-
-/* FPS cơ bản với RX580 + i3-12100F
-   Full HD */
-
-const baseFPS = {
-
-    // =========================
-    // GAME ESPORT / GAME QUỐC DÂN
-    // =========================
-    "Liên Minh Huyền Thoại": 240,
-    "Đột Kích": 220,
-    "FC Online": 150,
-    "VALORANT": 250,
-    "Counter-Strike 2": 125,
-    "PUBG": 85,
-    "NARAKA: BLADEPOINT": 70,
-
-    // =========================
-    // GAME ONLINE PHỔ BIẾN
-    // =========================
-    "Dota 2": 120,
-    "Apex Legends": 95,
-    "Overwatch 2": 120,
-    "Rainbow Six Siege": 140,
-    "Fortnite": 100,
-    "Rocket League": 180,
-    "Marvel Rivals": 75,
-    "Call of Duty: Warzone": 75,
-    "Call of Duty: Black Ops 6": 70,
+        document.head.appendChild(animeStyle);
+
+    </script>
+    <script>
+
+        /* =====================================================
+           FPS PC GAMING CALCULATOR
+        ===================================================== */
+
+        const fpsData = {
+            // Cơ bản
+            "i3-10100f": { name: "Core i3-10100F", cpuScore: 0.82 },
+            "i3-10105f": { name: "Core i3-10105F", cpuScore: 0.85 },
+            "i3-12100f": { name: "Core i3-12100F", cpuScore: 1.00 },
+            "i3-13100f": { name: "Core i3-13100F", cpuScore: 1.05 },
+
+            // Quốc dân
+            "i5-10400f": { name: "Core i5-10400F", cpuScore: 0.95 },
+            "i5-11400f": { name: "Core i5-11400F", cpuScore: 1.00 },
+            "i5-12400f": { name: "Core i5-12400F", cpuScore: 1.12 },
+            "i5-13400f": { name: "Core i5-13400F", cpuScore: 1.20 },
+            "i5-14400f": { name: "Core i5-14400F", cpuScore: 1.28 },
+
+            "r5-3600": { name: "Ryzen 5 3600", cpuScore: 0.88 },
+            "r5-5500": { name: "Ryzen 5 5500", cpuScore: 1.05 },
+            "r5-5600": { name: "Ryzen 5 5600", cpuScore: 1.14 },
+            "r5-7500f": { name: "Ryzen 5 7500F", cpuScore: 1.28 },
+            "r5-7600": { name: "Ryzen 5 7600", cpuScore: 1.35 },
+
+            // Cao cấp
+            "i5-14600kf": { name: "Core i5-14600KF", cpuScore: 1.38 },
+            "i7-12700f": { name: "Core i7-12700F", cpuScore: 1.30 },
+            "i7-13700f": { name: "Core i7-13700F", cpuScore: 1.42 },
+            "i7-14700f": { name: "Core i7-14700F", cpuScore: 1.52 },
+
+            "r7-7700": { name: "Ryzen 7 7700", cpuScore: 1.38 },
+            "r7-7800x3d": { name: "Ryzen 7 7800X3D", cpuScore: 1.55 }
+        };
+
+        const gpuData = {
+
+            // NVIDIA GTX
+            "gtx1050ti": {
+                name: "GTX 1050 Ti 4GB",
+                gpuScore: 0.65
+            },
+            "gtx1650": {
+                name: "GTX 1650 4GB",
+                gpuScore: 0.82
+            },
+            "gtx1660": {
+                name: "GTX 1660 6GB",
+                gpuScore: 1.15
+            },
+            "gtx1660s": {
+                name: "GTX 1660 Super 6GB",
+                gpuScore: 1.25
+            },
+            "gtx1660ti": {
+                name: "GTX 1660 Ti 6GB",
+                gpuScore: 1.28
+            },
+
+            // NVIDIA RTX 20 series
+            "rtx2060": {
+                name: "RTX 2060 6GB",
+                gpuScore: 1.35
+            },
+            "rtx2060s": {
+                name: "RTX 2060 Super 8GB",
+                gpuScore: 1.52
+            },
+            "rtx2070": {
+                name: "RTX 2070 8GB",
+                gpuScore: 1.58
+            },
+            "rtx2080": {
+                name: "RTX 2080 8GB",
+                gpuScore: 1.78
+            },
+
+            // NVIDIA RTX 30 series
+            "rtx3050": {
+                name: "RTX 3050 6GB",
+                gpuScore: 1.38
+            },
+            "rtx3050_8gb": {
+                name: "RTX 3050 8GB",
+                gpuScore: 1.48
+            },
+            "rtx3060": {
+                name: "RTX 3060 12GB",
+                gpuScore: 1.82
+            },
+            "rtx3060ti": {
+                name: "RTX 3060 Ti 8GB",
+                gpuScore: 2.10
+            },
+            "rtx3070": {
+                name: "RTX 3070 8GB",
+                gpuScore: 2.30
+            },
+            "rtx3070ti": {
+                name: "RTX 3070 Ti 8GB",
+                gpuScore: 2.50
+            },
+            "rtx3080": {
+                name: "RTX 3080 10GB",
+                gpuScore: 2.90
+            },
+            "rtx3080ti": {
+                name: "RTX 3080 Ti 12GB",
+                gpuScore: 3.20
+            },
+            "rtx3090": {
+                name: "RTX 3090 24GB",
+                gpuScore: 3.35
+            },
+
+            // NVIDIA RTX 40 series
+            "rtx4060": {
+                name: "RTX 4060 8GB",
+                gpuScore: 2.05
+            },
+            "rtx4060ti": {
+                name: "RTX 4060 Ti 8GB",
+                gpuScore: 2.45
+            },
+            "rtx4070": {
+                name: "RTX 4070 12GB",
+                gpuScore: 2.85
+            },
+            "rtx4070s": {
+                name: "RTX 4070 Super 12GB",
+                gpuScore: 3.20
+            },
+            "rtx4070ti": {
+                name: "RTX 4070 Ti 12GB",
+                gpuScore: 3.45
+            },
+            "rtx4070tis": {
+                name: "RTX 4070 Ti Super 16GB",
+                gpuScore: 3.70
+            },
+            "rtx4080": {
+                name: "RTX 4080 16GB",
+                gpuScore: 4.10
+            },
+            "rtx4080s": {
+                name: "RTX 4080 Super 16GB",
+                gpuScore: 4.30
+            },
+            "rtx4090": {
+                name: "RTX 4090 24GB",
+                gpuScore: 5.00
+            },
+
+            // NVIDIA RTX 50 series
+            "rtx5050": {
+                name: "RTX 5050 8GB",
+                gpuScore: 1.95
+            },
+            "rtx5060": {
+                name: "RTX 5060 8GB",
+                gpuScore: 2.50
+            },
+            "rtx5060ti": {
+                name: "RTX 5060 Ti 8GB",
+                gpuScore: 2.90
+            },
+            "rtx5070": {
+                name: "RTX 5070 12GB",
+                gpuScore: 3.50
+            },
+            "rtx5070ti": {
+                name: "RTX 5070 Ti 16GB",
+                gpuScore: 4.20
+            },
+            "rtx5080": {
+                name: "RTX 5080 16GB",
+                gpuScore: 4.80
+            },
+            "rtx5090": {
+                name: "RTX 5090 32GB",
+                gpuScore: 6.00
+            },
+
+            // AMD Radeon RX 500 series
+            "rx570": {
+                name: "RX 570 4GB",
+                gpuScore: 0.80
+            },
+            "rx580": {
+                name: "RX 580 8GB",
+                gpuScore: 1.00
+            },
+            "rx590": {
+                name: "RX 590 8GB",
+                gpuScore: 1.10
+            },
+
+            // AMD Radeon RX 5000 series
+            "rx5500xt": {
+                name: "RX 5500 XT 8GB",
+                gpuScore: 1.05
+            },
+            "rx5600xt": {
+                name: "RX 5600 XT 6GB",
+                gpuScore: 1.40
+            },
+            "rx5700xt": {
+                name: "RX 5700 XT 8GB",
+                gpuScore: 1.70
+            },
+
+            // AMD Radeon RX 6000 series
+            "rx6500xt": {
+                name: "RX 6500 XT 4GB",
+                gpuScore: 0.90
+            },
+            "rx6600": {
+                name: "RX 6600 8GB",
+                gpuScore: 1.65
+            },
+            "rx6600xt": {
+                name: "RX 6600 XT 8GB",
+                gpuScore: 1.85
+            },
+            "rx6650xt": {
+                name: "RX 6650 XT 8GB",
+                gpuScore: 1.95
+            },
+            "rx6700xt": {
+                name: "RX 6700 XT 12GB",
+                gpuScore: 2.35
+            },
+            "rx6750xt": {
+                name: "RX 6750 XT 12GB",
+                gpuScore: 2.50
+            },
+            "rx6800": {
+                name: "RX 6800 16GB",
+                gpuScore: 2.80
+            },
+            "rx6800xt": {
+                name: "RX 6800 XT 16GB",
+                gpuScore: 3.15
+            },
+            "rx6900xt": {
+                name: "RX 6900 XT 16GB",
+                gpuScore: 3.40
+            },
+            "rx6950xt": {
+                name: "RX 6950 XT 16GB",
+                gpuScore: 3.60
+            },
+
+            // AMD Radeon RX 7000 series
+            "rx7600": {
+                name: "RX 7600 8GB",
+                gpuScore: 1.95
+            },
+            "rx7600xt": {
+                name: "RX 7600 XT 16GB",
+                gpuScore: 2.15
+            },
+            "rx7700xt": {
+                name: "RX 7700 XT 12GB",
+                gpuScore: 2.75
+            },
+            "rx7800xt": {
+                name: "RX 7800 XT 16GB",
+                gpuScore: 3.20
+            },
+            "rx7900gre": {
+                name: "RX 7900 GRE 16GB",
+                gpuScore: 3.60
+            },
+            "rx7900xt": {
+                name: "RX 7900 XT 20GB",
+                gpuScore: 4.10
+            },
+            "rx7900xtx": {
+                name: "RX 7900 XTX 24GB",
+                gpuScore: 4.60
+            },
+
+            // Intel Arc
+            "arc_a380": {
+                name: "Intel Arc A380 6GB",
+                gpuScore: 0.85
+            },
+            "arc_a580": {
+                name: "Intel Arc A580 8GB",
+                gpuScore: 1.35
+            },
+            "arc_a750": {
+                name: "Intel Arc A750 8GB",
+                gpuScore: 1.60
+            },
+            "arc_a770": {
+                name: "Intel Arc A770 16GB",
+                gpuScore: 1.85
+            },
+            "arc_b580": {
+                name: "Intel Arc B580 12GB",
+                gpuScore: 2.25
+            }
+
+        };
+        // const gpuSelect = document.getElementById("fpsGPU");
+
+        // gpuSelect.innerHTML = Object.entries(gpuData)
+        //     .map(([key, gpu]) =>
+        //         `<option value="${key}">${gpu.name}</option>`
+        //     )
+        //     .join("");
+
+        // gpuSelect.value = "rx580";
+        /* FPS cơ bản với RX580 + i3-12100F
+           Full HD */
+
+        const baseFPS = {
+
+            // =========================
+            // GAME ESPORT / GAME QUỐC DÂN
+            // =========================
+            "Liên Minh Huyền Thoại": 240,
+            "Đột Kích": 220,
+            "FC Online": 150,
+            "VALORANT": 250,
+            "Counter-Strike 2": 125,
+            "PUBG": 85,
+            "NARAKA: BLADEPOINT": 70,
+
+            // =========================
+            // GAME ONLINE PHỔ BIẾN
+            // =========================
+            "Dota 2": 120,
+            "Apex Legends": 95,
+            "Overwatch 2": 120,
+            "Rainbow Six Siege": 140,
+            "Fortnite": 100,
+            "Rocket League": 180,
+            "Marvel Rivals": 75,
+            "Call of Duty: Warzone": 75,
+            "Call of Duty: Black Ops 6": 70,
+
+            // =========================
+            // GAME PHỔ BIẾN / SANDBOX
+            // =========================
+            "GTA V": 110,
+            "Minecraft": 150,
+            "Roblox": 140,
+            "The Sims 4": 120,
+
+            // =========================
+            // GAME ĐUA XE / THỂ THAO
+            // =========================
+            "Forza Horizon 5": 80,
+            "EA SPORTS FC 25": 130,
+            "EA SPORTS FC 26": 130,
+
+            // =========================
+            // GAME AAA
+            // =========================
+            "Red Dead Redemption 2": 60,
+            "Elden Ring": 60,
+            "Hogwarts Legacy": 60,
+            "Cyberpunk 2077": 65,
+            "Black Myth: Wukong": 55,
+            "Monster Hunter Wilds": 50,
+            "Battlefield 6": 65,
+
+            // =========================
+            // GAME KHÁC KHÁ PHỔ BIẾN
+            // =========================
+            "Rust": 70,
+            "Dead by Daylight": 100,
+            "HELLDIVERS 2": 60,
+            "War Thunder": 100,
+            "Genshin Impact": 60,
+            "Honkai: Star Rail": 60
+        };
+        /* Tính FPS */
+
+        function calculateFPS() {
+
+            const cpu =
+                document.getElementById("fpsCPU").value;
+
+            const main =
+                document.getElementById("fpsMain").value;
+
+            const ram =
+                parseInt(document.getElementById("fpsRAM").value);
+
+            const gpu =
+                document.getElementById("fpsGPU").value;
+
+            const ssd =
+                document.getElementById("fpsSSD").value;
+
+            const psu =
+                parseInt(document.getElementById("fpsPSU").value);
+
+            const resolution =
+                document.getElementById("fpsResolution").value;
+
+
+            const cpuInfo =
+                fpsData[cpu];
+
+            const gpuInfo =
+                gpuData[gpu];
+
+
+            /* =========================
+               HỆ SỐ CPU + GPU
+            ========================= */
+
+            let multiplier =
+                (cpuInfo.cpuScore * 0.35) +
+                (gpuInfo.gpuScore * 0.65);
+
+
+            /* =========================
+               RAM
+            ========================= */
+
+            if (ram === 8) {
+
+                multiplier *= 0.88;
+
+            }
+
+            else if (ram === 16) {
+
+                multiplier *= 1.00;
+
+            }
+
+            else if (ram === 32) {
+
+                multiplier *= 1.02;
+
+            }
+
+
+            /* =========================
+               ĐỘ PHÂN GIẢI
+            ========================= */
+
+            if (resolution === "1440") {
+
+                multiplier *= 0.72;
+
+            }
+
+
+            /* =========================
+               GAME-SPECIFIC
+            ========================= */
+
+            const games = Object.keys(baseFPS);
+
+            const tbody =
+                document.getElementById("fpsTableBody");
+
+            tbody.innerHTML = "";
+
+
+            games.forEach(game => {
+
+                let fps =
+                    baseFPS[game] * multiplier;
+
+
+                /*
+                 * Một số game phụ thuộc CPU
+                 * nhiều hơn GPU
+                 */
+
+                if (
+                    game === "Liên Minh Huyền Thoại" ||
+                    game === "Đột Kích" ||
+                    game === "VALORANT"
+                ) {
+
+                    fps *=
+                        0.85 +
+                        cpuInfo.cpuScore * 0.15;
+
+                }
+
+
+                if (game === "CS2") {
+
+                    fps *=
+                        0.90 +
+                        cpuInfo.cpuScore * 0.10;
+
+                }
+
+
+                /*
+                 * Làm tròn FPS
+                 */
+
+                const minFPS =
+                    Math.max(20, Math.round(fps * 0.82));
+
+                const maxFPS =
+                    Math.round(fps * 1.12);
+
+
+                let rating = "";
+                let ratingClass = "";
+
+                if (minFPS >= 200) {
+                    rating = "Rất tốt ";
+                    ratingClass = "fps-excellent";
+                }
+                else if (minFPS >= 120) {
+                    rating = "Tốt";
+                    ratingClass = "fps-good";
+                }
+                else if (minFPS >= 75) {
+                    rating = "Khá";
+                    ratingClass = "fps-medium";
+                }
+                else if (minFPS >= 50) {
+                    rating = "Chơi được";
+                    ratingClass = "fps-playable";
+                }
+                else {
+                    rating = "Cần nâng cấp";
+                    ratingClass = "fps-low";
+                }
+
+
+                const row =
+                    document.createElement("tr");
+
+                row.innerHTML = `
+
+    <td class="fps-game">
+        ${game}
+    </td>
+
+    <td>
+        <span class="fps-value ${ratingClass}">
+            ${minFPS} – ${maxFPS}+ FPS
+        </span>
+    </td>
+
+    <td>
+        <span class="fps-status ${ratingClass}">
+            ${rating}
+        </span>
+    </td>
+
+`;
+
+
+                tbody.appendChild(row);
 
-    // =========================
-    // GAME PHỔ BIẾN / SANDBOX
-    // =========================
-    "GTA V": 110,
-    "Minecraft": 150,
-    "Roblox": 140,
-    "The Sims 4": 120,
-
-    // =========================
-    // GAME ĐUA XE / THỂ THAO
-    // =========================
-    "Forza Horizon 5": 80,
-    "EA SPORTS FC 25": 130,
-    "EA SPORTS FC 26": 130,
-
-    // =========================
-    // GAME AAA
-    // =========================
-    "Red Dead Redemption 2": 60,
-    "Elden Ring": 60,
-    "Hogwarts Legacy": 60,
-    "Cyberpunk 2077": 65,
-    "Black Myth: Wukong": 55,
-    "Monster Hunter Wilds": 50,
-    "Battlefield 6": 65,
-
-    // =========================
-    // GAME KHÁC KHÁ PHỔ BIẾN
-    // =========================
-    "Rust": 70,
-    "Dead by Daylight": 100,
-    "HELLDIVERS 2": 60,
-    "War Thunder": 100,
-    "Genshin Impact": 60,
-    "Honkai: Star Rail": 60
-};
-/* Tính FPS */
-
-function calculateFPS() {
-
-    const cpu =
-        document.getElementById("fpsCPU").value;
-
-    const main =
-        document.getElementById("fpsMain").value;
-
-    const ram =
-        parseInt(document.getElementById("fpsRAM").value);
-
-    const gpu =
-        document.getElementById("fpsGPU").value;
-
-    const ssd =
-        document.getElementById("fpsSSD").value;
-
-    const psu =
-        parseInt(document.getElementById("fpsPSU").value);
-
-    const resolution =
-        document.getElementById("fpsResolution").value;
-
-
-    const cpuInfo =
-        fpsData[cpu];
-
-    const gpuInfo =
-        gpuData[gpu];
-
-
-    /* =========================
-       HỆ SỐ CPU + GPU
-    ========================= */
-
-    let multiplier =
-        (cpuInfo.cpuScore * 0.35) +
-        (gpuInfo.gpuScore * 0.65);
-
-
-    /* =========================
-       RAM
-    ========================= */
-
-    if (ram === 8) {
-
-        multiplier *= 0.88;
-
-    }
-
-    else if (ram === 16) {
-
-        multiplier *= 1.00;
-
-    }
-
-    else if (ram === 32) {
-
-        multiplier *= 1.02;
-
-    }
-
-
-    /* =========================
-       ĐỘ PHÂN GIẢI
-    ========================= */
-
-    if (resolution === "1440") {
-
-        multiplier *= 0.72;
-
-    }
-
-
-    /* =========================
-       GAME-SPECIFIC
-    ========================= */
-
-    const games = Object.keys(baseFPS);
-
-    const tbody =
-        document.getElementById("fpsTableBody");
-
-    tbody.innerHTML = "";
-
-
-    games.forEach(game => {
-
-        let fps =
-            baseFPS[game] * multiplier;
-
-
-        /*
-         * Một số game phụ thuộc CPU
-         * nhiều hơn GPU
-         */
-
-        if (
-            game === "Liên Minh Huyền Thoại" ||
-            game === "Đột Kích" ||
-            game === "VALORANT"
-        ) {
-
-            fps *=
-                0.85 +
-                cpuInfo.cpuScore * 0.15;
-
-        }
-
-
-        if (game === "CS2") {
-
-            fps *=
-                0.90 +
-                cpuInfo.cpuScore * 0.10;
-
-        }
-
-
-        /*
-         * Làm tròn FPS
-         */
-
-        const minFPS =
-            Math.max(20, Math.round(fps * 0.82));
-
-        const maxFPS =
-            Math.round(fps * 1.12);
-
-
-        let rating = "";
-
-        if (minFPS >= 200) {
-
-            rating =
-                "Rất tốt";
-
-        }
-
-        else if (minFPS >= 120) {
-
-            rating =
-                "Tốt";
-
-        }
-
-        else if (minFPS >= 75) {
-
-            rating =
-                "Khá";
-
-        }
-
-        else if (minFPS >= 50) {
-
-            rating =
-                "Chơi được";
-
-        }
-
-        else {
-
-            rating =
-                "Cần nâng cấp";
-
-        }
-
-
-        const row =
-            document.createElement("tr");
-
-
-        row.innerHTML = `
-
-            <td class="fps-game">
-                ${game}
-            </td>
-
-            <td class="fps-value">
-                ${minFPS} – ${maxFPS}+ FPS
-            </td>
-
-            <td>
-                ${rating}
-            </td>
-
-        `;
-
-
-        tbody.appendChild(row);
-
-    });
-
-
-    /* =========================
-       HIỂN THỊ CẤU HÌNH
-    ========================= */
-
-    document.getElementById("resultCPU").textContent =
-        cpuInfo.name;
-
-    document.getElementById("resultGPU").textContent =
-        gpuInfo.name;
-
-    document.getElementById("resultRAM").textContent =
-        ram + "GB" +
-        (ram >= 16 ? " Dual Channel" : "");
-
-    document.getElementById("resultMain").textContent =
-        document.querySelector(
-            "#fpsMain option:checked"
-        ).textContent;
-
-    document.getElementById("resultSSD").textContent =
-        document.querySelector(
-            "#fpsSSD option:checked"
-        ).textContent;
-
-    document.getElementById("resultPSU").textContent =
-        psu + "W";
-
-
-    /* =========================
-       KIỂM TRA NGUỒN
-    ========================= */
-
-    let gpuPowerOK = true;
-
-    if (gpu === "rx580" && psu < 500) {
-        gpuPowerOK = false;
-    }
-
-    if (gpu === "rx6600" && psu < 500) {
-        gpuPowerOK = false;
-    }
-
-    if (
-        (gpu === "rtx3060" ||
-         gpu === "rx7600" ||
-         gpu === "rtx4060") &&
-        psu < 550
-    ) {
-
-        gpuPowerOK = false;
-
-    }
-
-
-    const status =
-        document.getElementById("fpsStatus");
-
-
-    if (!gpuPowerOK) {
-
-        status.innerHTML =
-            '<i class="fa-solid fa-triangle-exclamation"></i> ' +
-            '<b>Cảnh báo:</b> PSU đang chọn có thể không phù hợp ' +
-            'với GPU này. Nên sử dụng nguồn công suất thực ' +
-            'phù hợp với cấu hình.';
-
-    }
-
-    else {
-
-        status.innerHTML =
-            '<i class="fa-solid fa-circle-check"></i> ' +
-            '<b>Cấu hình:</b> Có thể sử dụng. ' +
-            'FPS phía trên là mức dự đoán tham khảo.';
-
-    }
-
-
-    /* Hiện kết quả */
-
-    document.getElementById("fpsResult").style.display =
-        "block";
-
-
-    /* Cuộn nhẹ tới kết quả */
-
-    setTimeout(() => {
-
-        document.getElementById("fpsResult")
-            .scrollIntoView({
-                behavior: "smooth",
-                block: "start"
             });
 
-    }, 100);
 
-}
+            /* =========================
+               HIỂN THỊ CẤU HÌNH
+            ========================= */
 
-</script>
+            document.getElementById("resultCPU").textContent =
+                cpuInfo.name;
+
+            document.getElementById("resultGPU").textContent =
+                gpuInfo.name;
+
+            document.getElementById("resultRAM").textContent =
+                ram + "GB" +
+                (ram >= 16 ? " Dual Channel" : "");
+
+            document.getElementById("resultMain").textContent =
+                document.querySelector(
+                    "#fpsMain option:checked"
+                ).textContent;
+
+            document.getElementById("resultSSD").textContent =
+                document.querySelector(
+                    "#fpsSSD option:checked"
+                ).textContent;
+
+            document.getElementById("resultPSU").textContent =
+                psu + "W";
+
+
+            /* =========================
+               KIỂM TRA NGUỒN
+            ========================= */
+
+            let gpuPowerOK = true;
+
+            if (gpu === "rx580" && psu < 500) {
+                gpuPowerOK = false;
+            }
+
+            if (gpu === "rx6600" && psu < 500) {
+                gpuPowerOK = false;
+            }
+
+            if (
+                (gpu === "rtx3060" ||
+                    gpu === "rx7600" ||
+                    gpu === "rtx4060") &&
+                psu < 550
+            ) {
+
+                gpuPowerOK = false;
+
+            }
+
+
+            const status =
+                document.getElementById("fpsStatus");
+
+
+            if (!gpuPowerOK) {
+
+                status.innerHTML =
+                    '<i class="fa-solid fa-triangle-exclamation"></i> ' +
+                    '<b>Cảnh báo:</b> PSU đang chọn có thể không phù hợp ' +
+                    'với GPU này. Nên sử dụng nguồn công suất thực ' +
+                    'phù hợp với cấu hình.';
+
+            }
+
+            else {
+
+                status.innerHTML =
+                    '<i class="fa-solid fa-circle-check"></i> ' +
+                    '<b>Cấu hình:</b> Có thể sử dụng. ' +
+                    'FPS phía trên là mức dự đoán tham khảo.';
+
+            }
+
+
+            /* Hiện kết quả */
+
+            document.getElementById("fpsResult").style.display =
+                "block";
+
+
+            /* Cuộn nhẹ tới kết quả */
+
+            setTimeout(() => {
+
+                document.getElementById("fpsResult")
+                    .scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+            }, 100);
+
+        }
+
+    </script>
 </body>
 
 </html>
