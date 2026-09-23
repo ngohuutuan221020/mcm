@@ -31,7 +31,7 @@
         } */
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, system-ui;
             background: #f2f2f2;
             color: #222;
         }
@@ -917,7 +917,7 @@
         /* Màu FPS và đánh giá theo mức hiệu năng */
         .fps-value,
         .fps-status {
-            display: inline-block;
+            /* display: inline-block; */
             font-weight: 700;
             border-radius: 8px;
             padding: 5px 10px;
@@ -980,6 +980,29 @@
                 background: #7f1d1d;
             }
         }
+        .game-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 7px;
+}
+
+.game-info span {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 7px;
+    border-radius: 6px;
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.fps-game strong {
+    display: block;
+    margin-bottom: 3px;
+}
     </style>
     <script defer src="/_vercel/insights/script.js"></script>
 
@@ -3589,7 +3612,253 @@
             "Honkai: Star Rail": 60
         };
         /* Tính FPS */
+const gameInfo = {
 
+    "Liên Minh Huyền Thoại": {
+        platform: "PC",
+        mode: "Online",
+        price: "Miễn phí",
+        genre: "MOBA"
+    },
+
+    "Đột Kích": {
+        platform: "PC",
+        mode: "Online",
+        price: "Miễn phí",
+        genre: "FPS"
+    },
+
+    "FC Online": {
+        platform: "PC",
+        mode: "Online",
+        price: "Miễn phí",
+        genre: "Bóng đá"
+    },
+
+    "VALORANT": {
+        platform: "PC / PS5 / Xbox Series",
+        mode: "Online",
+        price: "Miễn phí",
+        genre: "FPS"
+    },
+
+    "Counter-Strike 2": {
+        platform: "PC",
+        mode: "Online",
+        price: "Miễn phí",
+        genre: "FPS"
+    },
+
+    "PUBG": {
+        platform: "PC / PS5 / Xbox / Mobile",
+        mode: "Online",
+        price: "Miễn phí",
+        genre: "Battle Royale"
+    },
+
+    "NARAKA: BLADEPOINT": {
+        platform: "PC / PS5 / Xbox",
+        mode: "Online",
+        price: "Miễn phí",
+        genre: "Battle Royale"
+    },
+
+    "Dota 2": {
+        platform: "PC",
+        mode: "Online",
+        price: "Miễn phí",
+        genre: "MOBA"
+    },
+
+    "Apex Legends": {
+        platform: "PC / PS5 / Xbox / Switch",
+        mode: "Online",
+        price: "Miễn phí",
+        genre: "Battle Royale"
+    },
+
+    "Overwatch 2": {
+        platform: "PC / PS5 / Xbox / Switch",
+        mode: "Online",
+        price: "Miễn phí",
+        genre: "FPS"
+    },
+
+    "Rainbow Six Siege": {
+        platform: "PC / PS5 / Xbox",
+        mode: "Online",
+        price: "Trả phí",
+        genre: "FPS"
+    },
+
+    "Fortnite": {
+        platform: "PC / PS5 / Xbox / Switch",
+        mode: "Online",
+        price: "Miễn phí",
+        genre: "Battle Royale"
+    },
+
+    "Rocket League": {
+        platform: "PC / PS5 / Xbox / Switch",
+        mode: "Online",
+        price: "Miễn phí",
+        genre: "Thể thao"
+    },
+
+    "Marvel Rivals": {
+        platform: "PC / PS5 / Xbox",
+        mode: "Online",
+        price: "Miễn phí",
+        genre: "Hero Shooter"
+    },
+
+    "Call of Duty: Warzone": {
+        platform: "PC / PS5 / Xbox",
+        mode: "Online",
+        price: "Miễn phí",
+        genre: "Battle Royale / FPS"
+    },
+
+    "GTA V": {
+        platform: "PC / PS5 / Xbox",
+        mode: "Online + Offline",
+        price: "Trả phí",
+        genre: "Action / Open World"
+    },
+
+    "Minecraft": {
+        platform: "PC / PS5 / Xbox / Switch / Mobile",
+        mode: "Online + Offline",
+        price: "Trả phí",
+        genre: "Sandbox"
+    },
+
+    "Roblox": {
+        platform: "PC / PS5 / Xbox / Mobile",
+        mode: "Online",
+        price: "Miễn phí",
+        genre: "Sandbox"
+    },
+
+    "The Sims 4": {
+        platform: "PC / PS5 / Xbox",
+        mode: "Offline",
+        price: "Miễn phí",
+        genre: "Simulation"
+    },
+
+    "Forza Horizon 5": {
+        platform: "PC / PS5 / Xbox",
+        mode: "Online + Offline",
+        price: "Trả phí",
+        genre: "Đua xe"
+    },
+
+    "EA SPORTS FC 25": {
+        platform: "PC / PS5 / Xbox / Switch",
+        mode: "Online + Offline",
+        price: "Trả phí",
+        genre: "Thể thao"
+    },
+
+    "EA SPORTS FC 26": {
+        platform: "PC / PS5 / Xbox / Switch",
+        mode: "Online + Offline",
+        price: "Trả phí",
+        genre: "Thể thao"
+    },
+
+    "Red Dead Redemption 2": {
+        platform: "PC / PS4 / PS5 / Xbox",
+        mode: "Online + Offline",
+        price: "Trả phí",
+        genre: "Action / Open World"
+    },
+
+    "Elden Ring": {
+        platform: "PC / PS5 / Xbox",
+        mode: "Online + Offline",
+        price: "Trả phí",
+        genre: "Action RPG"
+    },
+
+    "Hogwarts Legacy": {
+        platform: "PC / PS5 / Xbox / Switch",
+        mode: "Offline",
+        price: "Trả phí",
+        genre: "Action RPG"
+    },
+
+    "Cyberpunk 2077": {
+        platform: "PC / PS5 / Xbox",
+        mode: "Offline",
+        price: "Trả phí",
+        genre: "RPG / Open World"
+    },
+
+    "Black Myth: Wukong": {
+        platform: "PC / PS5 / Xbox",
+        mode: "Offline",
+        price: "Trả phí",
+        genre: "Action RPG"
+    },
+
+    "Monster Hunter Wilds": {
+        platform: "PC / PS5 / Xbox",
+        mode: "Online + Offline",
+        price: "Trả phí",
+        genre: "Action RPG"
+    },
+
+    "Battlefield 6": {
+        platform: "PC / PS5 / Xbox",
+        mode: "Online + Offline",
+        price: "Trả phí",
+        genre: "FPS"
+    },
+
+    "Rust": {
+        platform: "PC / PS5 / Xbox",
+        mode: "Online",
+        price: "Trả phí",
+        genre: "Survival"
+    },
+
+    "Dead by Daylight": {
+        platform: "PC / PS5 / Xbox / Switch / Mobile",
+        mode: "Online",
+        price: "Trả phí",
+        genre: "Horror / Multiplayer"
+    },
+
+    "HELLDIVERS 2": {
+        platform: "PC / PS5 / Xbox",
+        mode: "Online",
+        price: "Trả phí",
+        genre: "Co-op / Shooter"
+    },
+
+    "War Thunder": {
+        platform: "PC / PS5 / Xbox",
+        mode: "Online",
+        price: "Miễn phí",
+        genre: "Combat"
+    },
+
+    "Genshin Impact": {
+        platform: "PC / PS5 / Xbox / Mobile",
+        mode: "Online",
+        price: "Miễn phí",
+        genre: "Action RPG"
+    },
+
+    "Honkai: Star Rail": {
+        platform: "PC / PS5 / Xbox / Mobile",
+        mode: "Online",
+        price: "Miễn phí",
+        genre: "Turn-based RPG"
+    }
+};
         function calculateFPS() {
 
             const cpu =
@@ -3748,24 +4017,31 @@
                 const row =
                     document.createElement("tr");
 
-                row.innerHTML = `
+const info = gameInfo[game] || {
+    platform: "PC",
+    mode: "—",
+    price: "—",
+    genre: "—"
+};
 
+row.innerHTML = `
     <td class="fps-game">
-        ${game}
+        <strong>${game}</strong>
+        <div class="game-info">
+            <span>🎮 ${info.platform}</span>
+            <span>🌐 ${info.mode}</span>
+            <span>💰 ${info.price}</span>
+            <span>🏷️ ${info.genre}</span>
+        </div>
     </td>
 
-    <td>
-        <span class="fps-value ${ratingClass}">
-            ${minFPS} – ${maxFPS}+ FPS
-        </span>
+    <td class="fps-value ${ratingClass}">
+        ${minFPS} – ${maxFPS}+ FPS
     </td>
 
-    <td>
-        <span class="fps-status ${ratingClass}">
-            ${rating}
-        </span>
+    <td class="fps-status ${ratingClass}">
+        ${rating}
     </td>
-
 `;
 
 
