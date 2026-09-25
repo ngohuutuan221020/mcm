@@ -3072,6 +3072,13 @@
       document.head.appendChild(animeStyle);
     </script>
     <script>
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
+
+      window.addEventListener("load", () => {
+        window.scrollTo(0, 0);
+      });
       /* =====================================================
            FPS PC GAMING CALCULATOR
         ===================================================== */
@@ -4208,7 +4215,7 @@
           status.innerHTML =
             '<i class="fa-solid fa-circle-check"></i> ' +
             "<b>Cấu hình:</b> Có thể sử dụng. " +
-            "PSU đề xuất cho GPU: " +
+            "PSU đề xuất tối thiểu cho GPU: " +
             recommendedPSU +
             "W. " +
             "FPS phía trên là mức dự đoán tham khảo.";
