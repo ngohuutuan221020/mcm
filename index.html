@@ -146,10 +146,10 @@
       /* ================= ANIME ASSISTANT ================= */
 
       .anime-assistant {
-        position: absolute;
-        right: 17rem;
+        position: fixed;
+        right: 2rem;
         bottom: 0;
-        width: 270px;
+        /* width: 270px; */
         height: 100%;
         z-index: 20;
 
@@ -181,7 +181,7 @@
       /* NHÂN VẬT */
 
       .anime-character {
-        position: absolute;
+        /* position: absolute; */
         right: 0;
         bottom: -8px;
 
@@ -808,6 +808,7 @@
       }
 
       .fps-table td {
+
         padding: 12px 10px;
         border-bottom: 1px solid #e5e5e5;
       }
@@ -837,6 +838,7 @@
       }
 
       .fps-status {
+text-align: center;
         margin-top: 15px;
         padding: 12px;
         border-radius: 8px;
@@ -2669,6 +2671,8 @@
             TÍNH FPS
           </button>
             <div class="fps-status" id="fpsStatus1"></div>
+<div class="fps-status" id="fpsStatus2"></div>
+
 
           <div class="fps-result" id="fpsResult">
             <div class="fps-summary">
@@ -4064,6 +4068,47 @@
           genre: "FPS",
         },
       };
+const gameRAMRequirement = {
+  "Liên Minh Huyền Thoại": 8,
+  "VALORANT": 8,
+  "Delta Force": 16,
+  "Counter-Strike 2": 8,
+  "FC Online": 8,
+  "Đột Kích": 8,
+  "Dota 2": 8,
+  "Overwatch 2": 8,
+  "Roblox": 8,
+  "Minecraft": 8,
+  "GTA V": 8,
+
+  "Fortnite": 16,
+  "Apex Legends": 8,
+  "NARAKA: BLADEPOINT": 16,
+  "Rocket League": 8,
+  "Rainbow Six Siege": 8,
+  "Marvel Rivals": 16,
+  "Call of Duty: Warzone": 16,
+  "EA SPORTS FC 25": 8,
+  "EA SPORTS FC 26": 8,
+
+  "Dead by Daylight": 8,
+  "War Thunder": 8,
+  "The Sims 4": 8,
+  "Genshin Impact": 8,
+  "Honkai: Star Rail": 16,
+
+  "Forza Horizon 5": 16,
+  "Red Dead Redemption 2": 12,
+  "Elden Ring": 16,
+  "Hogwarts Legacy": 16,
+  "Cyberpunk 2077": 16,
+  "Black Myth: Wukong": 16,
+  "Monster Hunter Wilds": 16,
+  "Battlefield 6": 16,
+  "Rust": 16,
+  "HELLDIVERS 2": 16,
+  "Call of Duty: Black Ops 6": 16
+};
       const gameFactor = {
         "Liên Minh Huyền Thoại": {
           cpu: 1.25,
@@ -4325,7 +4370,8 @@
             cpu: 1.0,
             gpu: 1.0,
           };
-
+const requiredRAM = gameRAMRequirement[game] || 16;
+const ramWarning = ram < requiredRAM;
           /*
            * =========================
            * GAME CPU / GPU CONTRIBUTION
@@ -4467,6 +4513,15 @@
 
       <td class="fps-status ${ratingClass}">
         ${rating}
+
+  ${
+    ramWarning
+      ? `<div class="ram-warning">
+           ⚠️ RAM không đủ
+           <small>đề xuất từ ${requiredRAM}GB RAM </small>
+         </div>`
+      : ""
+  }
       </td>
     `;
 
@@ -4478,7 +4533,20 @@
          * HIỂN THỊ CẤU HÌNH
          * =========================
          */
+const ramWarningGames = games.filter((game) => {
+  const requiredRAM = gameRAMRequirement[game] || 16;
+  return ram < requiredRAM;
+});
 
+const ramStatus = document.getElementById("fpsStatus2");
+
+if (ramWarningGames.length > 0) {
+  ramStatus.innerHTML =
+    '<i class="fa-solid fa-triangle-exclamation"></i> ' +
+    '<b>Cảnh báo RAM:</b> ' +
+    ram + 'GB RAM có thể không đủ cho một số tựa game. ' +
+    'Các game cần nhiều RAM có thể bị giật, tụt FPS hoặc tải game không ổn định.';
+}
         document.getElementById("resultCPU").textContent = cpuInfo.name;
 
         document.getElementById("resultGPU").textContent = gpuInfo.name;
@@ -4512,7 +4580,7 @@
 
         const status = document.getElementById("fpsStatus");
         const status1 = document.getElementById("fpsStatus1");
-
+        
         if (!gpuPowerOK) {
           status1.innerHTML =
             '<i class="fa-solid fa-triangle-exclamation"></i> ' +
