@@ -2506,36 +2506,123 @@
                 CPU
               </label>
 
-              <select id="fpsCPU">
-                <optgroup label="CPU Cơ bản">
-                  <option value="i3-10100f">Core i3-10100F</option>
-                  <option value="i3-10105f">Core i3-10105F</option>
-                  <option value="i3-12100f">Core i3-12100F</option>
-                  <option value="i3-13100f">Core i3-13100F</option>
-                </optgroup>
+         <select id="fpsCPU">
 
-                <optgroup label="CPU Quốc dân">
-                  <option value="i5-10400f">Core i5-10400F</option>
-                  <option value="i5-11400f">Core i5-11400F</option>
-                  <option value="i5-12400f">Core i5-12400F</option>
-                  <option value="i5-13400f">Core i5-13400F</option>
-                  <option value="i5-14400f" selected>Core i5-14400F</option>
-                  <option value="r5-3600">Ryzen 5 3600</option>
-                  <option value="r5-5500">Ryzen 5 5500</option>
-                  <option value="r5-5600">Ryzen 5 5600</option>
-                  <option value="r5-7500f">Ryzen 5 7500F</option>
-                  <option value="r5-7600">Ryzen 5 7600</option>
-                </optgroup>
+  <!-- INTEL LGA 1151 — GEN 8 / 9 -->
+  <optgroup label="Intel Gen 8 / 9 — LGA 1151">
+    <option value="i3-8100">Core i3-8100</option>
+    <option value="i3-9100f">Core i3-9100F</option>
+    <option value="i5-8400">Core i5-8400</option>
+    <option value="i5-8500">Core i5-8500</option>
+    <option value="i5-9400f">Core i5-9400F</option>
+    <option value="i5-9600k">Core i5-9600K</option>
+    <option value="i7-8700">Core i7-8700</option>
+    <option value="i7-9700">Core i7-9700</option>
+    <option value="i7-9700k">Core i7-9700K</option>
+    <option value="i9-9900k">Core i9-9900K</option>
+  </optgroup>
 
-                <optgroup label="CPU Cao cấp">
-                  <option value="i5-14600kf">Core i5-14600KF</option>
-                  <option value="i7-12700f">Core i7-12700F</option>
-                  <option value="i7-13700f">Core i7-13700F</option>
-                  <option value="i7-14700f">Core i7-14700F</option>
-                  <option value="r7-7700">Ryzen 7 7700</option>
-                  <option value="r7-7800x3d">Ryzen 7 7800X3D</option>
-                </optgroup>
-              </select>
+
+  <!-- INTEL LGA 1200 — GEN 10 / 11 -->
+  <optgroup label="Intel Gen 10 / 11 — LGA 1200">
+    <option value="i3-10100f">Core i3-10100F</option>
+    <option value="i3-10105f">Core i3-10105F</option>
+    <option value="i5-10400f">Core i5-10400F</option>
+    <option value="i5-10500">Core i5-10500</option>
+    <option value="i5-10600k">Core i5-10600K</option>
+    <option value="i7-10700f">Core i7-10700F</option>
+    <option value="i7-10700k">Core i7-10700K</option>
+    <option value="i9-10900f">Core i9-10900F</option>
+    <option value="i9-10900k">Core i9-10900K</option>
+
+    <option value="i3-10105f">Core i3-10105F</option>
+    <option value="i5-11400f">Core i5-11400F</option>
+    <option value="i5-11500">Core i5-11500</option>
+    <option value="i5-11600k">Core i5-11600K</option>
+    <option value="i7-11700f">Core i7-11700F</option>
+    <option value="i7-11700k">Core i7-11700K</option>
+    <option value="i9-11900f">Core i9-11900F</option>
+    <option value="i9-11900k">Core i9-11900K</option>
+  </optgroup>
+
+
+  <!-- INTEL LGA 1700 — GEN 12 / 13 / 14 -->
+  <optgroup label="Intel Gen 12 / 13 / 14 — LGA 1700">
+    <option value="i3-12100f">Core i3-12100F</option>
+    <option value="i3-13100f">Core i3-13100F</option>
+
+    <option value="i5-12400f">Core i5-12400F</option>
+    <option value="i5-12600k">Core i5-12600K</option>
+    <option value="i5-13400f">Core i5-13400F</option>
+    <option value="i5-13600kf">Core i5-13600KF</option>
+    <option value="i5-14400f" selected>Core i5-14400F</option>
+    <option value="i5-14600kf">Core i5-14600KF</option>
+
+    <option value="i7-12700f">Core i7-12700F</option>
+    <option value="i7-12700k">Core i7-12700K</option>
+    <option value="i7-13700f">Core i7-13700F</option>
+    <option value="i7-13700k">Core i7-13700K</option>
+    <option value="i7-14700f">Core i7-14700F</option>
+    <option value="i7-14700k">Core i7-14700K</option>
+
+    <option value="i9-12900k">Core i9-12900K</option>
+    <option value="i9-13900k">Core i9-13900K</option>
+    <option value="i9-14900k">Core i9-14900K</option>
+  </optgroup>
+
+
+  <!-- INTEL LGA 1851 -->
+  <optgroup label="Intel Core Ultra — LGA 1851">
+    <option value="core-ultra-5-225f">Core Ultra 5 225F</option>
+    <option value="core-ultra-5-245kf">Core Ultra 5 245KF</option>
+    <option value="core-ultra-7-265f">Core Ultra 7 265F</option>
+    <option value="core-ultra-7-265k">Core Ultra 7 265K</option>
+    <option value="core-ultra-9-285k">Core Ultra 9 285K</option>
+  </optgroup>
+
+
+  <!-- AMD AM4 -->
+  <optgroup label="AMD Ryzen — AM4">
+    <option value="r5-1600">Ryzen 5 1600</option>
+    <option value="r5-2600">Ryzen 5 2600</option>
+    <option value="r5-3600">Ryzen 5 3600</option>
+    <option value="r5-5500">Ryzen 5 5500</option>
+    <option value="r5-5600">Ryzen 5 5600</option>
+    <option value="r5-5600x">Ryzen 5 5600X</option>
+
+    <option value="r7-2700x">Ryzen 7 2700X</option>
+    <option value="r7-3700x">Ryzen 7 3700X</option>
+    <option value="r7-5700x">Ryzen 7 5700X</option>
+    <option value="r7-5800x">Ryzen 7 5800X</option>
+    <option value="r7-5700x3d">Ryzen 7 5700X3D</option>
+    <option value="r7-5800x3d">Ryzen 7 5800X3D</option>
+
+    <option value="r9-3900x">Ryzen 9 3900X</option>
+    <option value="r9-5900x">Ryzen 9 5900X</option>
+    <option value="r9-5950x">Ryzen 9 5950X</option>
+  </optgroup>
+
+
+  <!-- AMD AM5 -->
+  <optgroup label="AMD Ryzen — AM5">
+    <option value="r5-7500f">Ryzen 5 7500F</option>
+    <option value="r5-7600">Ryzen 5 7600</option>
+    <option value="r5-7600x">Ryzen 5 7600X</option>
+    <option value="r5-9600x">Ryzen 5 9600X</option>
+
+    <option value="r7-7700">Ryzen 7 7700</option>
+    <option value="r7-7700x">Ryzen 7 7700X</option>
+    <option value="r7-7800x3d">Ryzen 7 7800X3D</option>
+    <option value="r7-9700x">Ryzen 7 9700X</option>
+    <option value="r7-9800x3d">Ryzen 7 9800X3D</option>
+
+    <option value="r9-7900x">Ryzen 9 7900X</option>
+    <option value="r9-7950x">Ryzen 9 7950X</option>
+    <option value="r9-9900x">Ryzen 9 9900X</option>
+    <option value="r9-9950x">Ryzen 9 9950X</option>
+  </optgroup>
+
+</select>
             </div>
 
             <!-- MAINBOARD -->
@@ -2545,87 +2632,195 @@
                 Mainboard
               </label>
 
-              <select id="fpsMain">
-                <!-- INTEL LGA 1200 -->
-                <optgroup label="Intel LGA 1200">
-                  <option value="h410">H410M — LGA 1200 — Intel Gen 10</option>
-                  <option value="b460">B460M — LGA 1200 — Intel Gen 10</option>
-                  <option value="b560">
-                    B560M — LGA 1200 — Intel Gen 10 / 11
-                  </option>
-                </optgroup>
+            <select id="fpsMain">
 
-                <!-- INTEL LGA 1151 / 1151v2 -->
-                <optgroup label="Intel LGA 1151">
-                  <option value="h310">
-                    H310M — LGA 1151 — Intel Gen 8 / 9
-                  </option>
-                  <option value="b365">
-                    B365M — LGA 1151 — Intel Gen 8 / 9
-                  </option>
-                  <option value="z390">
-                    Z390 — LGA 1151 — Intel Gen 8 / 9
-                  </option>
-                </optgroup>
+  <!-- =====================================================
+       INTEL LGA 1151 — GEN 8 / 9
+       ===================================================== -->
+  <optgroup label="Intel LGA 1151 — Gen 8 / 9">
+    <option value="h310">
+      H310M — LGA 1151 — Intel Gen 8 / 9
+    </option>
+    <option value="b360">
+      B360M — LGA 1151 — Intel Gen 8 / 9
+    </option>
+    <option value="b365">
+      B365M — LGA 1151 — Intel Gen 8 / 9
+    </option>
+    <option value="h370">
+      H370M — LGA 1151 — Intel Gen 8 / 9
+    </option>
+    <option value="z370">
+      Z370 — LGA 1151 — Intel Gen 8 / 9
+    </option>
+    <option value="z390">
+      Z390 — LGA 1151 — Intel Gen 8 / 9
+    </option>
+  </optgroup>
 
-                <!-- INTEL LGA 1700 -->
-                <optgroup label="Intel LGA 1700">
-                  <option value="h610" selected>
-                    H610M — LGA 1700 — Intel Gen 12 / 13 / 14
-                  </option>
-                  <option value="b660">
-                    B660M — LGA 1700 — Intel Gen 12 / 13 / 14
-                  </option>
-                  <option value="b760">
-                    B760M — LGA 1700 — Intel Gen 12 / 13 / 14
-                  </option>
-                  <option value="z690">
-                    Z690 — LGA 1700 — Intel Gen 12 / 13 / 14
-                  </option>
-                  <option value="z790">
-                    Z790 — LGA 1700 — Intel Gen 12 / 13 / 14
-                  </option>
-                </optgroup>
 
-                <!-- AMD AM4 -->
-                <optgroup label="AMD AM4">
-                  <option value="a320">
-                    A320M — AM4 — Ryzen 1000 → 5000 (tùy BIOS)
-                  </option>
-                  <option value="b350">
-                    B350M — AM4 — Ryzen 1000 → 5000 (tùy BIOS)
-                  </option>
-                  <option value="b450">
-                    B450M — AM4 — Ryzen 1000 → 5000 (tùy BIOS)
-                  </option>
-                  <option value="a520">
-                    A520M — AM4 — Ryzen 3000 / 4000G / 5000
-                  </option>
-                  <option value="b550">
-                    B550M — AM4 — Ryzen 3000 / 4000G / 5000
-                  </option>
-                  <option value="x570">X570 — AM4 — Ryzen 3000 / 5000</option>
-                </optgroup>
+  <!-- =====================================================
+       INTEL LGA 1200 — GEN 10 / 11
+       ===================================================== -->
+  <optgroup label="Intel LGA 1200 — Gen 10 / 11">
+    <option value="h410">
+      H410M — LGA 1200 — Intel Gen 10
+    </option>
+    <option value="h510">
+      H510M — LGA 1200 — Intel Gen 10 / 11
+    </option>
+    <option value="b460">
+      B460M — LGA 1200 — Intel Gen 10
+    </option>
+    <option value="b560">
+      B560M — LGA 1200 — Intel Gen 10 / 11
+    </option>
+    <option value="h470">
+      H470 — LGA 1200 — Intel Gen 10
+    </option>
+    <option value="z490">
+      Z490 — LGA 1200 — Intel Gen 10
+    </option>
+    <option value="z590">
+      Z590 — LGA 1200 — Intel Gen 10 / 11
+    </option>
+  </optgroup>
 
-                <!-- AMD AM5 -->
-                <optgroup label="AMD AM5">
-                  <option value="a620">
-                    A620M — AM5 — Ryzen 7000 / 8000G / 9000 (tùy BIOS)
-                  </option>
-                  <option value="b650">
-                    B650M — AM5 — Ryzen 7000 / 8000 / 9000
-                  </option>
-                  <option value="b650e">
-                    B650E — AM5 — Ryzen 7000 / 8000 / 9000
-                  </option>
-                  <option value="x670">
-                    X670 — AM5 — Ryzen 7000 / 8000 / 9000
-                  </option>
-                  <option value="x870">
-                    X870 — AM5 — Ryzen 7000 / 8000 / 9000
-                  </option>
-                </optgroup>
-              </select>
+
+  <!-- =====================================================
+       INTEL LGA 1700 — GEN 12 / 13 / 14
+       ===================================================== -->
+  <optgroup label="Intel LGA 1700 — Gen 12 / 13 / 14">
+
+    <!-- H Series -->
+    <option value="h610" selected>
+      H610M — LGA 1700 — Intel Gen 12 / 13 / 14
+    </option>
+    <option value="h670">
+      H670 — LGA 1700 — Intel Gen 12 / 13 / 14
+    </option>
+
+    <!-- B Series -->
+    <option value="b660">
+      B660M — LGA 1700 — Intel Gen 12 / 13 / 14
+    </option>
+    <option value="b760">
+      B760M — LGA 1700 — Intel Gen 12 / 13 / 14
+    </option>
+
+    <!-- Z Series -->
+    <option value="z690">
+      Z690 — LGA 1700 — Intel Gen 12 / 13 / 14
+    </option>
+    <option value="z790">
+      Z790 — LGA 1700 — Intel Gen 12 / 13 / 14
+    </option>
+
+  </optgroup>
+
+
+  <!-- =====================================================
+       INTEL LGA 1851 — CORE ULTRA DESKTOP
+       ===================================================== -->
+  <optgroup label="Intel LGA 1851 — Core Ultra">
+
+    <!-- H Series -->
+    <option value="h810">
+      H810 — LGA 1851 — Intel Core Ultra
+    </option>
+
+    <!-- B Series -->
+    <option value="b860">
+      B860M — LGA 1851 — Intel Core Ultra
+    </option>
+
+    <!-- Z Series -->
+    <option value="z890">
+      Z890 — LGA 1851 — Intel Core Ultra
+    </option>
+
+  </optgroup>
+
+
+  <!-- =====================================================
+       AMD AM4
+       ===================================================== -->
+  <optgroup label="AMD AM4 — Ryzen">
+
+    <!-- A Series -->
+    <option value="a320">
+      A320M — AM4 — Ryzen 1000 → 5000 (tùy BIOS)
+    </option>
+    <option value="a520">
+      A520M — AM4 — Ryzen 3000 / 4000G / 5000
+    </option>
+
+    <!-- B Series -->
+    <option value="b350">
+      B350M — AM4 — Ryzen 1000 → 5000 (tùy BIOS)
+    </option>
+    <option value="b450">
+      B450M — AM4 — Ryzen 2000 / 3000 / 4000G / 5000 (tùy BIOS)
+    </option>
+    <option value="b550">
+      B550M — AM4 — Ryzen 3000 / 4000G / 5000
+    </option>
+
+    <!-- X Series -->
+    <option value="x370">
+      X370 — AM4 — Ryzen 1000 → 5000 (tùy BIOS)
+    </option>
+    <option value="x470">
+      X470 — AM4 — Ryzen 2000 → 5000 (tùy BIOS)
+    </option>
+    <option value="x570">
+      X570 — AM4 — Ryzen 3000 / 5000
+    </option>
+
+  </optgroup>
+
+
+  <!-- =====================================================
+       AMD AM5
+       ===================================================== -->
+  <optgroup label="AMD AM5 — Ryzen">
+
+    <!-- A Series -->
+    <option value="a620">
+      A620M — AM5 — Ryzen 7000 / 8000 / 9000 (tùy BIOS)
+    </option>
+
+    <!-- B Series -->
+    <option value="b650">
+      B650M — AM5 — Ryzen 7000 / 8000 / 9000
+    </option>
+    <option value="b650e">
+      B650E — AM5 — Ryzen 7000 / 8000 / 9000
+    </option>
+    <option value="b850">
+      B850M — AM5 — Ryzen 7000 / 8000 / 9000
+    </option>
+    <option value="b850e">
+      B850E — AM5 — Ryzen 7000 / 8000 / 9000
+    </option>
+
+    <!-- X Series -->
+    <option value="x670">
+      X670 — AM5 — Ryzen 7000 / 8000 / 9000
+    </option>
+    <option value="x670e">
+      X670E — AM5 — Ryzen 7000 / 8000 / 9000
+    </option>
+    <option value="x870">
+      X870 — AM5 — Ryzen 7000 / 8000 / 9000
+    </option>
+    <option value="x870e">
+      X870E — AM5 — Ryzen 7000 / 8000 / 9000
+    </option>
+
+  </optgroup>
+
+</select>
             </div>
 
             <!-- RAM -->
@@ -2780,7 +2975,6 @@
             <i class="fa-solid fa-calculator"></i>
             TÍNH FPS
           </button>
-
           <div class="fps-result" id="fpsResult">
             <div class="fps-summary">
               <div class="fps-summary-title">
@@ -2852,6 +3046,7 @@
         </div>
       </div>
     </div>
+    
     <footer class="footer">
       © 2026 Tuan PC | Hỗ trợ cài đặt phần mềm Windows & Game & Sửa lỗi máy tính
 
@@ -2883,6 +3078,22 @@
       }
     </script>
     <script>
+      function resetFPS() {
+  document.getElementById("fpsCPU").selectedIndex = 0;
+  document.getElementById("fpsMain").selectedIndex = 0;
+  document.getElementById("fpsRAM").selectedIndex = 0;
+  document.getElementById("fpsGPU").selectedIndex = 0;
+  document.getElementById("fpsSSD").selectedIndex = 0;
+  document.getElementById("fpsPSU").selectedIndex = 0;
+  document.getElementById("fpsResolution").selectedIndex = 0;
+
+  document.getElementById("fpsResult").style.display = "none";
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
       function showTab(tabId, btn) {
         document
           .querySelectorAll(".tab-content")
@@ -2892,8 +3103,21 @@
           .forEach((b) => b.classList.remove("active"));
         document.getElementById(tabId).classList.add("active");
         btn.classList.add("active");
+        localStorage.setItem("activeTab", tabId);
       }
+window.addEventListener("DOMContentLoaded", () => {
+  const savedTab = localStorage.getItem("activeTab");
 
+  if (!savedTab) return;
+
+  const btn = document.querySelector(
+    `.tab-btn[onclick*="showTab('${savedTab}'"]`
+  );
+
+  if (btn) {
+    showTab(savedTab, btn);
+  }
+});
       /* SEARCH */
 
       const searchInput = document.getElementById("searchInput");
@@ -3084,34 +3308,369 @@
         ===================================================== */
 
       const fpsData = {
-        // Cơ bản
-        "i3-10100f": { name: "Core i3-10100F", cpuScore: 0.82 },
-        "i3-10105f": { name: "Core i3-10105F", cpuScore: 0.85 },
-        "i3-12100f": { name: "Core i3-12100F", cpuScore: 1.0 },
-        "i3-13100f": { name: "Core i3-13100F", cpuScore: 1.05 },
+  // =========================================================
+  // INTEL LGA 1151 — GEN 8 / 9
+  // =========================================================
 
-        // Quốc dân
-        "i5-10400f": { name: "Core i5-10400F", cpuScore: 0.95 },
-        "i5-11400f": { name: "Core i5-11400F", cpuScore: 1.0 },
-        "i5-12400f": { name: "Core i5-12400F", cpuScore: 1.12 },
-        "i5-13400f": { name: "Core i5-13400F", cpuScore: 1.2 },
-        "i5-14400f": { name: "Core i5-14400F", cpuScore: 1.28 },
+  "i3-8100": {
+    name: "Core i3-8100",
+    cpuScore: 0.68
+  },
+  "i3-9100f": {
+    name: "Core i3-9100F",
+    cpuScore: 0.72
+  },
 
-        "r5-3600": { name: "Ryzen 5 3600", cpuScore: 0.88 },
-        "r5-5500": { name: "Ryzen 5 5500", cpuScore: 1.05 },
-        "r5-5600": { name: "Ryzen 5 5600", cpuScore: 1.14 },
-        "r5-7500f": { name: "Ryzen 5 7500F", cpuScore: 1.28 },
-        "r5-7600": { name: "Ryzen 5 7600", cpuScore: 1.35 },
+  "i5-8400": {
+    name: "Core i5-8400",
+    cpuScore: 0.82
+  },
+  "i5-8500": {
+    name: "Core i5-8500",
+    cpuScore: 0.85
+  },
+  "i5-9400f": {
+    name: "Core i5-9400F",
+    cpuScore: 0.88
+  },
+  "i5-9600k": {
+    name: "Core i5-9600K",
+    cpuScore: 0.94
+  },
 
-        // Cao cấp
-        "i5-14600kf": { name: "Core i5-14600KF", cpuScore: 1.38 },
-        "i7-12700f": { name: "Core i7-12700F", cpuScore: 1.3 },
-        "i7-13700f": { name: "Core i7-13700F", cpuScore: 1.42 },
-        "i7-14700f": { name: "Core i7-14700F", cpuScore: 1.52 },
+  "i7-8700": {
+    name: "Core i7-8700",
+    cpuScore: 1.02
+  },
+  "i7-9700": {
+    name: "Core i7-9700",
+    cpuScore: 1.04
+  },
+  "i7-9700k": {
+    name: "Core i7-9700K",
+    cpuScore: 1.08
+  },
 
-        "r7-7700": { name: "Ryzen 7 7700", cpuScore: 1.38 },
-        "r7-7800x3d": { name: "Ryzen 7 7800X3D", cpuScore: 1.55 },
-      };
+  "i9-9900k": {
+    name: "Core i9-9900K",
+    cpuScore: 1.18
+  },
+
+
+  // =========================================================
+  // INTEL LGA 1200 — GEN 10 / 11
+  // =========================================================
+
+  "i3-10100f": {
+    name: "Core i3-10100F",
+    cpuScore: 0.82
+  },
+  "i3-10105f": {
+    name: "Core i3-10105F",
+    cpuScore: 0.85
+  },
+
+  "i5-10400f": {
+    name: "Core i5-10400F",
+    cpuScore: 0.95
+  },
+  "i5-10500": {
+    name: "Core i5-10500",
+    cpuScore: 0.98
+  },
+  "i5-10600k": {
+    name: "Core i5-10600K",
+    cpuScore: 1.02
+  },
+
+  "i7-10700f": {
+    name: "Core i7-10700F",
+    cpuScore: 1.12
+  },
+  "i7-10700k": {
+    name: "Core i7-10700K",
+    cpuScore: 1.16
+  },
+
+  "i9-10900f": {
+    name: "Core i9-10900F",
+    cpuScore: 1.20
+  },
+  "i9-10900k": {
+    name: "Core i9-10900K",
+    cpuScore: 1.24
+  },
+
+  "i5-11400f": {
+    name: "Core i5-11400F",
+    cpuScore: 1.00
+  },
+  "i5-11500": {
+    name: "Core i5-11500",
+    cpuScore: 1.04
+  },
+  "i5-11600k": {
+    name: "Core i5-11600K",
+    cpuScore: 1.08
+  },
+
+  "i7-11700f": {
+    name: "Core i7-11700F",
+    cpuScore: 1.15
+  },
+  "i7-11700k": {
+    name: "Core i7-11700K",
+    cpuScore: 1.20
+  },
+
+  "i9-11900f": {
+    name: "Core i9-11900F",
+    cpuScore: 1.22
+  },
+  "i9-11900k": {
+    name: "Core i9-11900K",
+    cpuScore: 1.25
+  },
+
+
+  // =========================================================
+  // INTEL LGA 1700 — GEN 12 / 13 / 14
+  // =========================================================
+
+  "i3-12100f": {
+    name: "Core i3-12100F",
+    cpuScore: 1.00
+  },
+  "i3-13100f": {
+    name: "Core i3-13100F",
+    cpuScore: 1.05
+  },
+
+  "i5-12400f": {
+    name: "Core i5-12400F",
+    cpuScore: 1.12
+  },
+  "i5-12600k": {
+    name: "Core i5-12600K",
+    cpuScore: 1.22
+  },
+
+  "i5-13400f": {
+    name: "Core i5-13400F",
+    cpuScore: 1.20
+  },
+  "i5-13600kf": {
+    name: "Core i5-13600KF",
+    cpuScore: 1.34
+  },
+
+  "i5-14400f": {
+    name: "Core i5-14400F",
+    cpuScore: 1.28
+  },
+  "i5-14600kf": {
+    name: "Core i5-14600KF",
+    cpuScore: 1.38
+  },
+
+  "i7-12700f": {
+    name: "Core i7-12700F",
+    cpuScore: 1.30
+  },
+  "i7-12700k": {
+    name: "Core i7-12700K",
+    cpuScore: 1.34
+  },
+
+  "i7-13700f": {
+    name: "Core i7-13700F",
+    cpuScore: 1.42
+  },
+  "i7-13700k": {
+    name: "Core i7-13700K",
+    cpuScore: 1.46
+  },
+
+  "i7-14700f": {
+    name: "Core i7-14700F",
+    cpuScore: 1.52
+  },
+  "i7-14700k": {
+    name: "Core i7-14700K",
+    cpuScore: 1.56
+  },
+
+  "i9-12900k": {
+    name: "Core i9-12900K",
+    cpuScore: 1.48
+  },
+  "i9-13900k": {
+    name: "Core i9-13900K",
+    cpuScore: 1.62
+  },
+  "i9-14900k": {
+    name: "Core i9-14900K",
+    cpuScore: 1.68
+  },
+
+
+  // =========================================================
+  // INTEL LGA 1851 — CORE ULTRA
+  // =========================================================
+
+  "core-ultra-5-225f": {
+    name: "Core Ultra 5 225F",
+    cpuScore: 1.32
+  },
+  "core-ultra-5-245kf": {
+    name: "Core Ultra 5 245KF",
+    cpuScore: 1.42
+  },
+
+  "core-ultra-7-265f": {
+    name: "Core Ultra 7 265F",
+    cpuScore: 1.52
+  },
+  "core-ultra-7-265k": {
+    name: "Core Ultra 7 265K",
+    cpuScore: 1.56
+  },
+
+  "core-ultra-9-285k": {
+    name: "Core Ultra 9 285K",
+    cpuScore: 1.68
+  },
+
+
+  // =========================================================
+  // AMD AM4 — RYZEN
+  // =========================================================
+
+  "r5-1600": {
+    name: "Ryzen 5 1600",
+    cpuScore: 0.65
+  },
+  "r5-2600": {
+    name: "Ryzen 5 2600",
+    cpuScore: 0.75
+  },
+  "r5-3600": {
+    name: "Ryzen 5 3600",
+    cpuScore: 0.88
+  },
+
+  "r5-5500": {
+    name: "Ryzen 5 5500",
+    cpuScore: 1.05
+  },
+  "r5-5600": {
+    name: "Ryzen 5 5600",
+    cpuScore: 1.14
+  },
+  "r5-5600x": {
+    name: "Ryzen 5 5600X",
+    cpuScore: 1.17
+  },
+
+  "r7-2700x": {
+    name: "Ryzen 7 2700X",
+    cpuScore: 0.86
+  },
+  "r7-3700x": {
+    name: "Ryzen 7 3700X",
+    cpuScore: 1.00
+  },
+
+  "r7-5700x": {
+    name: "Ryzen 7 5700X",
+    cpuScore: 1.20
+  },
+  "r7-5800x": {
+    name: "Ryzen 7 5800X",
+    cpuScore: 1.25
+  },
+  "r7-5700x3d": {
+    name: "Ryzen 7 5700X3D",
+    cpuScore: 1.32
+  },
+  "r7-5800x3d": {
+    name: "Ryzen 7 5800X3D",
+    cpuScore: 1.38
+  },
+
+  "r9-3900x": {
+    name: "Ryzen 9 3900X",
+    cpuScore: 1.15
+  },
+  "r9-5900x": {
+    name: "Ryzen 9 5900X",
+    cpuScore: 1.38
+  },
+  "r9-5950x": {
+    name: "Ryzen 9 5950X",
+    cpuScore: 1.48
+  },
+
+
+  // =========================================================
+  // AMD AM5 — RYZEN
+  // =========================================================
+
+  "r5-7500f": {
+    name: "Ryzen 5 7500F",
+    cpuScore: 1.28
+  },
+  "r5-7600": {
+    name: "Ryzen 5 7600",
+    cpuScore: 1.35
+  },
+  "r5-7600x": {
+    name: "Ryzen 5 7600X",
+    cpuScore: 1.38
+  },
+  "r5-9600x": {
+    name: "Ryzen 5 9600X",
+    cpuScore: 1.42
+  },
+
+  "r7-7700": {
+    name: "Ryzen 7 7700",
+    cpuScore: 1.38
+  },
+  "r7-7700x": {
+    name: "Ryzen 7 7700X",
+    cpuScore: 1.42
+  },
+  "r7-7800x3d": {
+    name: "Ryzen 7 7800X3D",
+    cpuScore: 1.55
+  },
+  "r7-9700x": {
+    name: "Ryzen 7 9700X",
+    cpuScore: 1.52
+  },
+  "r7-9800x3d": {
+    name: "Ryzen 7 9800X3D",
+    cpuScore: 1.62
+  },
+
+  "r9-7900x": {
+    name: "Ryzen 9 7900X",
+    cpuScore: 1.52
+  },
+  "r9-7950x": {
+    name: "Ryzen 9 7950X",
+    cpuScore: 1.62
+  },
+  "r9-9900x": {
+    name: "Ryzen 9 9900X",
+    cpuScore: 1.64
+  },
+  "r9-9950x": {
+    name: "Ryzen 9 9950X",
+    cpuScore: 1.72
+  }
+};
 
       const gpuData = {
         // NVIDIA GTX
@@ -3447,28 +4006,28 @@
       const baseFPS = {
         // 🔥 PHỔ BIẾN NHẤT
         "Liên Minh Huyền Thoại": 280,
-        VALORANT: 300,
-        PUBG: 145,
+        "VALORANT": 300,
         "Delta Force": 115,
         "Counter-Strike 2": 220,
         "FC Online": 180,
         "Đột Kích": 300,
         "Dota 2": 180,
         "Overwatch 2": 180,
-        Roblox: 200,
+        "Roblox": 200,
+        "Minecraft": 200,
         "GTA V": 160,
 
         // 🎮 PHỔ BIẾN
-        Fortnite: 150,
+        "Fortnite": 150,
         "Apex Legends": 150,
         "NARAKA: BLADEPOINT": 120,
         "Rocket League": 250,
-        Minecraft: 200,
         "Rainbow Six Siege": 220,
         "Marvel Rivals": 105,
         "Call of Duty: Warzone": 110,
         "EA SPORTS FC 25": 180,
         "EA SPORTS FC 26": 180,
+        "PUBG": 145,
 
         // 🎯 GAME ONLINE / ESPORTS
         "Dead by Daylight": 150,
@@ -3486,7 +4045,7 @@
         "Black Myth: Wukong": 65,
         "Monster Hunter Wilds": 60,
         "Battlefield 6": 100,
-        Rust: 110,
+        "Rust": 110,
         "HELLDIVERS 2": 75,
         "Call of Duty: Black Ops 6": 100,
       };
