@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Orbitron:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
 
     <title>DOWNLOAD PHẦN MỀM MCM</title>
     <link
@@ -130,14 +134,46 @@
       }
 
       /* LOGO */
+      .logo-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        cursor: pointer;
+      }
 
       .header-logo {
-        height: 58px;
+        height: 60px;
         width: auto;
-        position: relative;
-        z-index: 2;
-        transition: 0.3s;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+        filter: invert(100%) brightness(200%);
       }
+
+      .logo-text {
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        margin-top: 4px;
+        /* text-transform: uppercase; */
+        /* Sử dụng font chữ đậm nét, hiện đại, góc cạnh */
+        font-family: "Montserrat", "Orbitron", "Segoe UI", sans-serif;
+        text-shadow: 0 2px 8px rgba(0, 150, 255, 0.6); /* Tạo hiệu ứng sáng nhẹ đồng bộ với logo */
+      }
+
+      .logo-container:hover .header-logo {
+        transform: scale(1.05);
+      }
+      /* .header-logo {
+  height: 100px;
+  width: auto;
+  position: relative;
+  z-index: 2;
+  transition: 0.3s;
+  filter: invert(100%) brightness(200%);
+} */
 
       .header-logo:hover {
         transform: scale(1.04);
@@ -968,12 +1004,19 @@
 
   <body>
     <div class="header" id="mainHeader">
-      <img
+      <!-- <img
         class="header-logo"
-        src="https://muicamau.vn/wp-content/uploads/2026/01/logo-15-years-1.png"
+        src="https://www.pngkey.com/png/full/781-7814194_ouroboros-chinese-dragon-symbol-computer-icons-circle-logo.png"
         alt="Mũi Cà Mau"
-      />
-
+      /> -->
+      <div class="logo-container">
+        <img
+          src="https://www.pngkey.com/png/full/781-7814194_ouroboros-chinese-dragon-symbol-computer-icons-circle-logo.png"
+          alt="WhiteDragon Logo"
+          class="header-logo"
+        />
+        <span class="logo-text">WhiteDragonSSS</span>
+      </div>
       <div class="anime-assistant" id="animeAssistant">
         <div class="anime-character" onclick="openMCM(event)">
           <img
@@ -985,9 +1028,7 @@
           <div class="anime-spark spark-2">✦</div>
           <div class="anime-spark spark-3">⚡</div>
         </div>
-        <div class="anime-bubble" id="animeBubble">
-          Xin chào! Tớ là Shara
-        </div>
+        <div class="anime-bubble" id="animeBubble">Xin chào! Tớ là Shara</div>
 
         <!-- <button class="anime-close" id="animeClose">×</button> -->
       </div>
@@ -1226,7 +1267,36 @@
               </a>
             </div>
           </div>
+          <div
+            class="product-card"
+            onclick="
+              window.open('https://www.onlyoffice.com/download-desktop#windows', '_blank')
+            "
+          >
+            <div class="badge">Onlyoffice</div>
 
+            <img
+              class="product-image"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQSFQrswUNS6v6nGmz_9PeNkwBfjYif3Ll_lA0L-pREw&s"
+            />
+
+            <div class="product-name">Onlyoffice</div>
+
+            <div class="product-info">
+              Download Onlyoffice, the free and open source office suite.
+            </div>
+
+            <div class="download-group">
+              <a
+                class="download-btn drive-btn"
+                href="https://drive.google.com/file/d/1-XjJUWV8n6SLpqaoziul1ZQ2ceH--o9e/view?usp=drive_link"
+                target="_blank"
+              >
+                <i class="fa-brands fa-google-drive"></i>
+                Drive
+              </a>
+            </div>
+          </div>
           <div
             class="product-card"
             onclick="window.open('https://www.bkav.com/download', '_blank')"
@@ -2230,11 +2300,20 @@
               class="product-image"
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT175eO88mPqkB4hnx6hB7NA5B85tPs-hNyF-FGTTOmKA&s=10"
             />
-            <div class="product-name">Kiểm tra</div>
+            <div class="product-name">Slow Roads</div>
+          </div>
+                    <div
+            class="product-card"
+            onclick="window.open('https://grandvalley.pages.dev/', '_blank')"
+          >
+            <img
+              class="product-image"
+              src="https://grandvalley.pages.dev/images/GrandValley_Logo.png"
+            />
+            <div class="product-name">Grand valley</div>
           </div>
         </div>
       </div>
-
       <div class="tab-content" id="fps">
         <div class="fps-container">
           <div class="fps-title">
@@ -2742,7 +2821,8 @@
     </div>
 
     <footer class="footer">
-      © 2026 Ngô Hữu Tuấn (TuanPC) | Hỗ trợ cài đặt phần mềm Windows & Game & Sửa lỗi máy tính
+      © 2026 Ngô Hữu Tuấn (TuanPC) | Hỗ trợ cài đặt phần mềm Windows & Game &
+      Sửa lỗi máy tính
 
       <div class="secret-btn" id="secretBtn"></div>
     </footer>
@@ -2918,7 +2998,6 @@
       /* Nội dung tự động thay đổi */
 
       const animeMessages = [
-
         "Tớ là trợ lý AI của bạn",
 
         "Chúc bạn sử dụng vui vẻ! ❤️",
