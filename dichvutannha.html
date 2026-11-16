@@ -1,0 +1,1326 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dịch vụ kỹ thuật tận nhà | Mũi Cà Mau</title>
+<meta name="description" content="Dịch vụ sửa chữa, vệ sinh, cài đặt và nâng cấp máy tính tận nhà tại Cà Mau - Mũi Cà Mau.">
+
+<style>
+:root {
+    --blue:#1765bd;
+    --dark:#102b4d;
+    --red:#e53945;
+    --bg:#f4f7fb;
+    --text:#19283b;
+    --muted:#697789;
+    --border:#e4eaf1;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+    margin:0;
+    font-family:Arial,"Segoe UI",sans-serif;
+    color:var(--text);
+    line-height:1.6;
+}
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,92%);margin:auto}
+
+.btn{
+    display:inline-block;
+    padding:13px 23px;
+    border-radius:9px;
+    font-weight:bold;
+    border:0;
+    cursor:pointer;
+    transition:.2s;
+}
+.btn-blue{background:var(--blue);color:white}
+.btn-red{background:var(--red);color:white}
+.btn-white{background:white;color:var(--blue)}
+.btn:hover{transform:translateY(-2px);filter:brightness(.95)}
+
+/* HEADER */
+.topbar{
+    background:var(--dark);
+    color:#dceaff;
+    padding:8px 0;
+    font-size:13px;
+}
+.header{
+    background:white;
+    border-bottom:1px solid var(--border);
+}
+.header-inner{
+    min-height:75px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+.logo{
+    font-size:24px;
+    font-weight:900;
+    white-space:nowrap;
+}
+.logo span:first-child{color:var(--blue)}
+.logo span:last-child{color:var(--red)}
+.nav{display:flex;gap:22px;font-size:14px;font-weight:bold}
+.nav a:hover{color:var(--blue)}
+
+/* HERO */
+.hero{
+    background:
+        radial-gradient(circle at 85% 20%,#2779c9 0,transparent 30%),
+        linear-gradient(120deg,#0c2545,#15569c);
+    color:white;
+    padding:75px 0;
+    overflow:hidden;
+}
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    align-items:center;
+    gap:45px;
+}
+.tag{
+    color:#a9d1ff;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+.hero h1{
+    font-size:clamp(36px,5vw,56px);
+    line-height:1.12;
+    margin:18px 0;
+}
+.hero p{
+    color:#d5e5f7;
+    font-size:17px;
+    max-width:600px;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.hero-image{
+    min-height:300px;
+    border:1px solid #ffffff35;
+    border-radius:25px;
+    background:linear-gradient(145deg,#ffffff20,#ffffff05);
+    display:grid;
+    place-items:center;
+    font-size:100px;
+    position:relative;
+}
+.hero-image small{
+    position:absolute;
+    bottom:22px;
+    font-size:13px;
+    letter-spacing:3px;
+    font-weight:bold;
+}
+
+/* TRUST */
+.trust{
+    background:white;
+    border-bottom:1px solid var(--border);
+}
+.trust-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    padding:23px 0;
+}
+.trust-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:14px;
+    font-weight:bold;
+}
+.trust-icon{
+    width:43px;height:43px;
+    display:grid;place-items:center;
+    background:#edf5ff;
+    color:var(--blue);
+    border-radius:12px;
+    font-size:21px;
+}
+
+/* GENERAL SECTION */
+section{padding:75px 0}
+.section-title{text-align:center;margin-bottom:40px}
+.section-title small{
+    color:var(--blue);
+    font-weight:bold;
+    letter-spacing:2px;
+}
+.section-title h2{
+    font-size:clamp(27px,4vw,38px);
+    line-height:1.2;
+    margin:10px 0;
+}
+.section-title p{
+    color:var(--muted);
+    margin:auto;
+    max-width:700px;
+}
+
+/* SERVICES */
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+.service{
+    padding:26px;
+    background:white;
+    border:1px solid var(--border);
+    border-radius:15px;
+    transition:.2s;
+}
+.service:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 35px #17385c15;
+    border-color:#b9d3f2;
+}
+.service-icon{
+    width:50px;height:50px;
+    display:grid;place-items:center;
+    background:#edf5ff;
+    border-radius:13px;
+    font-size:25px;
+}
+.service h3{font-size:18px;margin:18px 0 8px}
+.service p{color:var(--muted);font-size:14px;margin:0}
+
+/* PROCESS */
+.policy{background:var(--bg)}
+.policy-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:45px;
+    align-items:center;
+}
+.policy h2{font-size:36px;line-height:1.2}
+.policy p{color:var(--muted)}
+.policy-item{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:17px;
+    margin-bottom:12px;
+    display:flex;
+    gap:13px;
+}
+.check{
+    background:#e8f7ee;
+    color:#16844a;
+    width:30px;height:30px;
+    flex-shrink:0;
+    display:grid;place-items:center;
+    border-radius:50%;
+}
+
+/* CUSTOMER PRIORITY POLICY */
+.priority-section{background:white}
+.priority-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+.priority-card{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:15px;
+    padding:25px;
+    transition:.2s;
+}
+.priority-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 30px #17385c12;
+}
+.priority-label{
+    display:inline-block;
+    background:#eaf3ff;
+    color:var(--blue);
+    font-size:12px;
+    font-weight:bold;
+    padding:6px 11px;
+    border-radius:20px;
+    margin-bottom:15px;
+}
+.priority-card h3{
+    font-size:19px;
+    margin:5px 0 12px;
+}
+.priority-card strong{
+    display:block;
+    color:var(--blue);
+    font-size:19px;
+    margin-bottom:8px;
+}
+.priority-card p{
+    color:var(--muted);
+    font-size:14px;
+    margin:0;
+}
+.priority-card.featured{border:2px solid var(--blue)}
+.priority-card.featured strong{color:#16844a}
+
+.distance-note{
+    margin-top:25px;
+    background:var(--bg);
+    border:1px solid var(--border);
+    border-left:5px solid var(--red);
+    border-radius:12px;
+    padding:22px;
+}
+.distance-note h3{margin:0 0 10px}
+.distance-note p{
+    margin:6px 0;
+    color:var(--muted);
+}
+.distance-note strong{color:var(--text)}
+.distance-note .distance-highlight{
+    color:var(--red);
+    font-weight:bold;
+    margin-top:12px;
+}
+
+/* PRICE FORMULA */
+.price-box{
+    background:linear-gradient(120deg,#102b4d,#1765bd);
+    color:white;
+    padding:35px;
+    border-radius:18px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    align-items:center;
+}
+.price-box p{color:#d5e5f7}
+.price-details{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    margin-top:20px;
+}
+.price-detail-item{
+    background:#ffffff12;
+    border:1px solid #ffffff35;
+    border-radius:12px;
+    padding:18px;
+}
+.price-detail-item strong{
+    display:block;
+    font-size:17px;
+    margin-bottom:7px;
+}
+.price-detail-item p{
+    margin:0;
+    font-size:14px;
+}
+.price-formula{
+    text-align:center;
+    padding:25px;
+    border:1px solid #ffffff45;
+    background:#ffffff12;
+    border-radius:13px;
+}
+.price-formula>strong{
+    font-size:20px;
+    display:block;
+}
+.price-formula>span{
+    display:block;
+    font-size:22px;
+    color:#a9d1ff;
+}
+.price-example{
+    margin-top:20px;
+    background:#fff;
+    color:var(--text);
+    padding:22px;
+    border-radius:12px;
+}
+.price-example h3{
+    margin:0 0 8px;
+    color:var(--blue);
+}
+.price-example .total{
+    font-size:30px;
+    font-weight:900;
+    color:var(--red);
+    margin:5px 0;
+}
+.price-example p{
+    color:var(--muted);
+    margin:0;
+    font-size:14px;
+}
+.price-note{
+    font-size:13px;
+    color:var(--muted);
+    margin-top:15px;
+}
+
+/* BOOKING */
+.booking-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:35px;
+}
+.contact{
+    background:var(--dark);
+    color:white;
+    padding:28px;
+    border-radius:16px;
+}
+.contact p{color:#d4e3f4;font-size:14px}
+.contact-item{margin-top:20px;font-size:14px}
+.contact-item strong{display:block;color:white}
+.booking-form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+.field label{font-size:13px;font-weight:bold}
+.field input,.field select,.field textarea{
+    width:100%;
+    padding:13px;
+    border:1px solid var(--border);
+    border-radius:9px;
+    font:inherit;
+    outline:none;
+}
+.field input:focus,.field select:focus,.field textarea:focus{
+    border-color:var(--blue);
+}
+.field textarea{min-height:100px}
+.booking-form button{grid-column:1/-1}
+
+/* DETAILED PRICE LIST */
+.price-list-section{background:var(--bg)}
+.price-list-toolbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:20px;
+}
+.price-search{
+    width:min(380px,100%);
+    padding:12px 15px;
+    border:1px solid var(--border);
+    border-radius:9px;
+    font:inherit;
+    outline:none;
+}
+.price-search:focus{border-color:var(--blue)}
+.price-table-wrap{
+    overflow-x:auto;
+    background:white;
+    border:1px solid var(--border);
+    border-radius:12px;
+    box-shadow:0 5px 20px #17385c08;
+}
+.price-table{
+    width:100%;
+    min-width:760px;
+    border-collapse:collapse;
+    font-size:14px;
+}
+.price-table th{
+    background:var(--dark);
+    color:white;
+    padding:15px 12px;
+    text-align:center;
+    white-space:nowrap;
+}
+.price-table td{
+    padding:12px;
+    border-bottom:1px solid var(--border);
+    vertical-align:middle;
+}
+.price-table tbody tr:hover{background:#f3f8ff}
+.price-table td:first-child{
+    text-align:center;
+    width:55px;
+}
+.price-table td:nth-child(3),
+.price-table td:nth-child(4){
+    text-align:right;
+    white-space:nowrap;
+    font-weight:bold;
+}
+.price-table td:nth-child(3){color:var(--blue)}
+.price-table td:nth-child(4){color:var(--red)}
+.price-category td{
+    background:#eaf3ff;
+    color:var(--dark);
+    font-weight:900;
+    padding:13px 15px;
+    text-transform:uppercase;
+    letter-spacing:.3px;
+}
+.price-table .price-quote{
+    text-align:center!important;
+    white-space:normal!important;
+    color:var(--muted)!important;
+    font-weight:normal!important;
+}
+.price-list-note{
+    background:white;
+    border-left:4px solid var(--blue);
+    padding:16px 20px;
+    margin-top:18px;
+    border-radius:8px;
+    font-size:13px;
+    color:var(--muted);
+}
+.price-count{
+    color:var(--muted);
+    font-size:13px;
+}
+.no-result{
+    padding:25px;
+    text-align:center;
+    color:var(--muted);
+}
+
+/* FOOTER */
+footer{
+    background:#091d36;
+    color:#d0dcec;
+    padding:25px 0;
+    font-size:13px;
+}
+.footer-inner{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    flex-wrap:wrap;
+}
+.mobile-contact{display:none}
+
+/* RESPONSIVE */
+@media(max-width:800px){
+    .nav{display:none}
+    .hero-grid,.policy-grid,.booking-grid{grid-template-columns:1fr}
+    .hero-image{min-height:220px}
+    .trust-grid{grid-template-columns:1fr 1fr}
+    .services-grid{grid-template-columns:1fr 1fr}
+    .priority-grid{grid-template-columns:1fr 1fr}
+    .price-box{grid-template-columns:1fr}
+}
+@media(max-width:540px){
+    section{padding:55px 0}
+    .hero{padding:55px 0}
+    .hero h1{font-size:37px}
+    .services-grid,.priority-grid,.price-details{grid-template-columns:1fr}
+    .booking-form{grid-template-columns:1fr}
+    .field.full,.booking-form button{grid-column:auto}
+    .mobile-contact{
+        display:flex;
+        position:fixed;
+        bottom:10px;
+        left:10px;right:10px;
+        z-index:99;
+        background:white;
+        padding:8px;
+        border-radius:12px;
+        box-shadow:0 3px 25px #0002;
+        gap:8px;
+    }
+    .mobile-contact a{
+        flex:1;
+        text-align:center;
+        padding:10px 5px;
+        font-size:13px;
+    }
+    footer{padding-bottom:85px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+    <div class="container">
+        Dịch vụ kỹ thuật tận nhà - Mũi Cà Mau
+    </div>
+</div>
+
+<header class="header">
+    <div class="container header-inner">
+
+        <a href="https://muicamau.vn/" class="logo">
+            <span>MŨI</span> <span>CÀ MAU</span>
+        </a>
+
+        <nav class="nav">
+            <a href="#dichvu">Dịch vụ</a>
+            <a href="#chinhsach">Quy trình</a>
+            <a href="#uudai">Chính sách ưu tiên</a>
+            <a href="#chiphi">Chi phí</a>
+            <a href="#banggia">Bảng giá</a>
+        </nav>
+
+        <a href="#banggia" class="btn btn-blue">
+            BẢNG GIÁ DỊCH VỤ →
+        </a>
+
+    </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container hero-grid">
+
+        <div>
+            <div class="tag">Dịch vụ kỹ thuật PC tận nhà</div>
+
+            <h1>Kỹ thuật viên Mũi Cà Mau đến tận nhà</h1>
+
+            <p>
+                Kiểm tra, vệ sinh, cài đặt phần mềm, sửa chữa,
+                lắp ráp và nâng cấp máy tính.
+                Hỗ trợ tận nơi tại Cà Mau, báo giá rõ ràng
+                trước khi thực hiện.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#datlich" class="btn btn-red">
+                    Đăng ký dịch vụ →
+                </a>
+
+                <a href="tel:0907625645" class="btn btn-white">
+                    ☎ Gọi ngay
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            🖥️
+            <small>MŨI CÀ MAU · PC SERVICE</small>
+        </div>
+
+    </div>
+</section>
+
+<!-- TRUST -->
+<div class="trust">
+    <div class="container trust-grid">
+
+        <div class="trust-item">
+            <span class="trust-icon">⌂</span>
+            Hỗ trợ tận nhà
+        </div>
+
+        <div class="trust-item">
+            <span class="trust-icon">✓</span>
+            Báo giá trước
+        </div>
+
+        <div class="trust-item">
+            <span class="trust-icon">⚙</span>
+            Kỹ thuật chuyên môn
+        </div>
+
+        <div class="trust-item">
+            <span class="trust-icon">♧</span>
+            Hỗ trợ nhiều thiết bị
+        </div>
+
+    </div>
+</div>
+
+<!-- SERVICES -->
+<section id="dichvu">
+    <div class="container">
+
+        <div class="section-title">
+            <small>DỊCH VỤ CỦA CHÚNG TÔI</small>
+            <h2>Mũi Cà Mau hỗ trợ những gì?</h2>
+            <p>
+                Đội ngũ kỹ thuật tiếp nhận các yêu cầu sửa chữa,
+                bảo trì và nâng cấp thiết bị tận nơi.
+            </p>
+        </div>
+
+        <div class="services-grid">
+
+            <article class="service">
+                <div class="service-icon">🖥️</div>
+                <h3>Sửa chữa máy tính</h3>
+                <p>
+                    Kiểm tra PC, laptop không lên nguồn,
+                    không xuất hình, lỗi phần cứng và Windows.
+                </p>
+            </article>
+
+            <article class="service">
+                <div class="service-icon">🧹</div>
+                <h3>Vệ sinh máy tính</h3>
+                <p>
+                    Vệ sinh PC Gaming, laptop, thay keo tản nhiệt,
+                    kiểm tra hệ thống làm mát.
+                </p>
+            </article>
+
+            <article class="service">
+                <div class="service-icon">💿</div>
+                <h3>Cài Windows & phần mềm</h3>
+                <p>
+                    Cài đặt Windows, driver, phần mềm văn phòng,
+                    phần mềm và tiện ích cần thiết.
+                </p>
+            </article>
+
+            <article class="service">
+                <div class="service-icon">🔧</div>
+                <h3>Lắp ráp & nâng cấp PC</h3>
+                <p>
+                    Nâng cấp CPU, RAM, SSD, VGA,
+                    lắp ráp máy tính Gaming và văn phòng.
+                </p>
+            </article>
+
+            <article class="service">
+                <div class="service-icon">🖨️</div>
+                <h3>Sửa chữa máy in</h3>
+                <p>
+                    Sửa máy in, cài driver, xử lý lỗi in,
+                    nạp mực và thay thế linh kiện.
+                </p>
+            </article>
+
+            <article class="service">
+                <div class="service-icon">📷</div>
+                <h3>Camera & thiết bị văn phòng</h3>
+                <p>
+                    Hỗ trợ camera, máy photocopy
+                    và các thiết bị văn phòng khác.
+                </p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- PROCESS -->
+<section class="policy" id="chinhsach">
+    <div class="container policy-grid">
+
+        <div>
+            <div class="tag">QUY TRÌNH HỖ TRỢ</div>
+
+            <h2>Minh bạch trong từng dịch vụ</h2>
+
+            <p>
+                Mũi Cà Mau luôn trao đổi tình trạng thiết bị,
+                phương án xử lý và chi phí với khách hàng
+                trước khi tiến hành.
+            </p>
+
+            <a href="#datlich" class="btn btn-blue">
+                Đăng ký hỗ trợ →
+            </a>
+        </div>
+
+        <div>
+
+            <div class="policy-item">
+                <div class="check">✓</div>
+                <div>
+                    <strong>Tiếp nhận yêu cầu</strong><br>
+                    <small>Ghi nhận thiết bị, tình trạng lỗi và địa chỉ.</small>
+                </div>
+            </div>
+
+            <div class="policy-item">
+                <div class="check">✓</div>
+                <div>
+                    <strong>Tư vấn phương án</strong><br>
+                    <small>Đề xuất phương án sửa chữa phù hợp.</small>
+                </div>
+            </div>
+
+            <div class="policy-item">
+                <div class="check">✓</div>
+                <div>
+                    <strong>Báo giá trước khi làm</strong><br>
+                    <small>Khách hàng xác nhận chi phí trước khi thực hiện.</small>
+                </div>
+            </div>
+
+            <div class="policy-item">
+                <div class="check">✓</div>
+                <div>
+                    <strong>Kiểm tra và bàn giao</strong><br>
+                    <small>Kiểm tra hoạt động thiết bị sau khi hoàn tất.</small>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CUSTOMER PRIORITY POLICY -->
+<section class="priority-section" id="uudai">
+    <div class="container">
+
+        <div class="section-title">
+            <small>CHÍNH SÁCH KHÁCH HÀNG</small>
+            <h2>Chính sách ưu tiên dành cho khách hàng Mũi Cà Mau</h2>
+            <p>
+                Ưu tiên hỗ trợ khách hàng đã mua máy và
+                khách hàng thân thiết tại Mũi Cà Mau.
+            </p>
+        </div>
+
+        <div class="priority-grid">
+
+            <article class="priority-card featured">
+                <span class="priority-label">MIỄN PHÍ</span>
+                <h3>PC mua trong 30 ngày</h3>
+                <strong>Miễn toàn bộ chi phí</strong>
+                <p>
+                    Miễn phí di chuyển và chi phí kỹ thuật.
+                    Chính sách được tính từ ngày khách hàng nhận máy.
+                </p>
+            </article>
+
+            <article class="priority-card">
+                <span class="priority-label">ƯU TIÊN XỬ LÝ</span>
+                <h3>Khách Elite hoặc PC mua trong 7 ngày</h3>
+                <strong>Ưu tiên hỗ trợ trong 24 giờ</strong>
+                <p>
+                    Ưu tiên tiếp nhận và sắp xếp kỹ thuật viên
+                    hỗ trợ trong vòng 24 giờ.
+                </p>
+            </article>
+
+            <article class="priority-card">
+                <span class="priority-label">CÓ THU PHÍ</span>
+                <h3>PC mua trên 30 ngày</h3>
+                <strong>Chi phí theo dịch vụ</strong>
+                <p>
+                    Chi phí được tính tùy theo dịch vụ cần thực hiện,
+                    mức độ kỹ thuật và vật tư sử dụng.
+                </p>
+            </article>
+
+        </div>
+
+        <div class="distance-note">
+            <h3>📍 Phạm vi phục vụ tận nhà</h3>
+            <p>
+                <strong>Dưới 50 km:</strong>
+                Mũi Cà Mau tiếp nhận yêu cầu và báo giá ngay.
+            </p>
+            <p>
+                <strong>Trên 50 km:</strong>
+                Hiện chưa hỗ trợ kỹ thuật tận nhà.
+            </p>
+            <p class="distance-highlight">
+                Quý khách có thể mang PC trực tiếp đến cửa hàng
+                Mũi Cà Mau để được kiểm tra và hỗ trợ miễn phí.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- PRICE FORMULA -->
+<section id="chiphi">
+    <div class="container">
+
+        <div class="section-title">
+            <small>CHI PHÍ DỊCH VỤ</small>
+            <h2>Công thức tính chi phí</h2>
+            <p>
+                Chi phí được tính theo khoảng cách từ cửa hàng
+                Mũi Cà Mau và dịch vụ kỹ thuật thực hiện.
+            </p>
+        </div>
+
+        <div class="price-box">
+
+            <div>
+                <h2 style="color:white">Chi phí minh bạch</h2>
+
+                <p>
+                    Tổng chi phí được xác định dựa trên phí di chuyển,
+                    phí dịch vụ và vật tư dự kiến.
+                    Mũi Cà Mau sẽ thông báo chi phí trước khi thực hiện.
+                </p>
+
+                <a class="btn btn-red" href="#banggia">
+                    Xem bảng giá chi tiết →
+                </a>
+
+                <div class="price-details">
+
+                    <div class="price-detail-item">
+                        <strong>🚗 Phí di chuyển</strong>
+                        <p>
+                            10.000đ/km<br>
+                            Tối thiểu: 40.000đ<br>
+                            Tối đa: 500.000đ<br>
+                            Dưới 50 km: báo giá ngay.
+                        </p>
+                    </div>
+
+                    <div class="price-detail-item">
+                        <strong>🔧 Phí dịch vụ</strong>
+                        <p>
+                            Tính theo dịch vụ cần thực hiện,
+                            mức độ rủi ro kỹ thuật và vật tư dự kiến.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="price-formula">
+                <small>CÔNG THỨC TÍNH CHI PHÍ</small>
+
+                <strong>Phí di chuyển</strong>
+                <span>+</span>
+                <strong>Phí dịch vụ</strong>
+                <span>+</span>
+                <strong>Vật tư dự kiến</strong>
+
+                <div class="price-example">
+                    <h3>Ví dụ thực tế</h3>
+                    <p>Di chuyển 9 km + cài đặt phần mềm</p>
+                    <div class="total">190.000đ</div>
+                    <p>
+                        90.000đ di chuyển<br>
+                        100.000đ dịch vụ<br>
+                        0đ vật tư dự kiến
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="price-note">
+            Chi phí cuối cùng sẽ được Mũi Cà Mau xác nhận
+            với khách hàng trước khi tiến hành dịch vụ.
+        </p>
+
+    </div>
+</section>
+
+<!-- BOOKING -->
+<section id="datlich">
+    <div class="container">
+
+        <div class="section-title">
+            <small>ĐĂNG KÝ DỊCH VỤ</small>
+            <h2>Đặt lịch kỹ thuật viên đến tận nhà</h2>
+            <p>
+                Điền thông tin để Mũi Cà Mau tiếp nhận yêu cầu của bạn.
+            </p>
+        </div>
+
+        <div class="booking-grid">
+
+            <div class="contact">
+                <h2>MŨI CÀ MAU</h2>
+                <p>Liên hệ trực tiếp với cửa hàng để được tư vấn.</p>
+
+                <div class="contact-item">
+                    <strong>☎ 0907 625 645</strong>
+                    Hotline / Zalo
+                </div>
+
+                <div class="contact-item">
+                    <strong>☎ 0901 05 16 26</strong>
+                    Hotline / Zalo
+                </div>
+
+                <div class="contact-item">
+                    <strong>📍 125-129 Lý Thường Kiệt</strong>
+                    Phường Tân Thành, Cà Mau
+                </div>
+
+                <div class="contact-item">
+                    <strong>📍 188 Nguyễn Tất Thành</strong>
+                    Phường Lý Văn Lâm, Cà Mau
+                </div>
+
+                <div class="contact-item">
+                    <strong>⏰ 7:30 - 17:30</strong>
+                    Tất cả các ngày trong tuần và ngày lễ
+                </div>
+            </div>
+
+            <form class="booking-form" id="bookingForm">
+
+                <div class="field">
+                    <label>Họ và tên *</label>
+                    <input name="name" required placeholder="Nhập họ tên">
+                </div>
+
+                <div class="field">
+                    <label>Số điện thoại *</label>
+                    <input name="phone" type="tel" required placeholder="Nhập số điện thoại">
+                </div>
+
+                <div class="field">
+                    <label>Thiết bị</label>
+                    <select name="device">
+                        <option>Máy tính bàn PC</option>
+                        <option>Laptop</option>
+                        <option>Máy in</option>
+                        <option>Máy photocopy</option>
+                        <option>Camera</option>
+                        <option>Thiết bị khác</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label>Dịch vụ</label>
+                    <select name="service">
+                        <option>Sửa chữa máy tính</option>
+                        <option>Vệ sinh máy tính</option>
+                        <option>Cài Windows / phần mềm</option>
+                        <option>Lắp ráp / nâng cấp PC</option>
+                        <option>Sửa chữa máy in</option>
+                        <option>Camera / thiết bị văn phòng</option>
+                        <option>Khác</option>
+                    </select>
+                </div>
+
+                <div class="field full">
+                    <label>Địa chỉ *</label>
+                    <input name="address" required placeholder="Địa chỉ cần hỗ trợ">
+                </div>
+
+                <div class="field full">
+                    <label>Mô tả tình trạng</label>
+                    <textarea name="description" placeholder="Mô tả lỗi hoặc yêu cầu của bạn..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-blue">
+                    Gửi yêu cầu đăng ký →
+                </button>
+
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- DETAILED PRICE LIST -->
+<section class="price-list-section" id="banggia">
+    <div class="container">
+
+        <div class="section-title">
+            <small>BẢNG GIÁ NIÊM YẾT</small>
+            <h2>Bảng giá dịch vụ Mũi Cà Mau</h2>
+            <p>
+                Bảng giá tham khảo các dịch vụ sửa chữa, bảo trì,
+                nạp mực và thay thế linh kiện.
+            </p>
+        </div>
+
+        <div class="price-list-toolbar">
+            <input
+                type="search"
+                id="priceSearch"
+                class="price-search"
+                placeholder="Tìm kiếm sản phẩm / dịch vụ..."
+            >
+            <span class="price-count" id="priceCount"></span>
+        </div>
+
+        <div class="price-table-wrap">
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>SẢN PHẨM / DỊCH VỤ</th>
+                        <th>ĐƠN GIÁ TẠI<br>MŨI CÀ MAU</th>
+                        <th>DƯỚI 7 KM</th>
+                    </tr>
+                </thead>
+                <tbody id="priceTableBody"></tbody>
+            </table>
+        </div>
+
+        <div class="price-list-note">
+            <strong>Lưu ý:</strong>
+            Đơn giá được niêm yết bằng VNĐ. Chi phí thực tế có thể
+            phụ thuộc vào tình trạng thiết bị, linh kiện và vật tư
+            cần thay thế. Vui lòng liên hệ Mũi Cà Mau để xác nhận
+            trước khi sử dụng dịch vụ.
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container footer-inner">
+        <strong>MŨI CÀ MAU - DỊCH VỤ KỸ THUẬT</strong>
+        <a href="https://muicamau.vn/">www.muicamau.vn</a>
+    </div>
+</footer>
+
+<!-- MOBILE CONTACT -->
+<div class="mobile-contact">
+    <a href="tel:0907625645" class="btn btn-blue">☎ Gọi ngay</a>
+    <a href="#banggia" class="btn btn-red">Bảng giá</a>
+</div>
+
+<script>
+/* BOOKING FORM */
+document.getElementById("bookingForm").addEventListener("submit",function(e){
+    e.preventDefault();
+
+    const f=new FormData(this);
+
+    const message=[
+        "ĐĂNG KÝ DỊCH VỤ MŨI CÀ MAU",
+        "Họ tên: "+f.get("name"),
+        "Số điện thoại: "+f.get("phone"),
+        "Thiết bị: "+f.get("device"),
+        "Dịch vụ: "+f.get("service"),
+        "Địa chỉ: "+f.get("address"),
+        "Mô tả: "+(f.get("description") || "Không có")
+    ].join("\n");
+
+    navigator.clipboard.writeText(message).then(()=>{
+        alert("Đã sao chép thông tin đăng ký. Zalo sẽ được mở để bạn gửi nội dung cho Mũi Cà Mau.");
+        window.open("https://zalo.me/0907625645","_blank");
+    }).catch(()=>{
+        alert("Không thể sao chép tự động. Vui lòng liên hệ Hotline 0907 625 645.");
+    });
+});
+
+/* PRICE LIST DATA */
+const priceGroups = [
+{
+    title:"PHÍ KIỂM TRA (KIỂM TRA RA LỖI NHƯNG KHÔNG SỬA HOẶC KHÔNG THAY ĐỔI)",
+    items:[
+        ["Máy tính xách tay","50.000","100.000"],
+        ["Máy tính để bàn văn phòng","50.000","100.000"],
+        ["Máy tính để bàn game / đồ họa (có card màn hình rời)","200.000","300.000"],
+        ["Máy in laser trắng đen A4","50.000","100.000"],
+        ["Máy in laser trắng đen A3","100.000","150.000"],
+        ["Máy in màu A4","100.000","150.000"],
+        ["Máy in màu A3","100.000","150.000"],
+        ["Các sản phẩm khác báo giá riêng","Báo giá","Báo giá"]
+    ]
+},
+{
+    title:"DỊCH VỤ NẠP MỰC MÁY IN TRẮNG ĐEN",
+    items:[
+        ["Nạp mực máy in Canon, HP A4","70.000","90.000"],
+        ["Nạp mực máy in Samsung/Xerox","80.000","100.000"],
+        ["Nạp mực máy in Brother","80.000","100.000"],
+        ["Nạp mực máy in Ricoh SP100/200","80.000","110.000"],
+        ["Nạp mực máy in Panasonic 85/88","80.000","110.000"],
+        ["Nạp mực máy in Canon, HP A3","190.000","250.000"]
+    ]
+},
+{
+    title:"DỊCH VỤ NẠP MỰC MÁY PHOTOCOPY",
+    items:[
+        ["Nạp mực máy photocopy Toshiba","400.000","500.000"],
+        ["Nạp mực máy photocopy Sharp","400.000","500.000"],
+        ["Nạp mực máy photocopy Xerox (ống)","350.000","450.000"],
+        ["Nạp mực máy photocopy Canon NPG28 (ống)","350.000","450.000"],
+        ["Nạp mực máy photocopy Canon NPG51 (ống)","450.000","550.000"],
+        ["Nạp mực máy photocopy Konica Minolta (ống)","360.000","420.000"],
+        ["Nạp mực máy photocopy Kyocera","450.000","550.000"]
+    ]
+},
+{
+    title:"DỊCH VỤ THAY DRUM MÁY IN",
+    items:[
+        ["Thay Drum Canon, HP 12/15/49/35/92","80.000","100.000"],
+        ["Thay Drum Canon, HP 05/17/26/107","90.000","110.000"],
+        ["Thay Drum Samsung/Xerox","100.000","120.000"],
+        ["Thay Drum Brother 1111/1211","100.000","140.000"],
+        ["Thay Drum Brother nhỏ 2140","100.000","120.000"],
+        ["Thay Drum Brother lớn 2240/2385","100.000","150.000"],
+        ["Thay Drum Canon, HP 14/16/64/81/90 (A3)","180.000","260.000"]
+    ]
+},
+{
+    title:"DỊCH VỤ THAY GẠT, LÒ XO, BẠC TỪ",
+    items:[
+        ["Thay gạt (lớn/nhỏ) Canon, HP 05/12/15/35","35.000","50.000"],
+        ["Thay gạt (lớn/nhỏ) Canon, HP 16A (A3)","70.000","90.000"],
+        ["Thay gạt (lớn/nhỏ) Samsung/Xerox/Brother","50.000","80.000"],
+        ["Thay lò xo drum, bạc từ các loại","20.000","30.000"]
+    ]
+},
+{
+    title:"DỊCH VỤ THAY TRỤC TỪ, CAO SU",
+    items:[
+        ["Thay trục từ/cao su Canon/HP 05/12/15/35/49","40.000","60.000"],
+        ["Thay trục từ/cao su Canon/HP 16A (A3)","90.000","110.000"],
+        ["Thay trục từ/cao su Samsung/Xerox/Brother","80.000","100.000"]
+    ]
+},
+{
+    title:"DỊCH VỤ THAY QUẢ ĐÀO, BAO LỤA",
+    items:[
+        ["Thay quả đào máy in khổ A4","130.000","200.000"],
+        ["Thay bao lụa máy in HP/Canon 2900/12A","270.000","350.000"],
+        ["Thay bao lụa máy in HP/Canon 2900/12A (TỐT)","290.000","380.000"],
+        ["Thay bao lụa máy in Canon/HP 15A/35A/92A","290.000","380.000"],
+        ["Thay bao lụa máy in Canon/HP 05A/49A/Đa năng","390.000","390.000"],
+        ["Thay bao lụa máy in Canon/HP khổ A3","580.000","6.480.000"],
+        ["Bôi nhờn bao lụa máy in Canon/HP khổ A4","180.000","250.000"],
+        ["Bôi nhờn bao lụa máy in Canon/HP khổ A3","280.000","380.000"]
+    ]
+},
+{
+    title:"DỊCH VỤ VỆ SINH, THAY RULO SẤY, ÉP",
+    items:[
+        ["Thay Rulo ép Canon/HP 12/15/35/92","300.000","360.000"],
+        ["Thay Rulo ép Canon/HP 05/49","390.000","490.000"],
+        ["Thay Rulo ép Canon/HP 16A","580.000","680.000"],
+        ["Thay Rulo sấy – ép Samsung/Brother","380.000","450.000"],
+        ["Thay dây cao áp máy in","150.000","180.000"],
+        ["Thay con lăn ra giấy máy in Canon 3300","230.000","280.000"],
+        ["Làm lại Rơ lê máy in A4","150.000","220.000"],
+        ["Vệ sinh hộp quang A4","200.000","280.000"],
+        ["Vệ sinh hộp quang A3","300.000","380.000"]
+    ]
+},
+{
+    title:"DỊCH VỤ SỬA CHỮA MÁY IN MÀU NƯỚC",
+    items:[
+        ["Reset mực máy in màu (không dùng key)","120.000","200.000"],
+        ["Reset mực máy in màu (có dùng key)","300.000","380.000"],
+        ["Sửa máy in không kéo giấy, kéo nhiều tờ","320.000","450.000"],
+        ["Ngâm đầu phun máy in màu","380.000","480.000"],
+        ["Khắc phục dây đứt do côn trùng","500.000","600.000"],
+        ["Clear mực đầu phun","120.000","200.000"],
+        ["Thay dây conro máy in màu","450.000","550.000"]
+    ]
+},
+{
+    title:"DỊCH VỤ VỆ SINH, SỬA CHỮA LAPTOP/PC",
+    items:[
+        ["Cài Game ONLINE","120.000","200.000"],
+        ["Cài Game OFFLINE","150.000","250.000"],
+        ["Vệ sinh + Bôi keo tản nhiệt cho máy để bàn văn phòng (không có card màn hình rời)","100.000","200.000"],
+        ["Vệ sinh + Bôi keo tản nhiệt cho máy để bàn Gaming/Đồ họa (không có tản nhiệt nước custom)","150.000","250.000"],
+        ["Vệ sinh + Bôi keo tản nhiệt cho máy để bàn Gaming/Đồ họa (có tản nhiệt nước custom, chưa bao gồm thay nước, rửa hệ thống ống, bơm)","250.000","350.000"],
+        ["Thay nước trắng, rửa bên trong hệ thống ống, bơm cho tản nhiệt nước Custom (có màu thêm 100.000đ)","250.000","350.000"],
+        ["Vệ sinh + Bôi keo tản nhiệt cho laptop văn phòng (loại không có card đồ họa rời)","150.000","250.000"],
+        ["Vệ sinh + Bôi keo tản nhiệt laptop Gaming, đồ họa (loại máy có card đồ họa rời)","200.000","300.000"],
+        ["Thay loa Laptop","250.000","300.000"],
+        ["Sửa laptop không nguồn (Văn phòng)","650.000","700.000"],
+        ["Sửa laptop không nguồn (Game/đồ họa)","850.000","950.000"],
+        ["Sửa laptop Macbook không nguồn","1.200.000","1.350.000"],
+        ["Làm lại nút kích nguồn laptop","150.000","200.000"],
+        ["Thay nút kích nguồn PC","100.000","150.000"],
+        ["Thay quạt CPU laptop Văn phòng (quạt tháo máy)","250.000","350.000"],
+        ["Thay quạt CPU laptop Văn phòng (quạt mới)","350.000","450.000"],
+        ["Thay quạt CPU laptop Game/Đồ họa","Báo giá theo model","Báo giá theo model"],
+        ["Làm bản lề laptop văn phòng","250.000","350.000"],
+        ["Làm bản lề laptop Gaming","300.000","400.000"],
+        ["Làm bản lề laptop cảm ứng","350.000","450.000"]
+    ]
+},
+{
+    title:"DỊCH VỤ CÀI PHẦN MỀM DIỆT VIRUS, PHẦN MỀM BẢN QUYỀN",
+    items:[
+        ["Phần mềm diệt virus Bkav Pro 1PC","240.000","280.000"],
+        ["Phần mềm diệt virus Bkav Pro 3PC","580.000","680.000"],
+        ["Phần mềm diệt virus Bkav Pro 5PC","900.000","1.000.000"],
+        ["Phần mềm diệt virus Kaspersky Anti-virus 1PC","200.000","240.000"],
+        ["Phần mềm diệt virus Kaspersky Anti-virus 3PC","325.000","400.000"],
+        ["Phần mềm diệt virus Kaspersky Internet 1PC","300.000","340.000"],
+        ["Phần mềm diệt virus Kaspersky Internet 3PC","650.000","720.000"],
+        ["Microsoft Windows 11 Pro (bản quyền vĩnh viễn) – Chính hãng Microsoft Việt Nam","3.790.000","3.890.000"],
+        ["Microsoft Office Home 2024 (bản quyền vĩnh viễn) – Chính hãng Microsoft Việt Nam","2.990.000","3.290.000"],
+        ["Microsoft Office Home & Business 2024 (bản quyền vĩnh viễn) – Chính hãng Microsoft Việt Nam","5.590.000","5.690.000"],
+        ["Microsoft Office 365 Personal (12 tháng, lưu trữ online), 1 user + 5 thiết bị – Chính hãng Microsoft Việt Nam","1.790.000","1.890.000"],
+        ["Microsoft Office 365 Family (12 tháng, lưu trữ online), 6 user + 30 thiết bị – Chính hãng Microsoft Việt Nam","2.290.000","2.390.000"]
+    ]
+}
+];
+
+/* RENDER PRICE TABLE */
+const priceBody=document.getElementById("priceTableBody");
+const priceSearch=document.getElementById("priceSearch");
+const priceCount=document.getElementById("priceCount");
+
+function renderPriceTable(keyword=""){
+    let html="";
+    let total=0;
+    const search=keyword.trim().toLocaleLowerCase("vi");
+
+    priceGroups.forEach(group=>{
+        const matched=group.items.filter(item=>
+            item.join(" ").toLocaleLowerCase("vi").includes(search)
+        );
+
+        if(matched.length===0)return;
+
+        html+=`
+            <tr class="price-category">
+                <td colspan="4">${group.title}</td>
+            </tr>
+        `;
+
+        matched.forEach((item,index)=>{
+            total++;
+
+            const isQuote=item[1].includes("Báo giá") ||
+                          item[2].includes("Báo giá");
+
+            html+=`
+                <tr>
+                    <td>${index+1}</td>
+                    <td>${item[0]}</td>
+                    <td class="${isQuote?'price-quote':''}">${isQuote?item[1]:item[1]+"đ"}</td>
+                    <td class="${isQuote?'price-quote':''}">${isQuote?item[2]:item[2]+"đ"}</td>
+                </tr>
+            `;
+        });
+    });
+
+    if(total===0){
+        html=`
+            <tr>
+                <td colspan="4" class="no-result">
+                    Không tìm thấy dịch vụ phù hợp.
+                </td>
+            </tr>
+        `;
+    }
+
+    priceBody.innerHTML=html;
+    priceCount.textContent="Hiển thị "+total+" dịch vụ";
+}
+
+priceSearch.addEventListener("input",function(){
+    renderPriceTable(this.value);
+});
+
+renderPriceTable();
+</script>
+
+</body>
+</html>
